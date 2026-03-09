@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kirsty Bathroom â Product Lookbook</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f0eb; color: #333; line-height: 1.6; }
+  .header { background: linear-gradient(135deg, #2E4057 0%, #1a1a2e 100%); color: white; padding: 40px 20px; text-align: center; }
+  .header h1 { font-size: 2.2em; margin-bottom: 8px; letter-spacing: 1px; }
+  .header p { font-size: 1.1em; opacity: 0.8; }
+  .nav { background: #2E4057; padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+  .nav a { color: white; text-decoration: none; padding: 6px 14px; border-radius: 20px; font-size: 0.85em; background: rgba(255,255,255,0.1); transition: background 0.2s; }
+  .nav a:hover { background: rgba(255,255,255,0.25); }
+  .section { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+  .section h2 { font-size: 1.8em; color: #2E4057; margin-bottom: 8px; border-bottom: 3px solid #2E4057; padding-bottom: 8px; }
+  .section .subtitle { color: #888; margin-bottom: 24px; font-size: 0.95em; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.75em; font-weight: 700; text-transform: uppercase; }
+  .badge.confirmed { background: #e8f5e9; color: #2e7d32; }
+  .badge.pending { background: #fff3e0; color: #e65100; }
+  .badge.recommended { background: #e3f2fd; color: #1565c0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+  .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+  .card-img { width: 100%; height: 280px; object-fit: cover; background: #f0f0f0; display: block; }
+  .card-img-placeholder { width: 100%; height: 280px; background: linear-gradient(135deg, #e8e0d8, #d4c8bc); display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.9em; text-align: center; padding: 20px; }
+  .card-body { padding: 20px; }
+  .card-body h3 { font-size: 1.15em; color: #2E4057; margin-bottom: 10px; }
+  .card-body .specs { font-size: 0.88em; color: #666; margin-bottom: 12px; }
+  .card-body .specs strong { color: #333; }
+  .card-body .note { font-size: 0.82em; color: #1565c0; font-style: italic; margin-top: 8px; padding: 8px; background: #f0f7ff; border-radius: 6px; }
+  .card-body .warning { font-size: 0.82em; color: #c62828; font-style: italic; margin-top: 8px; padding: 8px; background: #fef0f0; border-radius: 6px; }
+  .card-body a { display: inline-block; margin-top: 12px; color: white; background: #2E4057; text-decoration: none; padding: 8px 18px; border-radius: 6px; font-size: 0.88em; transition: background 0.2s; }
+  .card-body a:hover { background: #1a1a2e; }
+  .full-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); display: flex; gap: 0; margin-bottom: 24px; }
+  .full-card .img-side { flex: 0 0 40%; min-height: 300px; }
+  .full-card .img-side img { width: 100%; height: 100%; object-fit: cover; }
+  .full-card .text-side { flex: 1; padding: 28px; }
+  @media (max-width: 768px) { .full-card { flex-direction: column; } .full-card .img-side { min-height: 250px; } }
+  .divider { border: 0; border-top: 2px solid #e0d8d0; margin: 50px auto; max-width: 1100px; }
+  .key-info { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-top: 20px; }
+  .key-info table { width: 100%; border-collapse: collapse; }
+  .key-info th { background: #2E4057; color: white; padding: 10px 14px; text-align: left; font-size: 0.9em; }
+  .key-info td { padding: 10px 14px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .key-info tr:nth-child(even) { background: #f8f5f2; }
+  .footer { background: #2E4057; color: white; text-align: center; padding: 30px 20px; margin-top: 60px; }
+  .footer p { opacity: 0.7; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Kirsty Bathroom Lookbook</h1>
+  <p>30 Inwood Crescent, Brighton â March 2026</p>
+</div>
+
+<div class="nav">
+  <a href="#tiles">Tiles</a>
+  <a href="#floor">Floor Options</a>
+  <a href="#shower">Shower</a>
+  <a href="#vanity">Basin/Vanity</a>
+  <a href="#taps">Taps</a>
+  <a href="#cabinet">Cabinet</a>
+  <a href="#lighting">Lighting</a>
+  <a href="#extractor">Extractor</a>
+  <a href="#summary">Summary</a>
+</div>
+
+<!-- ===== CONFIRMED TILES ===== -->
+<div class="section" id="tiles">
+  <h2>Confirmed Tiles</h2>
+  <p class="subtitle">These are locked in â no decision needed</p>
+  <div class="grid">
+    <div class="card">
+      <img class="card-img" src="htt0s://qufrfrsbllnrsdnuzoqj.supabase.co/storage/v1/object/public/product-images-new/DOR6012BLA/DOR6012BLA_LS1.jpg" alt="Dormido Oak & Black" onerror="this.outerHTML='<div class=card-img-placeholder>Image loads when online<br>Dormido Oak & Black Slatted Wood Effect</div>'">
+      <div class="card-body">
+        <h3>Dormido Oak & Black Slatted Wood Effect <span class="badge confirmed">Confirmed</span></h3>
+        <div class="specs">
+          <strong>Size:</strong> 600 Ã 1200 mm<br>
+          <strong>Coverage:</strong> Shower walls + Wall B feature (6.95 mÂ² with wastage)<br>
+          <strong>Orientation:</strong> HORIZONTAL<br>
+          <strong>Price:</strong> ~Â£34.95/mÂ²
+        </div>
+        <a href="https://www.victorianplumbing.co.uk/dormido-large-format-oak-black-slatted-wood-effect-wall-tiles-600-x-1200mm?preSelected=true&sku=DOR6012BLA" target="_blank">View on Victorian Plumbing â</a>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://qufrfrsbllnrsdnuzoqj.supabase.co/storage/v1/object/public/product-images-new/MAT1530GRN/MAT1530GRN_LS1.jpg" alt="Matteo Fluted Green" onerror="this.outerHTML='<div class=card-img-placeholder>Image loads when online<br>Matteo Fluted Green</div>'">
+      <div class="card-body">
+        <h3>Matteo Fluted Green <span class="badge confirmed">Confirmed</span></h3>
+        <div class="specs">
+          <strong>Size:</strong> 150 Ã 300 mm<br>
+          <strong>Coverage:</strong> Walls C & D (7.65 mÂ² with wastage)<br>
+          <strong>Finish:</strong> Ceramic gloss, fluted/ridged<br>
+          <strong>Thickness:</strong> 7.5 mm
+        </div>
+        <a href="https://www.victorianplumbing.co.uk/stonehouse-studio-matteo-fluted-green-wall-tiles-150-x-300mm?preSelected=true&sku=MAT1530GRN" target="_blank">View on Victorian Plumbing â</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== FLOOR TILES ===== -->
+<div class="section" id="floor">
+  <h2>Floor Tile Options <span class="badge pending">Decision Needed</span></h2>
+  <p class="subtitle">3.05 mÂ² needed (with 10% wastage) â pick your favourite!</p>
+  <div class="grid">
+    <div class="card">
+      <img class="card-img" src="https://qufrfrsbllnrsdnuzoqj.supabase.co/storage/v1/object/public/product-images-new/ART150TER/ART150TER_LS1.jpg" alt="Artisan Terracotta Terrazzo" onerror="this.outerHTML='<div class=card-img-placeholder>Image loads when online<br>Artisan Terracotta Terrazzo Effect</div>'">
+      <div class="card-body">
+        <h3>A: Artisan Terracotta Terrazzo Effect</h3>
+        <div class="specs"><strong>Size:</strong> 150 Ã 150 mm<br><strong>Supplier:</strong> Victorian Plumbing</div>
+        <a href="https://www.victorianplumbing.co.uk/artisan-terracotta-terrazzo-effect-wall-and-floor-tiles-150-x-150mm?sku=ART150TER&preSelected=true" target="_blank">View â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Pella Pink Terrazzo Hexagon</div>
+      <div class="card-body">
+        <h3>B: Pella Pink Terrazzo Hexagon</h3>
+        <div class="specs"><strong>Size:</strong> 258 Ã 290 mm (hexagon)<br><strong>Supplier:</strong> Victorian Plumbing</div>
+        <a href="https://www.victorianplumbing.co.uk/pella-pink-terrazzo-effect-hexagon-wall-and-floor-tiles-258-x-290mm" target="_blank">View â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Isola Bella Fern</div>
+      <div class="card-body">
+        <h3>C: Isola Bella Fern</h3>
+        <div class="specs"><strong>Size:</strong> 300 Ã 300 Ã 9 mm<br><strong>Supplier:</strong> Claybrook Studio</div>
+        <a href="https://www.claybrookstudio.co.uk/isola-bella-fern.html" target="_blank">View â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Formella Clay</div>
+      <div class="card-body">
+        <h3>D: Formella Clay</h3>
+        <div class="specs"><strong>Material:</strong> Compressed composite stone<br><strong>Supplier:</strong> Claybrook Studio</div>
+        <a href="https://www.claybrookstudio.co.uk/formella-clay.html#gallery11748" target="_blank">View â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Quench Bellini</div>
+      <div class="card-body">
+        <h3>E: Quench Bellini</h3>
+        <div class="specs"><strong>Size:</strong> 600 Ã 600 Ã 8 mm<br><strong>Supplier:</strong> Claybrook Studio</div>
+        <a href="https://www.claybrookstudio.co.uk/quench-bellini.html" target="_blank">View â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Cornucopia Rose</div>
+      <div class="card-body">
+        <h3>F: Cornucopia Rose</h3>
+        <div class="specs"><strong>Size:</strong> 600 Ã 600 Ã 12 mm<br><strong>Supplier:</strong> Claybrook Studio</div>
+        <a href="https://www.claybrookstudio.co.uk/cornucopia-rose.html#gallery10048" target="_blank">View â</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== SHOWER TRAY ===== -->
+<div class="section" id="shower">
+  <h2>Shower Tray <span class="badge confirmed">Confirmed</span></h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Harbour Stone Resin Shower Tray</div>
+      <div class="card-body">
+        <h3>Harbour 28mm Luxury Stone Resin</h3>
+        <div class="specs">
+          <strong>Size:</strong> 1200 Ã 900 mm<br>
+          <strong>Profile:</strong> 25 mm (ultra-low)<br>
+          <strong>Material:</strong> 100% stone resin (not acrylic)<br>
+          <strong>Guarantee:</strong> Lifetime<br>
+          <strong>Supplier:</strong> Drench
+        </div>
+        <div class="note">Stone resin is heavier but far more rigid than acrylic â the waterproof seal holds better over time, significantly reducing leak risk.</div>
+        <a href="https://www.drench.co.uk/shower-enclosures/shower-trays/harbour-28mm-luxury-stone-resin-rectangular-shower-tray-1200-x-900mm" target="_blank">View on Drench â</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== BASIN / VANITY ===== -->
+<div class="section" id="vanity">
+  <h2>Basin / Vanity Unit <span class="badge pending">Decision Needed</span></h2>
+  <p class="subtitle">Wall C, to the right of the window</p>
+  <div class="grid">
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Avenza 600mm Terracotta Clay</div>
+      <div class="card-body">
+        <h3>A: Avenza 600mm Terracotta Clay</h3>
+        <div class="specs"><strong>Features:</strong> 2 drawers, ceramic basin, terracotta finish<br><strong>Supplier:</strong> Royal Bathrooms</div>
+        <a href="https://royalbathrooms.co.uk/avenza-700mm-terracotta-clay-wall-hung-vanity-unit-2-drawer-with-ceramic-basin-sf733-smb.html" target="_blank">View â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Arezzo Senza Matt Black & Oak</div>
+      <div class="card-body">
+        <h3>B: Arezzo Senza 600mm Matt Black & Oak</h3>
+        <div class="specs"><strong>Features:</strong> White basin, 1 drawer, open shelf for towels<br><strong>Supplier:</strong> Victorian Plumbing</div>
+        <a href="https://www.victorianplumbing.co.uk/arezzo-senza-600mm-matt-black-vicenza-oak-wall-hung-vanity-unit-with-open-shelf-ceramic-basin" target="_blank">View â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Atlas 600mm Matt Black</div>
+      <div class="card-body">
+        <h3>C: Atlas 600mm Matt Black 2-Drawer</h3>
+        <div class="specs"><strong>Features:</strong> Push-to-open drawers, gloss white basin<br><strong>Supplier:</strong> Victorian Plumbing</div>
+        <a href="https://www.victorianplumbing.co.uk/atlas-600mm-matt-black-2-drawer-wall-hung-vanity-unit-with-gloss-white-basin" target="_blank">View â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Pendle 600mm Black</div>
+      <div class="card-body">
+        <h3>D: Pendle 600mm Black Wall Hung</h3>
+        <div class="specs"><strong>Supplier:</strong> Better Bathrooms</div>
+        <a href="https://www.betterbathrooms.com/p/600mm-black-wall-hung-vanity-unit-with-basin-pendle-bunpen600bwh96091" target="_blank">View â</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== BASIN TAPS ===== -->
+<div class="section" id="taps">
+  <h2>Basin Taps <span class="badge pending">Decision Needed</span></h2>
+  <p class="subtitle">Matt black finish</p>
+  <div class="grid">
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Orchard Eden Matt Black</div>
+      <div class="card-body">
+        <h3>A: Orchard Eden Matt Black Mono</h3>
+        <div class="specs"><strong>Supplier:</strong> Victorian Plumbing</div>
+        <a href="https://www.victorianplumbing.co.uk/orchard-eden-matt-black-mono-basin-mixer-tap" target="_blank">View â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Grohe Start SilkMove</div>
+      <div class="card-body">
+        <h3>B: Grohe Start SilkMove M-Size</h3>
+        <div class="specs"><strong>Features:</strong> Push-open waste, matt black<br><strong>Supplier:</strong> Victorian Plumbing</div>
+        <a href="https://www.victorianplumbing.co.uk/grohe-start-silkmove-es-s-size-mono-basin-mixer-with-push-open-waste" target="_blank">View â</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== CABINET & SHELF ===== -->
+<div class="section" id="cabinet">
+  <h2>Wall Cabinet <span class="badge pending">Decision Needed</span></h2>
+  <p class="subtitle">Wall B above toilet â cabinet bottom at ~1350 mm from floor</p>
+  <div class="grid">
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Ridge Mirrored Cabinet, Black</div>
+      <div class="card-body">
+        <h3>1: Ridge Mirrored Cabinet, Black</h3>
+        <div class="specs"><strong>Material:</strong> Bamboo/MDF, black finish, ridged doors<br><strong>Supplier:</strong> John Lewis</div>
+        <div class="note">Black finish complements the shower enclosure frame</div>
+        <a href="https://www.johnlewis.com/john-lewis-ridge-mirrored-cabinet-black/p6678412" target="_blank">View â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Mirrored Slatted Cabinet, Natural</div>
+      <div class="card-body">
+        <h3>2: Mirrored Slatted Cabinet, Natural</h3>
+        <div class="specs"><strong>Material:</strong> Bamboo, sliding door, 2 shelves<br><strong>Supplier:</strong> John Lewis</div>
+        <div class="note">Warm natural tone complements the Dormido wood tiles</div>
+        <a href="https://www.johnlewis.com/john-lewis-mirrored-slatted-cabinet-natural/p6678418" target="_blank">View â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Slatted Wall Cabinet with Rail</div>
+      <div class="card-body">
+        <h3>3: Slatted Wall Cabinet with Rail</h3>
+        <div class="specs"><strong>Features:</strong> Slatted doors, towel rail below<br><strong>Supplier:</strong> John Lewis</div>
+        <div class="note">Towel rail handy for a hand towel near the toilet</div>
+        <a href="https://www.johnlewis.com/john-lewis-slatted-wall-cabinet-with-rail/p6678424" target="_blank">View â</a>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 24px;">
+    <div class="card" style="max-width: 400px;">
+      <div class="card-body">
+        <h3>Shelf Above Cabinet <span class="badge confirmed">Confirmed</span></h3>
+        <div class="specs"><strong>Product:</strong> Tikamoon Lila Solid Acacia 60cm<br><strong>Price:</strong> ~Â£49<br><strong>Height:</strong> ~1950â2050 mm from floor<br><strong>Use:</strong> Plants & decorative items</div>
+        <a href="https://www.tikamoon.co.uk/lila-solid-acacia-60cm-shelf.html" target="_blank">View â</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== LIGHTING ===== -->
+<div class="section" id="lighting">
+  <h2>Lighting <span class="badge pending">Decision Needed</span></h2>
+
+  <h3 style="margin: 24px 0 16px; color: #2E4057; font-size: 1.3em;">Vanity Wall Light (Wall C, above sink)</h3>
+  <p class="subtitle">Must be IP44 rated, with pull cord switch</p>
+  <div class="grid">
+    <div class="card">
+      <div class="card-img-placeholder" style="background: linear-gradient(135deg, #e8a040, #d4782a);">
+        <span style="color: white; font-size: 1.1em; font-weight: bold;">Dunelm Tela â Orange Glass<br><br>Click link below to see the product</span>
+      </div>
+      <div class="card-body">
+        <h3>A: Dunelm Tela â Orange <span class="badge recommended">Recommended</span></h3>
+        <div class="specs">
+          <strong>IP Rating:</strong> IP44 â<br>
+          <strong>Fitting:</strong> G9 LED<br>
+          <strong>Finish:</strong> Matt black base, orange glass shade<br>
+          <strong>Switch:</strong> Built-in pull cord
+        </div>
+        <div class="note">The warm orange glass adds a pop of colour against the green tiles and wood tones. Complements the terracotta palette beautifully.</div>
+        <a href="https://www.dunelm.com/product/tela-bathroom-wall-light-black-1000182545?colour=Orange" target="_blank">View on Dunelm â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder" style="background: linear-gradient(135deg, #444, #222);">
+        <span style="color: white; font-size: 1.1em; font-weight: bold;">Dunelm Tela â Black Glass<br><br>Click link below to see the product</span>
+      </div>
+      <div class="card-body">
+        <h3>B: Dunelm Tela â Black</h3>
+        <div class="specs">
+          <strong>IP Rating:</strong> IP44 â<br>
+          <strong>Fitting:</strong> G9 LED<br>
+          <strong>Finish:</strong> Matt black base, black/opal glass shade<br>
+          <strong>Switch:</strong> Built-in pull cord
+        </div>
+        <a href="https://www.dunelm.com/product/tela-bathroom-wall-light-black-1000182545?colour=Black" target="_blank">View on Dunelm â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Lasson Living Nordic Globe</div>
+      <div class="card-body">
+        <h3>C: Lasson Living Nordic Globe</h3>
+        <div class="specs">
+          <strong>IP Rating:</strong> UNCONFIRMED<br>
+          <strong>Features:</strong> LED, frosted glass globe<br>
+          <strong>Finish:</strong> Black metal base<br>
+          <strong>Switch:</strong> Built-in pull cord
+        </div>
+        <div class="warning">â ï¸ IP rating not confirmed â contact Lasson Living before purchasing. The Dunelm Tela is a safer choice with confirmed IP44.</div>
+        <a href="https://lassonliving.com/products/nordic-minimalist-glass-globe-wall-sconce-led-1-light-with-pull-cord" target="_blank">View on Lasson Living â</a>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="margin: 40px 0 16px; color: #2E4057; font-size: 1.3em;">Ceiling Downlights</h3>
+  <p class="subtitle">Dimmable black IP44 GU10 recessed â controlled by pull cord dimmer</p>
+  <div class="grid">
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Lamp&Light Chuck Black/Gold</div>
+      <div class="card-body">
+        <h3>Lamp&Light Chuck Black/Gold <span class="badge recommended">Recommended</span></h3>
+        <div class="specs">
+          <strong>IP Rating:</strong> IP44 â<br>
+          <strong>Fitting:</strong> GU10 (choose your own bulb)<br>
+          <strong>Finish:</strong> Black with gold inner ring<br>
+          <strong>Sold as:</strong> Set of 6
+        </div>
+        <div class="note">GU10 fitting lets you pick a known trailing-edge compatible bulb â guaranteed flicker-free dimming. Black/gold pairs nicely with brushed brass shower fittings.</div>
+        <a href="https://www.lampandlight.co.uk/chuck-recessed-spotlight-black-gold-set-of-6-gu10-ip44.html" target="_blank">View on Lamp&Light â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Briloner Klira Black</div>
+      <div class="card-body">
+        <h3>Briloner Klira â Black</h3>
+        <div class="specs">
+          <strong>IP Rating:</strong> IP44 â<br>
+          <strong>Fitting:</strong> Integrated LED<br>
+          <strong>Finish:</strong> Black
+        </div>
+        <div class="warning">Integrated LED â trailing-edge dimmer compatibility uncertain. May flicker with the Knightsbridge pull cord dimmer.</div>
+        <a href="https://www.amazon.co.uk/dp/B0D5GPTHR6" target="_blank">View on Amazon â</a>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="margin: 40px 0 16px; color: #2E4057; font-size: 1.3em;">Pull Cord Switches</h3>
+  <div class="grid">
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Revive Matt Black Pull Cord</div>
+      <div class="card-body">
+        <h3>Extractor Fan: Revive Matt Black</h3>
+        <div class="specs"><strong>Type:</strong> Standard on/off<br><strong>Finish:</strong> Matt black</div>
+        <a href="https://www.victorianplumbing.co.uk/revive-matt-black-light-pull-cord" target="_blank">View â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Knightsbridge ML8301MB</div>
+      <div class="card-body">
+        <h3>Downlights: Knightsbridge ML8301MB Dimmer</h3>
+        <div class="specs">
+          <strong>Type:</strong> Trailing-edge pull cord dimmer<br>
+          <strong>Rating:</strong> 5â100W LED<br>
+          <strong>Finish:</strong> Matt black<br>
+          <strong>Price:</strong> ~Â£20.28
+        </div>
+        <div class="note">Pull once to turn on/off. Pull and hold to dim up/down.</div>
+        <a href="https://www.tlc-direct.co.uk/Products/KBML8301MB.html" target="_blank">View â</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== EXTRACTOR FAN ===== -->
+<div class="section" id="extractor">
+  <h2>Extractor Fan <span class="badge pending">Decision Needed</span></h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Airflow iCON ECO 15</div>
+      <div class="card-body">
+        <h3>A: Airflow iCON ECO 15</h3>
+        <div class="specs">
+          <strong>Features:</strong> Humidity sensor + timer (optional). Backdraught shutter included.<br>
+          <strong>Supplier:</strong> Amazon
+        </div>
+        <div class="note">Backdraught shutter prevents cold air coming back in through the duct.</div>
+        <a href="https://www.amazon.co.uk/Airflow-iCON-ECO-15-Extractor/dp/B00OHZ5USQ/ref=sr_1_6" target="_blank">View â</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder">Image loads when online<br>Arezzo 100mm Turbo Black</div>
+      <div class="card-body">
+        <h3>B: Arezzo 100mm Turbo with Humidistat, Black</h3>
+        <div class="specs">
+          <strong>Features:</strong> Built-in humidity sensor, matt black finish<br>
+          <strong>Supplier:</strong> Victorian Plumbing
+        </div>
+        <div class="warning">No backdraught shutter â cold air may come back in through the duct.</div>
+        <a href="https://www.victorianplumbing.co.uk/arezzo-100mm-turbo-extractor-fan-humidistat-black" target="_blank">View â</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== SUMMARY ===== -->
+<div class="section" id="summary">
+  <h2>Quick Reference Summary</h2>
+  <div class="key-info">
+    <table>
+      <tr><th>Item</th><th>Status</th><th>Recommendation / Notes</th></tr>
+      <tr><td>Shower tiles (Dormido)</td><td><span class="badge confirmed">Confirmed</span></td><td>6.95 mÂ² with wastage, 12â13 tiles</td></tr>
+      <tr><td>Wall tiles (Matteo Green)</td><td><span class="badge confirmed">Confirmed</span></td><td>7.65 mÂ² with wastage â Walls C & D only</td></tr>
+      <tr><td>Floor tiles</td><td><span class="badge pending">Pending</span></td><td>6 options â 3.05 mÂ² needed</td></tr>
+      <tr><td>Shower tray</td><td><span class="badge confirmed">Confirmed</span></td><td>Drench stone resin 1200Ã900</td></tr>
+      <tr><td>Basin/Vanity</td><td><span class="badge pending">Pending</span></td><td>4 options</td></tr>
+      <tr><td>Basin tap</td><td><span class="badge pending">Pending</span></td><td>Orchard Eden or Grohe Start (matt black)</td></tr>
+      <tr><td>Wall cabinet</td><td><span class="badge pending">Pending</span></td><td>3 John Lewis options</td></tr>
+      <tr><td>Vanity light</td><td><span class="badge pending">Pending</span></td><td>Dunelm Tela Orange recommended (IP44 â)</td></tr>
+      <tr><td>Ceiling downlights</td><td><span class="badge pending">Pending</span></td><td>Lamp&Light Chuck black/gold (GU10, IP44)</td></tr>
+      <tr><td>Pull cord dimmer</td><td><span class="badge pending">Pending</span></td><td>Knightsbridge ML8301MB (5â100W)</td></tr>
+      <tr><td>Extractor fan</td><td><span class="badge pending">Pending</span></td><td>2 options</td></tr>
+      <tr><td>Paint</td><td><span class="badge pending">Pending</span></td><td>Claybrook terracotta + desert paint for Wall B above 1200mm</td></tr>
+      <tr><td>Shower valve/head</td><td><span class="badge pending">Pending</span></td><td>Brushed brass thermostatic rain set</td></tr>
+    </table>
+  </div>
+
+  <div style="margin-top: 30px; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+    <h3 style="color: #2E4057; margin-bottom: 12px;">Wall B Design Change</h3>
+    <p style="font-size: 0.95em;">The non-shower section of Wall B (behind the toilet) now has <strong>Dormido wood effect tiles from floor to 1200 mm</strong>, with a <strong>light desert-style paint from 1200 mm to ceiling</strong>. The fluted green tiles have been removed from this wall. This creates a warm, cohesive look with the shower tiles while keeping the ceiling area light and airy.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Kirsty Bathroom Renovation â 30 Inwood Crescent, Brighton â March 2026</p>
+  <p style="margin-top: 8px;">Click any product link to view full details and images on the retailer's website</p>
+</div>
+
+</body>
+</html>
