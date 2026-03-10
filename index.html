@@ -466,50 +466,209 @@
   <h2>Lighting <span class="badge pending">Decision Needed</span></h2>
 
   <h3 style="margin: 24px 0 16px; color: #2E4057; font-size: 1.3em;">Vanity Wall Light (Wall C, above sink)</h3>
-  <p class="subtitle">Must be IP44 rated, with pull cord switch</p>
+  <p class="subtitle">Two approaches: G9 fixture + smart switch, or E27 fixture + smart colour-changing bulb. All controlled via FLIC button/Twist.</p>
+
+  <!-- APPROACH EXPLAINER -->
+  <div class="key-info" style="margin-bottom:24px;">
+    <h3 style="color:#2E4057; margin-bottom:12px; font-size:1.05em;">Two Smart Lighting Approaches</h3>
+    <table style="width:100%; border-collapse:collapse; font-size:0.9em;">
+      <tr><th style="width:20%;">Approach</th><th style="width:40%;">How it works</th><th style="width:40%;">Pros &amp; cons</th></tr>
+      <tr style="background:#e3f2fd;">
+        <td style="padding:10px 12px;"><strong>🔵 Smart Switch</strong><br><span style="font-size:0.85em;color:#666;">G9 fixture + Shelly/SONOFF</span></td>
+        <td style="padding:10px 12px;">Wire a tiny WiFi relay (Shelly 1 Mini or SONOFF MINIR4M) behind the light fitting. The relay sits on WiFi and responds to FLIC button presses via HTTP. The Ellis &amp; Co pull cord stays in the circuit as a manual backup/isolation point — leave it "on" permanently.</td>
+        <td style="padding:10px 12px;"><strong>+</strong> Wider choice of IP44 bathroom fixtures<br><strong>+</strong> Cheaper overall<br><strong>+</strong> Simpler wiring<br><strong>−</strong> No colour changing<br><strong>−</strong> On/off only (dimming possible with Shelly Dimmer but tricky at low G9 wattage)</td>
+      </tr>
+      <tr style="background:#fff3e0;">
+        <td style="padding:10px 12px;"><strong>🟠 Smart Bulb</strong><br><span style="font-size:0.85em;color:#666;">E27 fixture + LIFX Mini Color</span></td>
+        <td style="padding:10px 12px;">Choose an E27 fixture and leave it permanently powered on. A LIFX Mini Color smart bulb goes inside — FLIC button/Twist controls on/off, brightness, and colour via WiFi. The smart bulb draws ~0.5W in standby when "off". Pull cord stays in circuit for isolation.</td>
+        <td style="padding:10px 12px;"><strong>+</strong> Full RGB colour changing<br><strong>+</strong> Dimming built in<br><strong>+</strong> Warm orange glow or any mood colour on demand<br><strong>−</strong> IP44 E27 fixtures are rarer/pricier<br><strong>−</strong> LIFX bulb adds ~£30–40 to cost</td>
+      </tr>
+    </table>
+    <p style="font-size:0.82em; color:#888; margin-top:10px;"><strong>IP44 required:</strong> The vanity light is in Zone 2 (within 600mm of the basin), so the fixture must be IP44 rated. Options marked IP20 can only be used if positioned more than 600mm from the basin edge.</p>
+  </div>
+
+  <!-- APPROACH A: G9 + SMART SWITCH -->
+  <h4 style="margin: 24px 0 12px; color: #1565c0; font-size: 1.1em;">🔵 Approach A — G9 Fixture + Smart Switch</h4>
+  <p class="subtitle">These use a G9 bulb — pair with a Shelly 1 Mini or SONOFF MINIR4M behind the fitting for FLIC control</p>
   <div class="grid">
     <div class="card">
       <img class="card-img" src="https://images.dunelm.com/30894878.jpg?$standardplayerdefault$&img404=noimagedefault" alt="Dunelm Tela Orange" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Dunelm Tela — Orange Glass</span></div>'">
       <div class="card-body">
-        <h3>A: Dunelm Tela — Orange <span class="badge recommended">Recommended</span></h3>
+        <h3>1: Dunelm Tela — Orange</h3>
         <div class="specs">
           <strong>IP Rating:</strong> IP44 ✓<br>
           <strong>Fitting:</strong> G9 LED<br>
           <strong>Finish:</strong> Matt black base, orange glass shade<br>
           <strong>Switch:</strong> Built-in pull cord<br>
+          <strong>Price:</strong> ~£25–30<br>
           <strong>Order qty:</strong> 1
         </div>
-        <div class="note">The warm orange glass adds a pop of colour against the green tiles and wood tones. Complements the terracotta palette beautifully.</div>
+        <div class="note">The warm orange glass adds a pop of colour against the green tiles and wood tones. Has its own pull cord built in, but reviews are mixed. With a Shelly behind it, the pull cord becomes a backup and the FLIC handles daily use.</div>
         <a href="https://www.dunelm.com/product/tela-bathroom-wall-light-black-1000182545" target="_blank">View on Dunelm →</a>
       </div>
     </div>
     <div class="card">
-      <img class="card-img" src="https://images.dunelm.com/30713561.jpg?$standardplayerdefault$&img404=noimagedefault" alt="Dunelm Tela Black" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Dunelm Tela — Black Glass</span></div>'">
+      <img class="card-img" src="https://media.johnlewiscontent.com/i/JohnLewis/112890225alt3?fmt=auto&$background-off-white$&wid=640&hei=853" alt="Houseof Opal Disk Wall Light Orange" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Houseof Opal Disk — Orange</span></div>'">
       <div class="card-body">
-        <h3>B: Dunelm Tela — Black</h3>
+        <h3>2: Houseof Opal Disk — Orange</h3>
         <div class="specs">
           <strong>IP Rating:</strong> IP44 ✓<br>
-          <strong>Fitting:</strong> G9 LED<br>
-          <strong>Finish:</strong> Matt black base, black/opal glass shade<br>
-          <strong>Switch:</strong> Built-in pull cord<br>
+          <strong>Fitting:</strong> G9<br>
+          <strong>Finish:</strong> Peel orange disc with opal glass shade<br>
+          <strong>Supplier:</strong> John Lewis / houseof.com<br>
           <strong>Order qty:</strong> 1
         </div>
-        <a href="https://www.dunelm.com/product/tela-bathroom-wall-light-black-1000182545" target="_blank">View on Dunelm →</a>
+        <div class="note">Bold, retro-modern design with a frosted opal globe on a vivid orange backplate. The disc shape makes a real statement on the wall. Bathroom-rated (IP44) with splash resistance.</div>
+        <a href="https://www.johnlewis.com/houseof-opal-disk-wall-light-orange/p112890370" target="_blank">View on John Lewis →</a>
       </div>
     </div>
     <div class="card">
-      <img class="card-img" src="https://lassonliving.com/cdn/shop/files/nordic-glass-globe-wall-sconce.jpg" alt="Lasson Living Nordic Globe" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Lasson Living Nordic Globe</span></div>'">
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg, #8B4513, #D2691E); display:flex; align-items:center; justify-content:center;">
+        <span style="font-size:0.85em;color:#fff;text-align:center;padding:20px;">ValueLights Darla<br>Rust Frosted Globe</span>
+      </div>
       <div class="card-body">
-        <h3>C: Lasson Living Nordic Globe</h3>
+        <h3>3: ValueLights Darla — Rust Frosted Globe</h3>
         <div class="specs">
-          <strong>IP Rating:</strong> UNCONFIRMED<br>
-          <strong>Features:</strong> LED, frosted glass globe<br>
-          <strong>Finish:</strong> Black metal base<br>
-          <strong>Switch:</strong> Built-in pull cord<br>
+          <strong>IP Rating:</strong> IP44 ✓<br>
+          <strong>Fitting:</strong> G9 (bulb included)<br>
+          <strong>Finish:</strong> Matte rust with frosted glass globe<br>
+          <strong>Price:</strong> £24.00 <span style="text-decoration:line-through;color:#999;">£30.00</span> (also available as 2-pack: £42)<br>
+          <strong>Supplier:</strong> Homebase<br>
           <strong>Order qty:</strong> 1
         </div>
-        <div class="warning">⚠️ IP rating not confirmed — contact Lasson Living before purchasing. The Dunelm Tela is a safer choice with confirmed IP44.</div>
-        <a href="https://lassonliving.com/products/nordic-minimalist-glass-globe-wall-sconce-led-1-light-with-pull-cord" target="_blank">View on Lasson Living →</a>
+        <div class="note">Great value IP44 bathroom light with a warm rust finish that complements the terracotta palette. Frosted globe diffuses light softly. Matching ceiling lights available in the Darla range. G9 bulb included. Pair with a Shelly or SONOFF for FLIC control.</div>
+        <a href="https://www.homebase.co.uk/en-uk/valuelights-darla-rust-frosted-globe-bathroom-wall-light-bulb/p/0761252" target="_blank">View on Homebase →</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg, #D2691E, #FF8C00); display:flex; align-items:center; justify-content:center;">
+        <span style="font-size:0.85em;color:#fff;text-align:center;padding:20px;">Sollux ZORI<br>Orange IP44</span>
+      </div>
+      <div class="card-body">
+        <h3>4: Sollux ZORI — Orange IP44</h3>
+        <div class="specs">
+          <strong>IP Rating:</strong> IP44 ✓<br>
+          <strong>Fitting:</strong> G9<br>
+          <strong>Finish:</strong> Orange with frosted glass globe<br>
+          <strong>Supplier:</strong> Sollux Lamps UK<br>
+          <strong>Order qty:</strong> 1
+        </div>
+        <div class="note">Polish-designed bathroom wall lamp with a vivid orange finish and frosted globe. IP44 bathroom rated. The ZORI range also comes in other colours (white, green, etc.) and has matching ceiling options. G9 fitting — pair with Shelly/SONOFF for FLIC control.</div>
+        <a href="https://sollux-lamps.co.uk/en/products/wall-lamp-zori-orange-ip44-5898" target="_blank">View on Sollux UK →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- APPROACH B: E27 + SMART BULB -->
+  <h4 style="margin: 32px 0 12px; color: #e65100; font-size: 1.1em;">🟠 Approach B — E27 Fixture + LIFX Mini Color Smart Bulb</h4>
+  <p class="subtitle">These use an E27 socket — fit a LIFX Mini Color bulb for full RGB colour control via FLIC. Fixture stays always-on, bulb handles switching.</p>
+  <div class="grid">
+    <div class="card">
+      <img class="card-img" src="https://www.dykeanddean.com/cdn/shop/products/orange-globe-reflector-lamp-dyke-dean-227719.png?v=1709681739&width=2560" alt="Dyke & Dean Orange Globe Reflector" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Dyke &amp; Dean Orange Globe Reflector</span></div>'">
+      <div class="card-body">
+        <h3>5: Dyke &amp; Dean Orange Globe Reflector <span class="badge confirmed">IP44 ✓</span></h3>
+        <div class="specs">
+          <strong>IP Rating:</strong> IP44 ✓<br>
+          <strong>Fitting:</strong> E27<br>
+          <strong>Material:</strong> Steel body, opal glass globe<br>
+          <strong>Finish:</strong> Orange powder coat<br>
+          <strong>Mount:</strong> Wall or ceiling<br>
+          <strong>Price:</strong> ~£156<br>
+          <strong>Supplier:</strong> Dyke &amp; Dean (UK)<br>
+          <strong>Order qty:</strong> 1
+        </div>
+        <div class="note">Industrial-meets-playful design — steel body with a central opal globe. IP44 rated for bathrooms. E27 socket takes a LIFX Mini Color for full colour control via FLIC. The orange finish ties into the terracotta palette beautifully. This is the premium choice but bathroom-safe.</div>
+        <a href="https://www.dykeanddean.com/products/orange-globe-reflector-lamp?variant=39762623987767" target="_blank">View on Dyke &amp; Dean →</a>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://lw-cdn.com/images/0BD9824FCB8D/k_75bd869f137b2cd3bc59b7ac83cc2eca;w_467;h_467;q_90/10044960.webp" alt="Ideal Lux Mapa Wall Light" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Ideal Lux Mapa — White Globe</span></div>'">
+      <div class="card-body">
+        <h3>6: Ideal Lux Mapa — White Glass Sphere</h3>
+        <div class="specs">
+          <strong>IP Rating:</strong> IP20 ⚠️<br>
+          <strong>Fitting:</strong> E27 (max 42W)<br>
+          <strong>Size:</strong> ø 200 mm globe<br>
+          <strong>Material:</strong> Blown acid-etched glass<br>
+          <strong>Supplier:</strong> lights.co.uk<br>
+          <strong>Order qty:</strong> 1
+        </div>
+        <div class="warning">⚠️ IP20 only — NOT safe for Zone 2. Can only be used if positioned more than 600mm from the basin edge. Measure carefully before ordering. Beautiful minimalist frosted sphere, E27 takes LIFX Mini Color.</div>
+        <a href="https://www.lights.co.uk/p/ideal-lux-mapa-wall-light-o-20-cm-e27-white-glass-sphere-10044960.html" target="_blank">View on lights.co.uk →</a>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/61rV0hlIplL._AC_SX679_.jpg" alt="Hanaloa Globe Wall Sconce" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Hanaloa Globe Sconce — Matte Black</span></div>'">
+      <div class="card-body">
+        <h3>7: Hanaloa Globe Sconce — Matte Black</h3>
+        <div class="specs">
+          <strong>IP Rating:</strong> Not rated ⚠️<br>
+          <strong>Fitting:</strong> E26/E27 (max 60W)<br>
+          <strong>Finish:</strong> Matte black base, opal glass globe<br>
+          <strong>Mount:</strong> Wall or ceiling<br>
+          <strong>Dimmable:</strong> Yes (with dimmable bulb)<br>
+          <strong>Supplier:</strong> Amazon<br>
+          <strong>Order qty:</strong> 1
+        </div>
+        <div class="warning">⚠️ No IP rating — indoor use only (UL listed). Must be positioned more than 600mm from basin edge. Clean mid-century globe design, works beautifully with a LIFX Mini Color for colour-changing mood lighting.</div>
+        <a href="https://www.amazon.com/dp/B0BCG12NKW" target="_blank">View on Amazon →</a>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/711WGqAccXL._AC_UF894,1000_QL80_.jpg" alt="Black Globe Wall Sconce" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Black Globe Wall Sconce</span></div>'">
+      <div class="card-body">
+        <h3>8: Black Globe Wall Sconce — eBay</h3>
+        <div class="specs">
+          <strong>IP Rating:</strong> Check before ordering ⚠️<br>
+          <strong>Fitting:</strong> E27<br>
+          <strong>Finish:</strong> Matte black base, clear/opal glass globe<br>
+          <strong>Supplier:</strong> eBay<br>
+          <strong>Order qty:</strong> 1
+        </div>
+        <div class="warning">⚠️ IP rating not confirmed — check listing details. If IP44, safe for above basin. If not, must be 600mm+ from basin. E27 socket takes LIFX Mini Color.</div>
+        <a href="https://www.ebay.co.uk/itm/277732058656" target="_blank">View on eBay →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SMART HOME HARDWARE -->
+  <h4 style="margin: 32px 0 12px; color: #2E4057; font-size: 1.1em;">Smart Home Hardware (for either approach)</h4>
+  <p class="subtitle">WiFi smart switches for Approach A, or just the FLIC button for Approach B. Both approaches use FLIC for daily control.</p>
+  <div class="grid">
+    <div class="card">
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg, #1a1a2e, #2E4057); display:flex; align-items:center; justify-content:center;">
+        <span style="font-size:0.85em;color:#ccc;text-align:center;padding:20px;">SONOFF MINIR4M<br>Matter Smart Switch</span>
+      </div>
+      <div class="card-body">
+        <h3>SONOFF MINIR4M — WiFi + Matter Smart Switch</h3>
+        <div class="specs">
+          <strong>Size:</strong> 39.5 × 33 × 16.8 mm (tiny!)<br>
+          <strong>Rating:</strong> 10A / 2400W<br>
+          <strong>Connectivity:</strong> WiFi 2.4GHz + Matter<br>
+          <strong>Neutral wire:</strong> Required<br>
+          <strong>Price:</strong> ~£10–15<br>
+          <strong>Order qty:</strong> 1
+        </div>
+        <div class="note">Fits behind the light fitting or in a ceiling void. Matter-certified for local control (works even if internet goes down). FLIC sends HTTP commands to toggle on/off. Cheapest smart switch option.</div>
+        <a href="https://www.amazon.co.uk/SONOFF-Wireless-Universal-Automation-Compatible/dp/B0CG8XDJ35" target="_blank">View on Amazon UK →</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg, #1a1a2e, #2E4057); display:flex; align-items:center; justify-content:center;">
+        <span style="font-size:0.85em;color:#ccc;text-align:center;padding:20px;">Shelly Dimmer Gen3<br>Smart Dimmer Relay</span>
+      </div>
+      <div class="card-body">
+        <h3>Shelly Dimmer Gen3 — WiFi Smart Dimmer</h3>
+        <div class="specs">
+          <strong>Type:</strong> Trailing-edge dimmer<br>
+          <strong>Rating:</strong> Up to 150W LED<br>
+          <strong>Connectivity:</strong> WiFi 2.4GHz + Bluetooth<br>
+          <strong>Neutral wire:</strong> Not required (bypass may be needed below 20W)<br>
+          <strong>Price:</strong> ~£20–25<br>
+          <strong>Order qty:</strong> 1
+        </div>
+        <div class="warning">⚠️ Dimming G9 bulbs at low wattage (3–5W) can be tricky — may need a bypass module or neutral wire. Best used if dimming is important to you. Otherwise the SONOFF on/off switch is simpler.</div>
+        <a href="https://shellystore.co.uk/product/shelly-dimmer-gen3/" target="_blank">View on Shelly Store UK →</a>
       </div>
     </div>
   </div>
