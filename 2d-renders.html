@@ -297,13 +297,22 @@
      ========================================================== -->
 <div class="section" id="wall-c">
   <h2>Wall C — Right Wall (Window Wall)</h2>
-  <p class="subtitle">Matteo fluted green tiles throughout · Centred window with plants on sill · Vertical teak shelf left of window · Floating vanity ~75 mm from Wall D · Tela sconce above sink</p>
+  <p class="subtitle">Matteo fluted green tiles to ~1200 mm only · Plaster/paint above · Centred window · Vertical teak shelf left of window · Floating vanity ~75 mm from Wall D · Sconce above sink</p>
   <div class="render-container">
     <svg viewBox="0 0 470 540" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:650px;">
       <!-- Scale: 379px = 2108mm, 450px = 2502mm. Origin at (50,40) -->
 
-      <!-- Wall — full green tiles -->
-      <rect x="50" y="40" width="379" height="450" fill="url(#green-fluted)" stroke="#4a7555" stroke-width="1.5"/>
+      <!-- Wall — plaster/paint top (above 1200mm) -->
+      <rect x="50" y="40" width="379" height="450" fill="#f0ebe3" stroke="#c8bfb0" stroke-width="1.5"/>
+      <!-- Green tiles — bottom band (floor to 897mm = y329 to y490) -->
+      <rect x="50" y="329" width="379" height="161" fill="url(#green-fluted)" stroke="#4a7555" stroke-width="1"/>
+      <!-- Green tiles — left window patch (897mm to 1200mm = y274 to y329) -->
+      <rect x="50" y="274" width="67" height="55" fill="url(#green-fluted)" stroke="#4a7555" stroke-width="0.8"/>
+      <!-- Green tiles — right window patch (897mm to 1200mm = y274 to y329) -->
+      <rect x="362" y="274" width="67" height="55" fill="url(#green-fluted)" stroke="#4a7555" stroke-width="0.8"/>
+      <!-- Tile/paint transition line at ~1200mm -->
+      <line x1="50" y1="274" x2="429" y2="274" stroke="#8B6914" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+      <text x="440" y="278" font-size="6" fill="#888">~1200mm</text>
 
       <!-- Floor -->
       <rect x="50" y="478" width="379" height="12" fill="url(#terrazzo)" stroke="#b89060" stroke-width="0.5"/>
@@ -332,8 +341,8 @@
       <!-- Window sill -->
       <rect x="120" y="319" width="240" height="10" fill="#ddd" stroke="#bbb" stroke-width="0.8" rx="1"/>
 
-      <!-- Green tile trim around window — raised border frame -->
-      <rect x="120" y="110" width="240" height="226" fill="none" stroke="#4e7a5a" stroke-width="4"/>
+      <!-- Window surround — painted plaster (no tile trim, above 1200mm) -->
+      <rect x="120" y="110" width="240" height="226" fill="none" stroke="#c8bfb0" stroke-width="2"/>
 
       <!-- Plants on window sill -->
       <ellipse cx="155" cy="315" rx="14" ry="11" fill="#3a7845" opacity="0.7"/>
