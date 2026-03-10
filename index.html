@@ -20,6 +20,7 @@
   .badge.confirmed { background: #e8f5e9; color: #2e7d32; }
   .badge.pending { background: #fff3e0; color: #e65100; }
   .badge.recommended { background: #e3f2fd; color: #1565c0; }
+  .badge.ordered { background: #c8e6c9; color: #1b5e20; }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
   .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
   .card:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
@@ -67,6 +68,7 @@
   <a href="#lighting">Lighting</a>
   <a href="#extractor">Extractor</a>
   <a href="#radiator">Radiator</a>
+  <a href="#accessories">Accessories</a>
   <a href="#budget">Budget</a>
   <a href="#summary">Summary</a>
   <a href="2d-renders.html" style="background:rgba(255,255,255,0.25);font-weight:600;">2D Renders →</a>
@@ -74,19 +76,19 @@
 
 <!-- ===== CONFIRMED TILES ===== -->
 <div class="section" id="tiles">
-  <h2>Confirmed Tiles</h2>
-  <p class="subtitle">These are locked in — no decision needed</p>
+  <h2>Tiles <span class="badge ordered">Ordered</span></h2>
+  <p class="subtitle">Ordered from Victorian Plumbing</p>
   <div class="grid">
     <div class="card">
       <img class="card-img" src="https://images.victorianplumbing.co.uk/products/dormido-large-format-oak-black-slatted-wood-effect-wall-tiles-600-x-1200mm/mainimages/dor6012bla.jpg" alt="Dormido Oak & Black Slatted Wood Effect" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Dormido Oak &amp; Black Slatted Wood Effect</span></div>'">
       <div class="card-body">
-        <h3>Dormido Oak & Black Slatted Wood Effect <span class="badge confirmed">Confirmed</span></h3>
+        <h3>Dormido Oak & Black Slatted Wood Effect <span class="badge ordered">Ordered</span></h3>
         <div class="specs">
           <strong>Size:</strong> 600 × 1200 mm<br>
           <strong>Coverage:</strong> Shower walls + Wall B feature (6.95 m² with wastage)<br>
           <strong>Orientation:</strong> HORIZONTAL<br>
-          <strong>Price:</strong> ~£34.95/m²<br>
-          <strong>Order qty:</strong> 13 tiles (9.36 m²) — sold per m², order ~9.5 m²
+          <strong>Price:</strong> £50.33/box (5 boxes = 7.20 m²)<br>
+          <strong>Ordered:</strong> 5 boxes — £251.65
         </div>
         <a href="https://www.victorianplumbing.co.uk/dormido-large-format-oak-black-slatted-wood-effect-wall-tiles-600-x-1200mm?preSelected=true&sku=DOR6012BLA" target="_blank">View on Victorian Plumbing →</a>
       </div>
@@ -94,13 +96,14 @@
     <div class="card">
       <img class="card-img" src="https://images.victorianplumbing.co.uk/products/stonehouse-studio-matteo-fluted-green-wall-tiles-150-x-300mm/mainimages/mat1530grn_d3.jpg" alt="Matteo Fluted Green" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Matteo Fluted Green</span></div>'">
       <div class="card-body">
-        <h3>Matteo Fluted Green <span class="badge confirmed">Confirmed</span></h3>
+        <h3>Matteo Fluted Green <span class="badge ordered">Ordered</span></h3>
         <div class="specs">
           <strong>Size:</strong> 150 × 300 mm<br>
           <strong>Coverage:</strong> Walls C & D (7.31 m² with wastage)<br>
           <strong>Finish:</strong> Ceramic gloss, fluted/ridged<br>
           <strong>Thickness:</strong> 7.5 mm<br>
-          <strong>Order qty:</strong> ~7.5 m² — sold per m² (each tile = 0.045 m², ~167 tiles)
+          <strong>Price:</strong> £36.35/box (7 boxes = 6.37 m²)<br>
+          <strong>Ordered:</strong> 7 boxes — £254.45
         </div>
         <a href="https://www.victorianplumbing.co.uk/stonehouse-studio-matteo-fluted-green-wall-tiles-150-x-300mm?preSelected=true&sku=MAT1530GRN" target="_blank">View on Victorian Plumbing →</a>
       </div>
@@ -143,7 +146,8 @@
 
 <!-- ===== SHOWER TRAY ===== -->
 <div class="section" id="shower">
-  <h2>Shower Tray &amp; Waste <span class="badge confirmed">Confirmed</span></h2>
+  <h2>Shower Tray &amp; Waste <span class="badge ordered">Ordered</span></h2>
+  <p class="subtitle">Drench order DR313663 — delivering 11th March</p>
   <div class="grid">
     <div class="card">
       <img class="card-img" src="https://img.drench.co.uk/products/3/7/d/c/37dc0fafa5d12f5474f88b37e245ac4b40d91774_harbour_28mm_luxury_stone_shower_tray_rectangular_lifestyle_2.jpg" alt="Harbour Stone Resin Shower Tray" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Harbour Stone Resin Shower Tray</span></div>'">
@@ -239,8 +243,8 @@
 
 <!-- ===== TOILET ===== -->
 <div class="section" id="toilet">
-  <h2>Toilet <span class="badge pending">Decision Needed</span></h2>
-  <p class="subtitle">Wall B, to the right of the shower — three options</p>
+  <h2>Toilet <span class="badge ordered">Ordered</span></h2>
+  <p class="subtitle">Wall B, to the right of the shower — Arezzo BTW ordered from Victorian Plumbing</p>
   <div class="grid">
     <div class="card">
       <img class="card-img" src="https://dam.cityplumbing.co.uk/private/o35ww75/GPID_1500052911_IMG_00.jpeg?width=451&height=443" alt="Vitellio Ashdon Close Coupled Toilet and Seat" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Vitellio Ashdon Close Coupled Toilet &amp; Seat</span></div>'">
@@ -282,15 +286,15 @@
     <div class="card">
       <img class="card-img" src="https://images.victorianplumbing.co.uk/products/arezzo-btw-close-coupled-toilet-with-matt-black-soft-close-seat/mainimages/arzccmbgw_l.webp?origin=arzccmbgw_l.png&w=675" alt="Arezzo BTW Close Coupled Toilet" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Arezzo BTW Close Coupled Toilet</span></div>'">
       <div class="card-body">
-        <h3>Arezzo BTW Close Coupled — Matt Black Seat <span class="badge recommended">Recommended</span></h3>
+        <h3>Arezzo BTW Close Coupled — Matt Black Seat <span class="badge ordered">Ordered</span></h3>
         <div class="specs">
-          <strong>Price:</strong> ~£150–£180<br>
+          <strong>Price:</strong> £289.95 <span style="color:#2e7d32;font-weight:700;">(−10% AREZZO10 = ~£260.95)</span><br>
           <strong>Dimensions:</strong> W 400 × D 640 × H 405 mm (projection ~618 mm)<br>
           <strong>Type:</strong> Back-to-wall close coupled, rimless pan<br>
           <strong>Seat:</strong> Slim soft close, matt black hinges<br>
           <strong>Flush:</strong> Dual flush, water-efficient<br>
           <strong>Supplier:</strong> Victorian Plumbing<br>
-          <strong>Order qty:</strong> 1
+          <strong>Ordered:</strong> 1
         </div>
         <div class="note">Best balance of style, space, and price. Rimless pan is easier to clean. Matt black seat and hinges tie in with the shower enclosure and hardware. Short 618 mm projection leaves good clearance. Back-to-wall design hides pipework for a cleaner look.</div>
         <a href="https://www.victorianplumbing.co.uk/arezzo-btw-close-coupled-toilet-with-matt-black-soft-close-seat" target="_blank">View on Victorian Plumbing →</a>
@@ -306,8 +310,8 @@
 
 <!-- ===== BASIN / VANITY ===== -->
 <div class="section" id="vanity">
-  <h2>Basin / Vanity Unit <span class="badge pending">Decision Needed</span></h2>
-  <p class="subtitle">Wall C, to the right of the window</p>
+  <h2>Basin / Vanity Unit <span class="badge ordered">Ordered</span></h2>
+  <p class="subtitle">Wall C, to the right of the window — Atlas 600mm Matt Black ordered from Victorian Plumbing</p>
   <div class="grid">
     <div class="card">
       <img class="card-img" src="https://images.royalbathrooms.co.uk/catalog/product/images/furniture/vanity-units/avenza/wall-hung/cb/2dwr/700mm/terracotta-scene.jpg" alt="Avenza 600mm Terracotta Clay" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Avenza 600mm Terracotta Clay</span></div>'">
@@ -328,8 +332,8 @@
     <div class="card">
       <img class="card-img" src="https://images.victorianplumbing.co.uk/products/atlas-600mm-matt-black-2-drawer-wall-hung-vanity-unit-with-gloss-white-basin/mainimages/atl60whvgw_d2.jpg" alt="Atlas 600mm Matt Black" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Atlas 600mm Matt Black</span></div>'">
       <div class="card-body">
-        <h3>C: Atlas 600mm Matt Black 2-Drawer</h3>
-        <div class="specs"><strong>Features:</strong> Push-to-open drawers, gloss white basin<br><strong>Supplier:</strong> Victorian Plumbing<br><strong>Order qty:</strong> 1</div>
+        <h3>C: Atlas 600mm Matt Black 2-Drawer <span class="badge ordered">Ordered</span></h3>
+        <div class="specs"><strong>Features:</strong> Push-to-open drawers, gloss white basin<br><strong>Supplier:</strong> Victorian Plumbing<br><strong>Price:</strong> £289.95<br><strong>Ordered:</strong> 1</div>
         <a href="https://www.victorianplumbing.co.uk/atlas-600mm-matt-black-2-drawer-wall-hung-vanity-unit-with-gloss-white-basin" target="_blank">View →</a>
       </div>
     </div>
@@ -348,8 +352,8 @@
 
 <!-- ===== BASIN TAPS ===== -->
 <div class="section" id="taps">
-  <h2>Basin Taps <span class="badge pending">Decision Needed</span></h2>
-  <p class="subtitle">Matt black finish</p>
+  <h2>Basin Tap <span class="badge ordered">Ordered</span></h2>
+  <p class="subtitle">Grohe Start SilkMove ordered from Victorian Plumbing</p>
   <div class="grid">
     <div class="card">
       <img class="card-img" src="https://images.victorianplumbing.co.uk/products/orchard-eden-matt-black-mono-basin-mixer-tap/mainimages/qt8202w-eb-l2.jpg" alt="Orchard Eden Matt Black" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Orchard Eden Matt Black</span></div>'">
@@ -362,8 +366,8 @@
     <div class="card">
       <img class="card-img" src="https://images.victorianplumbing.co.uk/products/grohe-start-silkmove-es-s-size-mono-basin-mixer-with-push-open-waste/mainimages/235512432_l3.jpg" alt="Grohe Start SilkMove" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Grohe Start SilkMove</span></div>'">
       <div class="card-body">
-        <h3>B: Grohe Start SilkMove M-Size</h3>
-        <div class="specs"><strong>Features:</strong> Push-open waste, matt black<br><strong>Supplier:</strong> Victorian Plumbing<br><strong>Order qty:</strong> 1</div>
+        <h3>B: Grohe Start SilkMove ES <span class="badge ordered">Ordered</span></h3>
+        <div class="specs"><strong>Features:</strong> Push-open waste, matt black<br><strong>Supplier:</strong> Victorian Plumbing<br><strong>Price:</strong> £112.16<br><strong>Ordered:</strong> 1</div>
         <a href="https://www.victorianplumbing.co.uk/grohe-start-silkmove-es-s-size-mono-basin-mixer-with-push-open-waste" target="_blank">View →</a>
       </div>
     </div>
@@ -537,28 +541,29 @@
     </div>
   </div>
 
-  <h3 style="margin: 40px 0 16px; color: #2E4057; font-size: 1.3em;">Pull Cord Switches</h3>
+  <h3 style="margin: 40px 0 16px; color: #2E4057; font-size: 1.3em;">Pull Cord Switches <span class="badge ordered">Ordered</span></h3>
   <div class="grid">
     <div class="card">
-      <img class="card-img" src="https://images.victorianplumbing.co.uk/products/revive-matt-black-light-pull-cord/mainimages/a3222mb-l1.jpg" alt="Revive Matt Black Pull Cord" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Revive Matt Black Pull Cord</span></div>'">
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg, #333, #1a1a1a); display:flex; align-items:center; justify-content:center;">
+        <span style="font-size:0.85em;color:#ccc;text-align:center;padding:20px;">Ellis & Co Matt Black<br>Pull Cord Switch</span>
+      </div>
       <div class="card-body">
-        <h3>Extractor Fan: Revive Matt Black</h3>
-        <div class="specs"><strong>Type:</strong> Standard on/off<br><strong>Finish:</strong> Matt black<br><strong>Order qty:</strong> 1</div>
-        <a href="https://www.victorianplumbing.co.uk/revive-matt-black-light-pull-cord" target="_blank">View →</a>
+        <h3>Ellis & Co Matt Black Light Pull Cord <span class="badge ordered">Ordered</span></h3>
+        <div class="specs"><strong>Type:</strong> Standard on/off pull cord<br><strong>Finish:</strong> Matt black<br><strong>SKU:</strong> BY029MB<br><strong>Price:</strong> £19.95 each<br><strong>Supplier:</strong> Victorian Plumbing<br><strong>Ordered:</strong> 2 — £39.90</div>
+        <div class="note">Two ordered — one for downlights, one for extractor fan.</div>
       </div>
     </div>
     <div class="card">
       <img class="card-img" src="https://www.tlc-direct.co.uk/Images/Products/size_3/ML8301MB.JPG" alt="Knightsbridge ML8301MB" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Knightsbridge ML8301MB</span></div>'">
       <div class="card-body">
-        <h3>Downlights: Knightsbridge ML8301MB Dimmer</h3>
+        <h3>Knightsbridge ML8301MB Dimmer <span class="badge pending">Not Ordered</span></h3>
         <div class="specs">
           <strong>Type:</strong> Trailing-edge pull cord dimmer<br>
           <strong>Rating:</strong> 5–100W LED<br>
           <strong>Finish:</strong> Matt black<br>
-          <strong>Price:</strong> ~£20.28<br>
-          <strong>Order qty:</strong> 1
+          <strong>Price:</strong> ~£20.28
         </div>
-        <div class="note">Pull once to turn on/off. Pull and hold to dim up/down.</div>
+        <div class="warning">⚠️ This dimmer was NOT ordered — Kirsty ordered Ellis & Co standard on/off pull cords instead. If dimmable downlights are wanted, this may still be needed separately.</div>
         <a href="https://www.tlc-direct.co.uk/Products/ML8301MB.html" target="_blank">View →</a>
       </div>
     </div>
@@ -604,21 +609,51 @@
 
 <!-- ===== RADIATOR ===== -->
 <div class="section" id="radiator">
-  <h2>Radiator <span class="badge pending">Decision Needed</span></h2>
-  <p class="subtitle">Wall D, below the mirror</p>
+  <h2>Radiator <span class="badge ordered">Ordered</span></h2>
+  <p class="subtitle">Wall D, below the mirror — ordered from Victorian Plumbing</p>
   <div class="grid">
     <div class="card">
       <img class="card-img" src="https://images.victorianplumbing.co.uk/products/urban-horizontal-radiator-matt-black-single-panel-600-mm-high-608-mm-wide/carouselimages/hfp004mb_l2.webp?origin=hfp004mb_l2.jpg&w=675" alt="Urban Horizontal Radiator Matt Black" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Urban Horizontal Radiator — Matt Black</span></div>'">
       <div class="card-body">
-        <h3>Urban Horizontal Radiator — Matt Black</h3>
+        <h3>Urban Horizontal Radiator — Matt Black <span class="badge ordered">Ordered</span></h3>
         <div class="specs">
           <strong>Size:</strong> 608 mm wide × 600 mm high<br>
           <strong>Type:</strong> Single panel<br>
           <strong>Finish:</strong> Matt black<br>
           <strong>Supplier:</strong> Victorian Plumbing<br>
-          <strong>Order qty:</strong> 1
+          <strong>Price:</strong> £99.95<br>
+          <strong>Ordered:</strong> 1
         </div>
         <a href="https://www.victorianplumbing.co.uk/urban-horizontal-radiator-matt-black-single-panel-600-mm-high-608-mm-wide?sku=HFP004MB&preSelected=true" target="_blank">View on Victorian Plumbing →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== ACCESSORIES ===== -->
+<div class="section" id="accessories">
+  <h2>Accessories <span class="badge ordered">Ordered</span></h2>
+  <p class="subtitle">Bathroom hardware and accessories</p>
+  <div class="grid">
+    <div class="card">
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg, #333, #1a1a1a); display:flex; align-items:center; justify-content:center;">
+        <span style="font-size:0.85em;color:#ccc;text-align:center;padding:20px;">Harbour Status<br>Matt Black Toilet Roll Holder</span>
+      </div>
+      <div class="card-body">
+        <h3>Harbour Status Matt Black Toilet Roll Holder <span class="badge ordered">Ordered</span></h3>
+        <div class="specs"><strong>Finish:</strong> Matt black<br><strong>Supplier:</strong> Drench (order DR313663)<br><strong>Price:</strong> £34.99<br><strong>Ordered:</strong> 1</div>
+        <div class="note">Part of the Drench order with the shower tray and waste — delivering 11th March.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-placeholder" style="background:linear-gradient(135deg, #e8e0d8, #d4c8bc); display:flex; align-items:center; justify-content:center;">
+        <span style="font-size:0.85em;color:#666;text-align:center;padding:20px;">Accents 3 Piece<br>Bathroom Accessory Set<br>Chrome</span>
+      </div>
+      <div class="card-body">
+        <h3>Accents 3 Piece Bathroom Accessory Set — Chrome <span class="badge ordered">Ordered</span></h3>
+        <div class="specs"><strong>Finish:</strong> Chrome<br><strong>Price:</strong> £29.95 <span style="text-decoration:line-through;color:#999;">was £59.95</span> (50% off)<br><strong>Supplier:</strong> Victorian Plumbing<br><strong>Ordered:</strong> 1 set</div>
       </div>
     </div>
   </div>
@@ -633,86 +668,62 @@
 
   <div class="key-info">
     <table>
-      <tr><th>Category</th><th>Item</th><th>Unit Price</th><th>Qty / Area</th><th>Subtotal</th></tr>
-      <!-- TILES -->
-      <tr style="background:#e8f5e9;"><td colspan="5" style="font-weight:700;color:#2e7d32;padding:10px 14px;">Tiles — Confirmed</td></tr>
-      <tr><td>Shower + Wall B</td><td>Dormido Oak &amp; Black (600×1200)</td><td>£34.95/m²</td><td>6.95 m²</td><td><strong>£242.90</strong></td></tr>
-      <tr><td>Walls C &amp; D</td><td>Matteo Fluted Green (150×300)</td><td>£39.95/m²</td><td>7.31 m²</td><td><strong>£292.03</strong></td></tr>
-      <!-- FLOOR -->
-      <tr style="background:#fff3e0;"><td colspan="5" style="font-weight:700;color:#e65100;padding:10px 14px;">Floor — Pending Decision</td></tr>
+      <tr><th>Category</th><th>Item</th><th>Unit Price</th><th>Qty</th><th>Subtotal</th></tr>
+      <!-- ORDERED — VICTORIAN PLUMBING -->
+      <tr style="background:#c8e6c9;"><td colspan="5" style="font-weight:700;color:#1b5e20;padding:10px 14px;">Victorian Plumbing — Ordered</td></tr>
+      <tr><td>Tiles</td><td>Dormido Oak &amp; Black (600×1200)</td><td>£50.33/box</td><td>5 boxes</td><td><strong>£251.65</strong></td></tr>
+      <tr><td>Tiles</td><td>Matteo Fluted Green (150×300)</td><td>£36.35/box</td><td>7 boxes</td><td><strong>£254.45</strong></td></tr>
+      <tr><td>Toilet</td><td>Arezzo BTW Close Coupled — Matt Black Seat</td><td>£289.95</td><td>1</td><td><strong>£260.95</strong> <span style="color:#2e7d32;font-size:0.85em;">(−10%)</span></td></tr>
+      <tr><td>Vanity</td><td>Atlas 600mm Matt Black 2-Drawer</td><td>£289.95</td><td>1</td><td><strong>£289.95</strong></td></tr>
+      <tr><td>Tap</td><td>Grohe Start SilkMove ES Basin Mixer</td><td>£112.16</td><td>1</td><td><strong>£112.16</strong></td></tr>
+      <tr><td>Radiator</td><td>Urban Horizontal Matt Black 608×600</td><td>£99.95</td><td>1</td><td><strong>£99.95</strong></td></tr>
+      <tr><td>Pull cords</td><td>Ellis &amp; Co Matt Black Light Pull Cord</td><td>£19.95</td><td>2</td><td><strong>£39.90</strong></td></tr>
+      <tr><td>Accessories</td><td>Accents 3 Piece Bathroom Set — Chrome</td><td>£29.95</td><td>1</td><td><strong>£29.95</strong></td></tr>
+      <tr style="background:#e8f5e9;"><td colspan="4" style="font-weight:700;padding:8px 14px;">VP Subtotal</td><td style="font-weight:700;padding:8px 14px;"><strong>£1,338.96</strong></td></tr>
+      <!-- ORDERED — DRENCH -->
+      <tr style="background:#c8e6c9;"><td colspan="5" style="font-weight:700;color:#1b5e20;padding:10px 14px;">Drench (Order DR313663) — Ordered, delivering 11 Mar</td></tr>
+      <tr><td>Shower tray</td><td>Harbour 28mm Stone Resin 1200×900</td><td>£199.99</td><td>1</td><td><strong>£199.99</strong></td></tr>
+      <tr><td>Shower waste</td><td>Harbour 90mm Round Topped — Gloss Black</td><td>£34.99</td><td>1</td><td><strong>£34.99</strong></td></tr>
+      <tr><td>Accessories</td><td>Harbour Status Matt Black Toilet Roll Holder</td><td>£34.99</td><td>1</td><td><strong>£34.99</strong></td></tr>
+      <tr><td colspan="3"></td><td>Delivery</td><td>£39.99</td></tr>
+      <tr style="background:#e8f5e9;"><td colspan="4" style="font-weight:700;padding:8px 14px;">Drench Subtotal</td><td style="font-weight:700;padding:8px 14px;"><strong>£309.96</strong></td></tr>
+      <!-- TOTAL ORDERED -->
+      <tr style="background:#1b5e20;color:white;"><td colspan="4" style="font-weight:700;padding:12px 14px;font-size:1.05em;">TOTAL ORDERED</td><td style="font-weight:700;padding:12px 14px;font-size:1.05em;">£1,648.92</td></tr>
+      <!-- STILL TO BUY -->
+      <tr style="background:#fff3e0;"><td colspan="5" style="font-weight:700;color:#e65100;padding:10px 14px;">Still to Buy — Pending Decisions</td></tr>
       <tr><td>Floor</td><td>A: Lokoloko Warm Terrazzo (vinyl)</td><td>€54/panel (~£46)</td><td>2–3 panels</td><td>~£92–£138</td></tr>
       <tr><td>Floor</td><td>B: Lokoloko Orange &amp; Grey Terrazzo</td><td>€68.99/panel (~£59)</td><td>2–3 panels</td><td>~£118–£177</td></tr>
-      <!-- SHOWER -->
-      <tr style="background:#e8f5e9;"><td colspan="5" style="font-weight:700;color:#2e7d32;padding:10px 14px;">Shower — Confirmed / Pending</td></tr>
-      <tr><td>Shower tray</td><td>Harbour 28mm Stone Resin (Drench)</td><td>£199.99</td><td>1</td><td><strong>£199.99</strong></td></tr>
-      <tr><td>Shower waste</td><td>Harbour 90mm Round Black Topped</td><td>£34.99</td><td>1</td><td>£34.99</td></tr>
       <tr><td>Glass enclosure</td><td>Pivot door, matt black frame (plumber to select)</td><td colspan="2">TBC — est. £250–£500</td><td>~£250–£500</td></tr>
-      <tr><td>Shower niche</td><td>A: Arezzo 610×305 matt black w/shelf</td><td>£169.95</td><td>1</td><td>£169.95</td></tr>
-      <tr><td>Shower niche</td><td>B: Arezzo 305×305 matt black</td><td>£99.95</td><td>1</td><td>£99.95</td></tr>
-      <tr><td>Shower niche</td><td>C: Arezzo 610×305 brushed brass w/shelf</td><td>£169.95</td><td>1</td><td>£169.95</td></tr>
-      <!-- TOILET -->
-      <tr style="background:#fff3e0;"><td colspan="5" style="font-weight:700;color:#e65100;padding:10px 14px;">Toilet — Optional</td></tr>
-      <tr><td>Toilet unit</td><td>Avenza 550mm Terracotta Clay BTW</td><td>£309.99</td><td>1</td><td>£309.99</td></tr>
-      <!-- BASIN / VANITY -->
-      <tr style="background:#fff3e0;"><td colspan="5" style="font-weight:700;color:#e65100;padding:10px 14px;">Basin / Vanity — Pending Decision</td></tr>
-      <tr><td>Vanity</td><td>A: Avenza 600mm Terracotta Clay</td><td colspan="2">TBC — check royalbathrooms.co.uk</td><td>TBC</td></tr>
-      <tr><td>Vanity</td><td>B: Arezzo Senza 600mm Matt Black &amp; Oak</td><td>£289.95</td><td>1</td><td>£289.95</td></tr>
-      <tr><td>Vanity</td><td>C: Atlas 600mm Matt Black</td><td>£289.95</td><td>1</td><td>£289.95</td></tr>
-      <tr><td>Vanity</td><td>D: Pendle 600mm Black</td><td>£259.97</td><td>1</td><td>£259.97</td></tr>
-      <!-- TAPS -->
-      <tr style="background:#fff3e0;"><td colspan="5" style="font-weight:700;color:#e65100;padding:10px 14px;">Basin Tap — Pending Decision</td></tr>
-      <tr><td>Tap</td><td>A: Orchard Eden Matt Black Mono</td><td>£59.95</td><td>1</td><td>£59.95</td></tr>
-      <tr><td>Tap</td><td>B: Grohe Start SilkMove</td><td>£112.16</td><td>1</td><td>£112.16</td></tr>
-      <!-- CABINET & SHELF -->
-      <tr style="background:#fff3e0;"><td colspan="5" style="font-weight:700;color:#e65100;padding:10px 14px;">Cabinet &amp; Shelf — Pending Decision</td></tr>
-      <tr><td>Cabinet</td><td>1: Ridge Mirrored, Black (John Lewis)</td><td colspan="2">TBC — check johnlewis.com</td><td>TBC</td></tr>
-      <tr><td>Cabinet</td><td>2: Mirrored Slatted, Natural (John Lewis)</td><td colspan="2">TBC — check johnlewis.com</td><td>TBC</td></tr>
-      <tr><td>Cabinet</td><td>3: Slatted with Rail (John Lewis)</td><td colspan="2">TBC — check johnlewis.com</td><td>TBC</td></tr>
-      <tr><td>Shelf</td><td>A: Bahya Teak Horizontal (Tikamoon)</td><td>~£59</td><td>1</td><td>~£59</td></tr>
-      <tr><td>Shelf</td><td>B: Ugo Teak 100cm (Tikamoon)</td><td colspan="2">TBC — check tikamoon.co.uk</td><td>TBC</td></tr>
-      <tr><td>Shelf</td><td>C: Bahya Teak Vertical (Tikamoon)</td><td>~£59</td><td>1</td><td>~£59</td></tr>
-      <tr><td>Shelf</td><td>D: Bahya Sheesham Vertical (Tikamoon)</td><td>~£49</td><td>1</td><td>~£49</td></tr>
-      <!-- LIGHTING -->
-      <tr style="background:#fff3e0;"><td colspan="5" style="font-weight:700;color:#e65100;padding:10px 14px;">Lighting — Pending Decision</td></tr>
-      <tr><td>Vanity light</td><td>A: Dunelm Tela Orange (recommended)</td><td>£25.00</td><td>1</td><td>£25.00</td></tr>
-      <tr><td>Vanity light</td><td>B: Dunelm Tela Black</td><td>£25.00</td><td>1</td><td>£25.00</td></tr>
-      <tr><td>Vanity light</td><td>C: Lasson Living Nordic Globe</td><td>~£80</td><td>1</td><td>~£80</td></tr>
-      <tr><td>Downlights</td><td>A: Chuck Black/Gold set of 6 (recommended)</td><td colspan="2">TBC — check lampandlight.co.uk</td><td>TBC</td></tr>
-      <tr><td>Downlights</td><td>B: Chuck White set of 6</td><td colspan="2">TBC — check lampandlight.co.uk</td><td>TBC</td></tr>
-      <tr><td>Dimmer</td><td>Knightsbridge ML8301MB pull cord</td><td>~£20.28</td><td>1</td><td>£20.28</td></tr>
-      <tr><td>Pull cord</td><td>Revive Matt Black (extractor switch)</td><td>£19.95</td><td>1</td><td>£19.95</td></tr>
-      <!-- EXTRACTOR -->
-      <tr style="background:#fff3e0;"><td colspan="5" style="font-weight:700;color:#e65100;padding:10px 14px;">Extractor Fan — Pending Decision</td></tr>
-      <tr><td>Extractor</td><td>A: Airflow iCON ECO 15</td><td>~£58 inc VAT</td><td>1</td><td>~£58</td></tr>
-      <tr><td>Extractor</td><td>B: Arezzo 100mm Turbo Black</td><td>£44.95</td><td>1</td><td>£44.95</td></tr>
-      <!-- RADIATOR -->
-      <tr style="background:#fff3e0;"><td colspan="5" style="font-weight:700;color:#e65100;padding:10px 14px;">Radiator — Pending Decision</td></tr>
-      <tr><td>Radiator</td><td>Urban Horizontal Matt Black 608×600</td><td>£99.95</td><td>1</td><td>£99.95</td></tr>
+      <tr><td>Shower niche</td><td>3 Arezzo options</td><td>£99.95–£169.95</td><td>1</td><td>£99.95–£169.95</td></tr>
+      <tr><td>Cabinet</td><td>3 John Lewis options</td><td colspan="2">TBC</td><td>TBC</td></tr>
+      <tr><td>Shelf</td><td>4 Tikamoon options</td><td>~£49–£59</td><td>1</td><td>~£49–£59</td></tr>
+      <tr><td>Vanity light</td><td>Dunelm Tela / Lasson Living</td><td>£25–£80</td><td>1</td><td>£25–£80</td></tr>
+      <tr><td>Downlights</td><td>Lamp&amp;Light Chuck (set of 6)</td><td colspan="2">TBC</td><td>TBC</td></tr>
+      <tr><td>Extractor</td><td>Airflow iCON / Arezzo Turbo</td><td>£44.95–£58</td><td>1</td><td>£44.95–£58</td></tr>
+      <tr><td>Paint</td><td>Claybrook terracotta + desert paint</td><td colspan="2">TBC</td><td>TBC</td></tr>
+      <tr><td>Shower valve/head</td><td>Brushed brass thermostatic rain set</td><td colspan="2">TBC</td><td>TBC</td></tr>
+      <tr><td>Electrical plates</td><td>Knightsbridge Screwless Matt Black</td><td colspan="2">TBC</td><td>TBC</td></tr>
     </table>
   </div>
 
   <!-- BUDGET SUMMARY -->
   <div style="margin-top: 24px; padding: 24px; background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
-    <h3 style="color: #2E4057; margin-bottom: 16px;">Estimated Total Range</h3>
-    <p style="font-size: 0.95em; margin-bottom: 12px;">Based on confirmed prices (tiles, switches, radiator) plus the cheapest and most expensive pending options:</p>
+    <h3 style="color: #2E4057; margin-bottom: 16px;">Budget Summary</h3>
     <table style="width:100%; border-collapse:collapse; font-size:0.95em;">
-      <tr style="background:#e8f5e9;"><td style="padding:8px 12px;"><strong>Confirmed costs (tiles + shower tray/waste + dimmer + pull cord)</strong></td><td style="padding:8px 12px; text-align:right;"><strong>£810.14</strong></td></tr>
-      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">Floor (Lokoloko, 2–3 panels)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£92 – £177</td></tr>
-      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">Shower tray + waste (Drench)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£234.98</td></tr>
-      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">Glass enclosure (plumber to select)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">~£250 – £500</td></tr>
-      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">Shower niche (Arezzo)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£99.95 – £169.95</td></tr>
-      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">Toilet unit (optional Avenza)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£0 – £309.99</td></tr>
-      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">Basin/vanity</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£259.97 – TBC (Avenza)</td></tr>
-      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">Basin tap</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£59.95 – £112.16</td></tr>
-      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">Cabinet (John Lewis)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">TBC</td></tr>
-      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">Shelf (Tikamoon)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£49 – £59</td></tr>
-      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">Vanity light</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£25 – £80</td></tr>
-      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">Downlights (Chuck set of 6)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">TBC</td></tr>
-      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">Extractor fan</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£44.95 – £58</td></tr>
-      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">Radiator</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£99.95</td></tr>
-      <tr style="background:#2E4057; color:white;"><td style="padding:10px 12px;"><strong>Estimated product total (exc. TBC items)</strong></td><td style="padding:10px 12px; text-align:right;"><strong>~£1,800 – £2,380</strong></td></tr>
+      <tr style="background:#c8e6c9;"><td style="padding:10px 12px;"><strong>Total ordered (VP + Drench)</strong></td><td style="padding:10px 12px; text-align:right;"><strong style="font-size:1.1em;">£1,648.92</strong></td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">— Victorian Plumbing basket</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£1,338.96</td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">— Drench (inc. £39.99 delivery)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£309.96</td></tr>
+      <tr style="background:#fff3e0;"><td style="padding:10px 12px;"><strong>Estimated remaining spend</strong></td><td style="padding:10px 12px; text-align:right;"><strong>~£560 – £1,100+</strong></td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">Floor (Lokoloko, 2–3 panels)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£92 – £177</td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">Glass enclosure (plumber to select)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">~£250 – £500</td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">Shower niche (Arezzo)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£99.95 – £169.95</td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">Cabinet (John Lewis)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">TBC</td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">Shelf (Tikamoon)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£49 – £59</td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">Vanity light + downlights + extractor</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">~£70 – £140+</td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">Paint, shower valve/head, electrical plates</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">TBC</td></tr>
+      <tr style="background:#2E4057; color:white;"><td style="padding:10px 12px;"><strong>Estimated project total (products only)</strong></td><td style="padding:10px 12px; text-align:right;"><strong>~£2,200 – £2,750+</strong></td></tr>
     </table>
-    <p style="font-size:0.82em; color:#888; margin-top:12px;">Excludes: cabinet (John Lewis), downlights (Lamp&amp;Light), Avenza vanity (Royal Bathrooms), shower valve/head, paint, electrical plates (Knightsbridge), and labour. These TBC items could add £200–500+ to the total. Prices correct as of March 2026 — check retailer sites for latest.</p>
+    <p style="font-size:0.82em; color:#888; margin-top:12px;">Excludes: labour, VP delivery (check basket), cabinet (John Lewis TBC), downlights (Lamp&amp;Light TBC), shower valve/head, paint, electrical plates (Knightsbridge). Prices as of March 2026.</p>
   </div>
 </div>
 
@@ -723,23 +734,25 @@
   <h2>Quick Reference Summary</h2>
   <div class="key-info">
     <table>
-      <tr><th>Item</th><th>Status</th><th>Recommendation / Notes</th></tr>
-      <tr><td>Shower tiles (Dormido)</td><td><span class="badge confirmed">Confirmed</span></td><td>6.95 m² with wastage, 12–13 tiles</td></tr>
-      <tr><td>Wall tiles (Matteo Green)</td><td><span class="badge confirmed">Confirmed</span></td><td>7.31 m² with wastage — Walls C & D only</td></tr>
+      <tr><th>Item</th><th>Status</th><th>Details</th></tr>
+      <tr style="background:#e8f5e9;"><td>Dormido tiles</td><td><span class="badge ordered">Ordered</span></td><td>5 boxes (7.20 m²) — £251.65 from VP</td></tr>
+      <tr style="background:#e8f5e9;"><td>Matteo tiles</td><td><span class="badge ordered">Ordered</span></td><td>7 boxes (6.37 m²) — £254.45 from VP</td></tr>
       <tr><td>Floor — Terrazzo vinyl</td><td><span class="badge pending">Pending</span></td><td>2 Lokoloko options — €54–69/panel</td></tr>
-      <tr><td>Shower tray</td><td><span class="badge confirmed">Confirmed</span></td><td>Drench stone resin 1200×900 — £199.99</td></tr>
-      <tr><td>Shower waste</td><td><span class="badge confirmed">Confirmed</span></td><td>Harbour 90mm round black — £34.99</td></tr>
-      <tr><td>Glass enclosure</td><td><span class="badge pending">Pending</span></td><td>Pivot door, matt black frame — plumber to select (~£250–£500)</td></tr>
+      <tr style="background:#e8f5e9;"><td>Shower tray</td><td><span class="badge ordered">Ordered</span></td><td>Drench stone resin 1200×900 — £199.99</td></tr>
+      <tr style="background:#e8f5e9;"><td>Shower waste</td><td><span class="badge ordered">Ordered</span></td><td>Harbour 90mm Gloss Black — £34.99</td></tr>
+      <tr><td>Glass enclosure</td><td><span class="badge pending">Pending</span></td><td>Plumber to select (~£250–£500)</td></tr>
       <tr><td>Shower niche</td><td><span class="badge pending">Pending</span></td><td>3 Arezzo options — matt black or brushed brass</td></tr>
-      <tr><td>Toilet</td><td><span class="badge pending">Pending</span></td><td>3 options — Vitellio Ashdon (~£100) · Arezzo BTW recommended (~£150–180) · Avenza terracotta (£309.99)</td></tr>
-      <tr><td>Basin/Vanity</td><td><span class="badge pending">Pending</span></td><td>4 options</td></tr>
-      <tr><td>Basin tap</td><td><span class="badge pending">Pending</span></td><td>Orchard Eden or Grohe Start (matt black)</td></tr>
+      <tr style="background:#e8f5e9;"><td>Toilet</td><td><span class="badge ordered">Ordered</span></td><td>Arezzo BTW matt black seat — £260.95 (10% off) from VP</td></tr>
+      <tr style="background:#e8f5e9;"><td>Basin/Vanity</td><td><span class="badge ordered">Ordered</span></td><td>Atlas 600mm Matt Black — £289.95 from VP</td></tr>
+      <tr style="background:#e8f5e9;"><td>Basin tap</td><td><span class="badge ordered">Ordered</span></td><td>Grohe Start SilkMove ES — £112.16 from VP</td></tr>
       <tr><td>Wall cabinet</td><td><span class="badge pending">Pending</span></td><td>3 John Lewis options</td></tr>
       <tr><td>Vanity light</td><td><span class="badge pending">Pending</span></td><td>Dunelm Tela Orange recommended (IP44 ✓)</td></tr>
       <tr><td>Ceiling downlights</td><td><span class="badge pending">Pending</span></td><td>Lamp&Light Chuck black/gold (GU10, IP44)</td></tr>
-      <tr><td>Pull cord dimmer</td><td><span class="badge pending">Pending</span></td><td>Knightsbridge ML8301MB (5–100W)</td></tr>
+      <tr style="background:#e8f5e9;"><td>Pull cord switches</td><td><span class="badge ordered">Ordered</span></td><td>Ellis & Co matt black × 2 — £39.90 from VP</td></tr>
       <tr><td>Extractor fan</td><td><span class="badge pending">Pending</span></td><td>2 options</td></tr>
-      <tr><td>Radiator</td><td><span class="badge pending">Pending</span></td><td>Urban Horizontal matt black 608×600mm</td></tr>
+      <tr style="background:#e8f5e9;"><td>Radiator</td><td><span class="badge ordered">Ordered</span></td><td>Urban Horizontal matt black — £99.95 from VP</td></tr>
+      <tr style="background:#e8f5e9;"><td>Toilet roll holder</td><td><span class="badge ordered">Ordered</span></td><td>Harbour Status matt black — £34.99 from Drench</td></tr>
+      <tr style="background:#e8f5e9;"><td>Accessory set</td><td><span class="badge ordered">Ordered</span></td><td>Accents 3 Piece Chrome — £29.95 from VP</td></tr>
       <tr><td>Paint</td><td><span class="badge pending">Pending</span></td><td>Claybrook terracotta + desert paint for Wall B above 1200mm</td></tr>
       <tr><td>Shower valve/head</td><td><span class="badge pending">Pending</span></td><td>Brushed brass thermostatic rain set</td></tr>
     </table>
