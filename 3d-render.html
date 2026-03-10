@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirsty Bathroom 3D Render — 30 Inwood Crescent, Brighton</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; font-family: 'Segoe UI', Arial, sans-serif; overflow: hidden; }
+  #canvas-container { width: 100vw; height: 100vh; }
+  canvas { display: block; }
+  #controls {
+    position: fixed; top: 16px; left: 16px; z-index: 100;
+    background: rgba(20,20,40,0.92); border-radius: 12px; padding: 16px;
+    color: #e0e0e0; max-width: 280px; backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  #controls h2 { font-size: 14px; color: #8ecae6; margin-bottom: 8px; letter-spacing: 0.5px; }
+  #controls p { font-size: 11px; color: #aaa; margin-bottom: 10px; line-height: 1.4; }
+  .view-btn {
+    display: block; width: 100%; padding: 8px 12px; margin: 4px 0;
+    background: rgba(142,202,230,0.15); border: 1px solid rgba(142,202,230,0.3);
+    color: #8ecae6; border-radius: 6px; cursor: pointer; font-size: 12px;
+    text-align: left; transition: all 0.2s;
+  }
+  .view-btn:hover { background: rgba(142,202,230,0.3); }
+  .view-btn.active { background: rgba(142,202,230,0.4); border-color: #8ecae6; }
+  #legend {
+    position: fixed; bottom: 16px; left: 16px; z-index: 100;
+    background: rgba(20,20,40,0.92); border-radius: 12px; padding: 14px;
+    color: #e0e0e0; backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .legend-item { display: flex; align-items: center; margin: 4px 0; font-size: 11px; }
+  .legend-swatch { width: 16px; height: 16px; border-radius: 3px; margin-right: 8px; border: 1px solid rgba(255,255,255,0.2); }
+  #title-bar {
+    position: fixed; top: 16px; right: 16px; z-index: 100;
+    background: rgba(20,20,40,0.92); border-radius: 12px; padding: 14px 18px;
+    color: #fff; backdrop-filter: blur(10px); text-align: right;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  #title-bar h1 { font-size: 15px; font-weight: 600; color: #fff; }
+  #title-bar .sub { font-size: 11px; color: #8ecae6; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div id="canvas-container"></div>
+
+<div id="controls">
+  <h2>CAMERA VIEWS</h2>
+  <p>Click a view or drag to orbit freely</p>
+  <button class="view-btn active" onclick="setView('overview')">Overview (Bird's Eye)</button>
+  <button class="view-btn" onclick="setView('shower')">Shower Corner (Wall A + B)</button>
+  <button class="view-btn" onclick="setView('toilet')">Toilet &amp; Cabinet (Wall B)</button>
+  <button class="view-btn" onclick="setView('sink')">Sink &amp; Pendant (Wall C)</button>
+  <button class="view-btn" onclick="setView('mirror')">Mirror Wall (Wall D)</button>
+  <button class="view-btn" onclick="setView('doorway')">From Doorway</button>
+</div>
+
+<div id="legend">
+  <div class="legend-item"><div class="legend-swatch" style="background: linear-gradient(180deg, #B8864E 25%, #1a1a1a 25%, #1a1a1a 50%, #B8864E 50%, #B8864E 75%, #1a1a1a 75%);"></div>Dormido Oak &amp; Black (Shower)</div>
+  <div class="legend-item"><div class="legend-swatch" style="background: linear-gradient(90deg, #4a7c59 0%, #5a9068 50%, #4a7c59 100%);"></div>Matteo Fluted Green (Walls)</div>
+  <div class="legend-item"><div class="legend-swatch" style="background: rgba(180,220,255,0.3); border-color: rgba(100,180,255,0.5);"></div>Glass Shower Enclosure</div>
+  <div class="legend-item"><div class="legend-swatch" style="background: #e8ddd0;"></div>Stone Shower Tray (25mm)</div>
+</div>
+
+<div id="title-bar">
+  <h1>Kirsty Bathroom Renovation</h1>
+  <div class="sub">30 Inwood Crescent, Brighton</div>
+  <div class="sub">1828mm x 2108mm x 2502mm</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// ============================================================
+// KIRSTY BATHROOM 3D RENDER — MIRRORED LAYOUT
+// Room: 1828mm (W) x 2108mm (L) x 2502mm (H)
+// Scale: 1 unit = 1 meter
+//
+// LAYOUT (looking from above, z=0 front, z=L back):
+//   Wall C (x=0, LEFT): window wall, sink, pendant
+//   Wall A (x=W, RIGHT): bathroom door (bottom) + shower (top)
+//   Wall B (z=L, BACK): shower (right) + toilet/cabinet (left)
+//   Wall D (z=0, FRONT): mirror wall, radiator
+//   Shower: top-RIGHT corner (x=W-1.2 to W, z=L-0.9 to L)
+//   Door: bottom-RIGHT corner of Wall A
+// ============================================================
+
+const W = 1.828, L = 2.108, H = 2.502;
+const SHOWER_W = 1.2, SHOWER_D = 0.9;
+
+// Scene
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x1a1a2e);
+scene.fog = new THREE.Fog(0x1a1a2e, 8, 12);
+
+const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.05, 20);
+camera.position.set(-1.5, 2.8, -1.0);
+camera.lookAt(W/2, H/3, L/2);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.1;
+document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+// ============================================================
+// TEXTURE GENERATORS
+// ============================================================
+
+function createDormidoTexture(w, h) {
+  const canvas = document.createElement('canvas');
+  canvas.width = w; canvas.height = h;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#B8864E';
+  ctx.fillRect(0, 0, w, h);
+  const slats = 8;
+  const slatW = w / slats;
+  for (let i = 0; i < slats; i++) {
+    const x = i * slatW;
+    if (i % 2 === 0) {
+      const grad = ctx.createLinearGradient(x, 0, x, h);
+      grad.addColorStop(0, '#C4956A');
+      grad.addColorStop(0.3, '#A67B4B');
+      grad.addColorStop(0.5, '#B8864E');
+      grad.addColorStop(0.7, '#9E7040');
+      grad.addColorStop(1, '#C4956A');
+      ctx.fillStyle = grad;
+      ctx.fillRect(x + 1, 0, slatW - 2, h);
+      ctx.strokeStyle = 'rgba(80,50,20,0.15)';
+      ctx.lineWidth = 0.5;
+      for (let y = 0; y < h; y += 3 + Math.random() * 4) {
+        ctx.beginPath();
+        ctx.moveTo(x + 2, y);
+        ctx.bezierCurveTo(x + slatW * 0.3, y + Math.random() * 2, x + slatW * 0.7, y - Math.random() * 2, x + slatW - 2, y);
+        ctx.stroke();
+      }
+    } else {
+      const grad = ctx.createLinearGradient(x, 0, x, h);
+      grad.addColorStop(0, '#1a1a1a');
+      grad.addColorStop(0.5, '#252525');
+      grad.addColorStop(1, '#1a1a1a');
+      ctx.fillStyle = grad;
+      ctx.fillRect(x + 1, 0, slatW - 2, h);
+    }
+    ctx.fillStyle = '#0a0a0a';
+    ctx.fillRect(x, 0, 1, h);
+    ctx.fillRect(x + slatW - 1, 0, 1, h);
+  }
+  ctx.strokeStyle = '#555';
+  ctx.lineWidth = 2;
+  ctx.strokeRect(0, 0, w, h);
+  ctx.strokeStyle = '#444';
+  ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(0, h/2); ctx.lineTo(w, h/2); ctx.stroke();
+  return canvas;
+}
+
+function createFlutedGreenTexture(w, h) {
+  const canvas = document.createElement('canvas');
+  canvas.width = w; canvas.height = h;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#4a7c59';
+  ctx.fillRect(0, 0, w, h);
+  const ridges = 12;
+  const ridgeW = w / ridges;
+  for (let i = 0; i < ridges; i++) {
+    const x = i * ridgeW;
+    const grad = ctx.createLinearGradient(x, 0, x + ridgeW, 0);
+    grad.addColorStop(0, 'rgba(0,0,0,0.15)');
+    grad.addColorStop(0.2, 'rgba(255,255,255,0.08)');
+    grad.addColorStop(0.5, 'rgba(255,255,255,0.12)');
+    grad.addColorStop(0.8, 'rgba(255,255,255,0.08)');
+    grad.addColorStop(1, 'rgba(0,0,0,0.15)');
+    ctx.fillStyle = grad;
+    ctx.fillRect(x, 0, ridgeW, h);
+  }
+  const glossGrad = ctx.createLinearGradient(0, 0, 0, h);
+  glossGrad.addColorStop(0, 'rgba(255,255,255,0.06)');
+  glossGrad.addColorStop(0.3, 'rgba(255,255,255,0.02)');
+  glossGrad.addColorStop(1, 'rgba(0,0,0,0.04)');
+  ctx.fillStyle = glossGrad;
+  ctx.fillRect(0, 0, w, h);
+  ctx.strokeStyle = '#3a5a40';
+  ctx.lineWidth = 1.5;
+  ctx.strokeRect(0, 0, w, h);
+  const tileH = h / 4;
+  for (let j = 1; j < 4; j++) {
+    ctx.beginPath(); ctx.moveTo(0, j * tileH); ctx.lineTo(w, j * tileH); ctx.stroke();
+  }
+  return canvas;
+}
+
+function createFloorTexture(w, h) {
+  const canvas = document.createElement('canvas');
+  canvas.width = w; canvas.height = h;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#d4c5b5';
+  ctx.fillRect(0, 0, w, h);
+  for (let i = 0; i < 2000; i++) {
+    const x = Math.random() * w, y = Math.random() * h;
+    const r = Math.random() * 2;
+    ctx.fillStyle = `rgba(${150+Math.random()*50},${130+Math.random()*40},${110+Math.random()*30},${Math.random()*0.15})`;
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI*2); ctx.fill();
+  }
+  ctx.strokeStyle = '#b8a898';
+  ctx.lineWidth = 1;
+  const ts = w / 6;
+  for (let x = 0; x <= w; x += ts) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke(); }
+  for (let y = 0; y <= h; y += ts) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke(); }
+  return canvas;
+}
+
+// Textures
+const dormidoTex = new THREE.CanvasTexture(createDormidoTexture(512, 1024));
+dormidoTex.wrapS = dormidoTex.wrapT = THREE.RepeatWrapping;
+const greenTex = new THREE.CanvasTexture(createFlutedGreenTexture(256, 512));
+greenTex.wrapS = greenTex.wrapT = THREE.RepeatWrapping;
+const floorTex = new THREE.CanvasTexture(createFloorTexture(512, 512));
+floorTex.wrapS = floorTex.wrapT = THREE.RepeatWrapping;
+
+// Materials
+const dormidoMat = new THREE.MeshStandardMaterial({ map: dormidoTex, roughness: 0.6, metalness: 0.05 });
+const greenMat = new THREE.MeshStandardMaterial({ map: greenTex, roughness: 0.3, metalness: 0.05 });
+const floorMat = new THREE.MeshStandardMaterial({ map: floorTex, roughness: 0.7 });
+const whiteMat = new THREE.MeshStandardMaterial({ color: 0xf5f0ea, roughness: 0.8 });
+const stoneMat = new THREE.MeshStandardMaterial({ color: 0xe8ddd0, roughness: 0.5 });
+const blackMat = new THREE.MeshStandardMaterial({ color: 0x1a1a1a, roughness: 0.3, metalness: 0.8 });
+const brassMat = new THREE.MeshStandardMaterial({ color: 0xd4af37, roughness: 0.2, metalness: 0.9 });
+const glassMat = new THREE.MeshPhysicalMaterial({ color: 0xb4dcff, transparent: true, opacity: 0.15, roughness: 0.05 });
+const mirrorMat = new THREE.MeshStandardMaterial({ color: 0xc0d0e0, roughness: 0.05, metalness: 0.95 });
+const ceramicMat = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.2 });
+const ceilingMat = new THREE.MeshStandardMaterial({ color: 0xfaf8f5, roughness: 0.9 });
+const cabinetMat = new THREE.MeshStandardMaterial({ color: 0x2a2a2a, roughness: 0.4, metalness: 0.3 });
+const pendantGlassMat = new THREE.MeshPhysicalMaterial({ color: 0xfff8e7, transparent: true, opacity: 0.5, roughness: 0.1 });
+
+// Helper: mirror x position (mx = mirrored x)
+// In the mirrored layout, shower is at right side (high x values)
+// Wall A = x=W (right), Wall C = x=0 (left)
+
+// ============================================================
+// ROOM STRUCTURE
+// ============================================================
+
+// Floor
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(W, L), floorMat);
+floor.rotation.x = -Math.PI / 2;
+floor.position.set(W/2, 0, L/2);
+floor.receiveShadow = true;
+scene.add(floor);
+
+// Ceiling
+const ceiling = new THREE.Mesh(new THREE.PlaneGeometry(W, L), ceilingMat);
+ceiling.rotation.x = Math.PI / 2;
+ceiling.position.set(W/2, H, L/2);
+scene.add(ceiling);
+
+// ============================================================
+// WALLS — MIRRORED LAYOUT
+// ============================================================
+
+// --- WALL A (x=W, RIGHT wall): bathroom door (bottom) + shower tiles (top) ---
+
+// Door section (non-tiled, from z=0 upward)
+const wallADoor = new THREE.Mesh(new THREE.PlaneGeometry(L - SHOWER_D, H), whiteMat);
+wallADoor.position.set(W - 0.001, H/2, (L - SHOWER_D)/2);
+wallADoor.rotation.y = -Math.PI / 2;
+scene.add(wallADoor);
+
+// Shower section (Dormido tiles, at the back/top of Wall A)
+const wallAShTex = dormidoTex.clone();
+wallAShTex.repeat.set(SHOWER_D / 0.6, H / 1.2);
+const wallASh = new THREE.Mesh(
+  new THREE.PlaneGeometry(SHOWER_D, H),
+  new THREE.MeshStandardMaterial({ map: wallAShTex, roughness: 0.6, metalness: 0.05 })
+);
+wallASh.position.set(W - 0.002, H/2, L - SHOWER_D/2);
+wallASh.rotation.y = -Math.PI / 2;
+scene.add(wallASh);
+
+// Bathroom door opening on Wall A (lower-right area)
+const doorW = 0.75, doorH = 2.0;
+const doorVoid = new THREE.Mesh(
+  new THREE.PlaneGeometry(doorW - 0.06, doorH - 0.05),
+  new THREE.MeshBasicMaterial({ color: 0x0a0a15 })
+);
+doorVoid.position.set(W - 0.005, doorH/2, doorW/2 + 0.06);
+doorVoid.rotation.y = -Math.PI / 2;
+scene.add(doorVoid);
+// Door frame
+const doorFrame = new THREE.Mesh(new THREE.BoxGeometry(0.05, doorH, doorW), whiteMat);
+doorFrame.position.set(W - 0.01, doorH/2, doorW/2 + 0.06);
+scene.add(doorFrame);
+
+// --- WALL B (z=L, BACK wall): shower tiles (right) + green tiles/toilet/cabinet (left) ---
+
+// Shower section (right side, from x=W-SHOWER_W to x=W)
+const wallBShTex = dormidoTex.clone();
+wallBShTex.repeat.set(SHOWER_W / 0.6, H / 1.2);
+const wallBSh = new THREE.Mesh(
+  new THREE.PlaneGeometry(SHOWER_W, H),
+  new THREE.MeshStandardMaterial({ map: wallBShTex, roughness: 0.6, metalness: 0.05 })
+);
+wallBSh.position.set(W - SHOWER_W/2, H/2, L - 0.002);
+wallBSh.rotation.y = Math.PI;
+scene.add(wallBSh);
+
+// Green tile section (left of shower, where toilet & cabinet go)
+const greenSectionW = 0.883;
+const greenSectionH = 1.714;
+const wallBGTex = greenTex.clone();
+wallBGTex.repeat.set(greenSectionW / 0.3, greenSectionH / 0.3);
+const wallBG = new THREE.Mesh(
+  new THREE.PlaneGeometry(greenSectionW, greenSectionH),
+  new THREE.MeshStandardMaterial({ map: wallBGTex, roughness: 0.3, metalness: 0.05 })
+);
+wallBG.position.set(W - SHOWER_W - greenSectionW/2, greenSectionH/2, L - 0.003);
+wallBG.rotation.y = Math.PI;
+scene.add(wallBG);
+
+// Upper wall above green section
+const upperH = H - greenSectionH;
+const wallBUpper = new THREE.Mesh(new THREE.PlaneGeometry(greenSectionW, upperH), whiteMat);
+wallBUpper.position.set(W - SHOWER_W - greenSectionW/2, greenSectionH + upperH/2, L - 0.003);
+wallBUpper.rotation.y = Math.PI;
+scene.add(wallBUpper);
+
+// --- WALL C (x=0, LEFT wall): window wall ---
+// Green tiles only to 1200mm, plaster/paint above (lines up with Wall B paint)
+const wallCTileH = 1.2; // tiles to 1200mm
+const wallCUpperH = H - wallCTileH;
+
+// Bottom section: green tiles (floor to 1200mm)
+const wallCTex = greenTex.clone();
+wallCTex.repeat.set(L / 0.3, wallCTileH / 0.3);
+const wallCBottom = new THREE.Mesh(
+  new THREE.PlaneGeometry(L, wallCTileH),
+  new THREE.MeshStandardMaterial({ map: wallCTex, roughness: 0.3, metalness: 0.05 })
+);
+wallCBottom.position.set(0.001, wallCTileH/2, L/2);
+wallCBottom.rotation.y = Math.PI / 2;
+scene.add(wallCBottom);
+
+// Top section: plaster/paint (1200mm to ceiling) — same paint as Wall B upper
+const wallCUpper = new THREE.Mesh(
+  new THREE.PlaneGeometry(L, wallCUpperH),
+  whiteMat
+);
+wallCUpper.position.set(0.001, wallCTileH + wallCUpperH/2, L/2);
+wallCUpper.rotation.y = Math.PI / 2;
+scene.add(wallCUpper);
+
+// Window on Wall C
+const winW = 1.076, winH = 1.115, winBottom = 0.897;
+const winCenterZ = L/2;
+// Window glass
+const winGlass = new THREE.Mesh(
+  new THREE.PlaneGeometry(winW, winH),
+  new THREE.MeshPhysicalMaterial({ color: 0xc4dff6, transparent: true, opacity: 0.4, roughness: 0.0, metalness: 0.1 })
+);
+winGlass.position.set(0.01, winBottom + winH/2, winCenterZ);
+winGlass.rotation.y = Math.PI / 2;
+scene.add(winGlass);
+// Window frame (black)
+[[-winW/2, 0], [winW/2, 0], [0, -winH/2], [0, winH/2], [0, 0]].forEach(([dz, dy], idx) => {
+  const isHoriz = idx >= 2;
+  const fw = isHoriz ? winW : 0.025;
+  const fh = isHoriz ? 0.025 : winH;
+  const frame = new THREE.Mesh(new THREE.BoxGeometry(0.025, fh, fw), blackMat);
+  frame.position.set(0.005, winBottom + winH/2 + dy, winCenterZ + dz);
+  scene.add(frame);
+});
+
+// --- WALL D (z=0, FRONT wall): mirror wall with green tiles ---
+
+const wallDTex = greenTex.clone();
+wallDTex.repeat.set(W / 0.3, H / 0.3);
+const wallD = new THREE.Mesh(
+  new THREE.PlaneGeometry(W, H),
+  new THREE.MeshStandardMaterial({ map: wallDTex, roughness: 0.3, metalness: 0.05 })
+);
+wallD.position.set(W/2, H/2, 0.001);
+scene.add(wallD);
+
+// Mirror on Wall D
+const mirrorW = 1.802, mirrorH = 1.208, mirrorBtm = 1.117;
+const mirrorMesh = new THREE.Mesh(new THREE.PlaneGeometry(mirrorW, mirrorH), mirrorMat);
+mirrorMesh.position.set(W/2, mirrorBtm + mirrorH/2, 0.008);
+scene.add(mirrorMesh);
+// Mirror frame
+const mf = 0.015;
+[[0, mirrorH/2+mf/2, mirrorW+mf*2, mf], [0, -mirrorH/2-mf/2, mirrorW+mf*2, mf],
+ [-mirrorW/2-mf/2, 0, mf, mirrorH], [mirrorW/2+mf/2, 0, mf, mirrorH]].forEach(([dx,dy,fw,fh]) => {
+  const f = new THREE.Mesh(new THREE.BoxGeometry(fw, fh, 0.01), blackMat);
+  f.position.set(W/2 + dx, mirrorBtm + mirrorH/2 + dy, 0.012);
+  scene.add(f);
+});
+
+// ============================================================
+// SHOWER (top-right corner: Wall A + Wall B)
+// ============================================================
+
+// Stone shower tray
+const tray = new THREE.Mesh(new THREE.BoxGeometry(SHOWER_W, 0.025, SHOWER_D), stoneMat);
+tray.position.set(W - SHOWER_W/2, 0.0125, L - SHOWER_D/2);
+tray.receiveShadow = true;
+scene.add(tray);
+
+// Drain
+const drain = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 0.005, 16), blackMat);
+drain.position.set(W - SHOWER_W/2, 0.027, L - SHOWER_D/2);
+scene.add(drain);
+
+// Glass enclosure
+const glassH = 2.1;
+
+// Front glass panel (runs along x-axis at z = L - SHOWER_D)
+const frontGlass = new THREE.Mesh(new THREE.PlaneGeometry(SHOWER_W, glassH), glassMat);
+frontGlass.position.set(W - SHOWER_W/2, glassH/2 + 0.025, L - SHOWER_D);
+scene.add(frontGlass);
+
+// Side glass panel (pivot door side, runs along z-axis at x = W - SHOWER_W)
+const sideGlass = new THREE.Mesh(new THREE.PlaneGeometry(SHOWER_D, glassH), glassMat);
+sideGlass.position.set(W - SHOWER_W, glassH/2 + 0.025, L - SHOWER_D/2);
+sideGlass.rotation.y = Math.PI / 2;
+scene.add(sideGlass);
+
+// Black frame helper
+function addFrame(x, y, z, sx, sy, sz) {
+  const f = new THREE.Mesh(new THREE.BoxGeometry(sx, sy, sz), blackMat);
+  f.position.set(x, y, z); f.castShadow = true; scene.add(f);
+}
+
+// Front panel frames
+addFrame(W - SHOWER_W/2, glassH + 0.025, L - SHOWER_D, SHOWER_W + 0.02, 0.02, 0.02);
+addFrame(W - SHOWER_W/2, 0.025, L - SHOWER_D, SHOWER_W + 0.02, 0.02, 0.02);
+addFrame(W - 0.005, glassH/2 + 0.025, L - SHOWER_D, 0.02, glassH, 0.02);
+addFrame(W - SHOWER_W, glassH/2 + 0.025, L - SHOWER_D, 0.02, glassH, 0.02);
+
+// Side panel frames (pivot door)
+addFrame(W - SHOWER_W, glassH + 0.025, L - SHOWER_D/2, 0.02, 0.02, SHOWER_D + 0.02);
+addFrame(W - SHOWER_W, 0.025, L - SHOWER_D/2, 0.02, 0.02, SHOWER_D + 0.02);
+addFrame(W - SHOWER_W, glassH/2 + 0.025, L - 0.005, 0.02, glassH, 0.02);
+
+// Door handle
+const handle1 = new THREE.Mesh(new THREE.BoxGeometry(0.015, 0.25, 0.03), blackMat);
+handle1.position.set(W - SHOWER_W - 0.02, 1.1, L - SHOWER_D + 0.15);
+scene.add(handle1);
+const handle2 = new THREE.Mesh(new THREE.BoxGeometry(0.015, 0.25, 0.03), blackMat);
+handle2.position.set(W - SHOWER_W + 0.02, 1.1, L - SHOWER_D + 0.15);
+scene.add(handle2);
+
+// Pivot hinges
+addFrame(W - SHOWER_W, 0.3, L - SHOWER_D + 0.01, 0.025, 0.06, 0.025);
+addFrame(W - SHOWER_W, glassH - 0.1, L - SHOWER_D + 0.01, 0.025, 0.06, 0.025);
+
+// Shower head on Wall B (back wall, 1200mm side) — brushed brass
+const showerX = W - SHOWER_W/2 - 0.1;
+const showerRail = new THREE.Mesh(new THREE.CylinderGeometry(0.012, 0.012, 1.2, 8), brassMat);
+showerRail.position.set(showerX, 1.5, L - 0.04);
+scene.add(showerRail);
+const rainHead = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 0.015, 24), brassMat);
+rainHead.position.set(showerX, 2.15, L - 0.15);
+scene.add(rainHead);
+const showerArm = new THREE.Mesh(new THREE.CylinderGeometry(0.01, 0.01, 0.2, 8), brassMat);
+showerArm.rotation.x = Math.PI / 2;
+showerArm.position.set(showerX, 2.15, L - 0.08);
+scene.add(showerArm);
+const handShower = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.015, 0.12, 8), brassMat);
+handShower.position.set(showerX, 1.3, L - 0.06);
+scene.add(handShower);
+const valve = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 0.08, 12), brassMat);
+valve.position.set(showerX, 1.05, L - 0.03);
+scene.add(valve);
+
+// ============================================================
+// TOILET (Wall B, left of shower)
+// ============================================================
+
+const toiletGroup = new THREE.Group();
+const toiletBase = new THREE.Mesh(new THREE.BoxGeometry(0.36, 0.38, 0.55), ceramicMat);
+toiletBase.position.set(0, 0.19, 0);
+toiletGroup.add(toiletBase);
+const bowlGeo = new THREE.SphereGeometry(0.18, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2);
+const bowl = new THREE.Mesh(bowlGeo, ceramicMat);
+bowl.rotation.x = Math.PI;
+bowl.position.set(0, 0.38, -0.12);
+toiletGroup.add(bowl);
+const tank = new THREE.Mesh(new THREE.BoxGeometry(0.34, 0.3, 0.15), ceramicMat);
+tank.position.set(0, 0.53, 0.22);
+toiletGroup.add(tank);
+const flushBtn = new THREE.Mesh(new THREE.CylinderGeometry(0.025, 0.025, 0.01, 12), brassMat);
+flushBtn.position.set(0, 0.685, 0.22);
+toiletGroup.add(flushBtn);
+// Position: left of shower on Wall B
+toiletGroup.position.set(W - SHOWER_W - greenSectionW/2, 0, L - 0.35);
+toiletGroup.castShadow = true;
+scene.add(toiletGroup);
+
+// ============================================================
+// HUNG CABINET ABOVE TOILET
+// ============================================================
+
+const cabGroup = new THREE.Group();
+const cabW = 0.6, cabH = 0.5, cabD = 0.2;
+cabGroup.add(new THREE.Mesh(new THREE.BoxGeometry(cabW, cabH, cabD), cabinetMat));
+// Two doors
+const doorMat2 = new THREE.MeshStandardMaterial({ color: 0x2a2a2a, roughness: 0.4, metalness: 0.3 });
+const ld = new THREE.Mesh(new THREE.PlaneGeometry(cabW/2 - 0.005, cabH - 0.02), doorMat2);
+ld.position.set(-cabW/4, 0, cabD/2 + 0.001);
+cabGroup.add(ld);
+const rd = new THREE.Mesh(new THREE.PlaneGeometry(cabW/2 - 0.005, cabH - 0.02), doorMat2);
+rd.position.set(cabW/4, 0, cabD/2 + 0.001);
+cabGroup.add(rd);
+// Handles
+const ch1 = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.01, 0.015), brassMat);
+ch1.position.set(-0.05, 0, cabD/2 + 0.01);
+cabGroup.add(ch1);
+const ch2 = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.01, 0.015), brassMat);
+ch2.position.set(0.05, 0, cabD/2 + 0.01);
+cabGroup.add(ch2);
+cabGroup.position.set(W - SHOWER_W - greenSectionW/2, 1.7, L - 0.12);
+scene.add(cabGroup);
+
+// ============================================================
+// FLOATING SINK / VANITY (Wall C, left wall, right of window = lower z values)
+// ============================================================
+
+const sinkGroup = new THREE.Group();
+const vanity = new THREE.Mesh(
+  new THREE.BoxGeometry(0.6, 0.2, 0.45),
+  new THREE.MeshStandardMaterial({ color: 0x1a1a1a, roughness: 0.5, metalness: 0.2 })
+);
+sinkGroup.add(vanity);
+// Drawer line
+const dl = new THREE.Mesh(new THREE.BoxGeometry(0.55, 0.002, 0.002), new THREE.MeshStandardMaterial({ color: 0x333333 }));
+dl.position.set(0, -0.03, 0.226);
+sinkGroup.add(dl);
+// Basin
+const basin = new THREE.Mesh(new THREE.BoxGeometry(0.58, 0.05, 0.43), ceramicMat);
+basin.position.set(0, 0.125, 0);
+sinkGroup.add(basin);
+const basinBowl = new THREE.Mesh(new THREE.CylinderGeometry(0.17, 0.15, 0.04, 20),
+  new THREE.MeshStandardMaterial({ color: 0xf0f0f0, roughness: 0.1 }));
+basinBowl.position.set(0, 0.12, 0);
+sinkGroup.add(basinBowl);
+// Matt black tap
+const tapBase = new THREE.Mesh(new THREE.CylinderGeometry(0.015, 0.02, 0.05, 8), blackMat);
+tapBase.position.set(0, 0.175, -0.12);
+sinkGroup.add(tapBase);
+const tapBody = new THREE.Mesh(new THREE.CylinderGeometry(0.008, 0.008, 0.2, 8), blackMat);
+tapBody.position.set(0, 0.275, -0.12);
+sinkGroup.add(tapBody);
+const tapSpout = new THREE.Mesh(new THREE.CylinderGeometry(0.008, 0.008, 0.1, 8), blackMat);
+tapSpout.rotation.x = Math.PI / 2;
+tapSpout.position.set(0, 0.365, -0.07);
+sinkGroup.add(tapSpout);
+// Position: on Wall C (x=0), to the right of window (lower z = closer to Wall D)
+sinkGroup.position.set(0.24, 0.85, 0.45);
+sinkGroup.rotation.y = Math.PI / 2;
+scene.add(sinkGroup);
+
+// ============================================================
+// PENDANT LAMP (Gatsby style, above sink, on wall strip right of window)
+// ============================================================
+
+const pendGroup = new THREE.Group();
+const bracket = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 0.04, 12), blackMat);
+pendGroup.add(bracket);
+const arm = new THREE.Mesh(new THREE.CylinderGeometry(0.006, 0.006, 0.2, 8), blackMat);
+arm.rotation.z = Math.PI / 2;
+arm.position.set(0.1, 0, 0);
+pendGroup.add(arm);
+const wire = new THREE.Mesh(new THREE.CylinderGeometry(0.003, 0.003, 0.3, 6), blackMat);
+wire.position.set(0.2, -0.15, 0);
+pendGroup.add(wire);
+const globe = new THREE.Mesh(new THREE.SphereGeometry(0.08, 20, 20), pendantGlassMat);
+globe.position.set(0.2, -0.38, 0);
+pendGroup.add(globe);
+const brassRing = new THREE.Mesh(new THREE.TorusGeometry(0.08, 0.004, 8, 24), brassMat);
+brassRing.rotation.x = Math.PI / 2;
+brassRing.position.set(0.2, -0.3, 0);
+pendGroup.add(brassRing);
+const bulbLight = new THREE.PointLight(0xffeebb, 0.6, 2);
+bulbLight.position.set(0.2, -0.38, 0);
+pendGroup.add(bulbLight);
+// Position on Wall C, right of window, above sink
+pendGroup.position.set(0.01, 1.9, 0.45);
+pendGroup.rotation.y = Math.PI / 2;
+scene.add(pendGroup);
+
+// ============================================================
+// RADIATOR (Wall D, centered)
+// ============================================================
+
+const radGroup = new THREE.Group();
+for (let i = 0; i < 10; i++) {
+  const fin = new THREE.Mesh(
+    new THREE.BoxGeometry(0.5, 0.6, 0.004),
+    new THREE.MeshStandardMaterial({ color: 0xdddddd, roughness: 0.4, metalness: 0.3 })
+  );
+  fin.position.set(0, 0, i * 0.006);
+  radGroup.add(fin);
+}
+radGroup.position.set(W/2, 0.4, 0.04);
+scene.add(radGroup);
+
+// ============================================================
+// LIGHTING
+// ============================================================
+
+scene.add(new THREE.AmbientLight(0xfff8f0, 0.4));
+
+const ceilingLight = new THREE.PointLight(0xfff5e6, 0.8, 6);
+ceilingLight.position.set(W/2, H - 0.1, L/2);
+ceilingLight.castShadow = true;
+ceilingLight.shadow.mapSize.set(1024, 1024);
+scene.add(ceilingLight);
+
+// Window light (from left side now)
+const windowLight = new THREE.DirectionalLight(0xeef4ff, 0.7);
+windowLight.position.set(-2, 2, L/2);
+windowLight.target.position.set(W/2, 1, L/2);
+windowLight.castShadow = true;
+scene.add(windowLight);
+scene.add(windowLight.target);
+
+const fill1 = new THREE.PointLight(0xfff0dd, 0.3, 4);
+fill1.position.set(W - 0.3, 1.5, L - 0.3);
+scene.add(fill1);
+const fill2 = new THREE.PointLight(0xeef0ff, 0.2, 4);
+fill2.position.set(0.3, 1.5, 0.3);
+scene.add(fill2);
+
+// ============================================================
+// ORBIT CONTROLS
+// ============================================================
+
+let isDragging = false, prevMouse = { x: 0, y: 0 };
+let spherical = { radius: 4.5, theta: 2.3, phi: 1.0 };
+let target = new THREE.Vector3(W/2, H/3, L/2);
+let targetSpherical = { ...spherical };
+let targetTarget = target.clone();
+
+function updateCamera() {
+  spherical.radius += (targetSpherical.radius - spherical.radius) * 0.08;
+  spherical.theta += (targetSpherical.theta - spherical.theta) * 0.08;
+  spherical.phi += (targetSpherical.phi - spherical.phi) * 0.08;
+  target.lerp(targetTarget, 0.08);
+  camera.position.x = target.x + spherical.radius * Math.sin(spherical.phi) * Math.cos(spherical.theta);
+  camera.position.y = target.y + spherical.radius * Math.cos(spherical.phi);
+  camera.position.z = target.z + spherical.radius * Math.sin(spherical.phi) * Math.sin(spherical.theta);
+  camera.lookAt(target);
+}
+
+renderer.domElement.addEventListener('mousedown', e => { isDragging = true; prevMouse = { x: e.clientX, y: e.clientY }; });
+renderer.domElement.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+  targetSpherical.theta -= (e.clientX - prevMouse.x) * 0.005;
+  targetSpherical.phi = Math.max(0.2, Math.min(Math.PI - 0.2, targetSpherical.phi + (e.clientY - prevMouse.y) * 0.005));
+  prevMouse = { x: e.clientX, y: e.clientY };
+  document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+});
+renderer.domElement.addEventListener('mouseup', () => isDragging = false);
+renderer.domElement.addEventListener('wheel', e => {
+  targetSpherical.radius = Math.max(1.5, Math.min(7, targetSpherical.radius + e.deltaY * 0.003));
+});
+renderer.domElement.addEventListener('touchstart', e => { isDragging = true; prevMouse = { x: e.touches[0].clientX, y: e.touches[0].clientY }; });
+renderer.domElement.addEventListener('touchmove', e => {
+  if (!isDragging) return;
+  targetSpherical.theta -= (e.touches[0].clientX - prevMouse.x) * 0.005;
+  targetSpherical.phi = Math.max(0.2, Math.min(Math.PI - 0.2, targetSpherical.phi + (e.touches[0].clientY - prevMouse.y) * 0.005));
+  prevMouse = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+});
+renderer.domElement.addEventListener('touchend', () => isDragging = false);
+
+// ============================================================
+// PRESET VIEWS — corrected for mirrored layout
+// ============================================================
+
+function setView(name) {
+  document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+  if (event && event.target) event.target.classList.add('active');
+  switch(name) {
+    case 'overview':
+      targetSpherical = { radius: 4.5, theta: 2.3, phi: 1.0 };
+      targetTarget = new THREE.Vector3(W/2, H/3, L/2);
+      break;
+    case 'shower':
+      // Looking at top-right corner (Wall A + Wall B)
+      targetSpherical = { radius: 2.8, theta: 1.3, phi: 1.1 };
+      targetTarget = new THREE.Vector3(W - SHOWER_W/2, H/3, L - SHOWER_D/2);
+      break;
+    case 'toilet':
+      // Looking at left side of Wall B
+      targetSpherical = { radius: 2.2, theta: 0.8, phi: 1.15 };
+      targetTarget = new THREE.Vector3(W - SHOWER_W - 0.4, 1.0, L - 0.3);
+      break;
+    case 'sink':
+      // Looking at Wall C (left wall), sink area
+      targetSpherical = { radius: 2.2, theta: 3.0, phi: 1.1 };
+      targetTarget = new THREE.Vector3(0.3, 1.0, 0.5);
+      break;
+    case 'mirror':
+      // Looking at Wall D (front wall)
+      targetSpherical = { radius: 3.0, theta: Math.PI, phi: 1.15 };
+      targetTarget = new THREE.Vector3(W/2, 1.3, 0.3);
+      break;
+    case 'doorway':
+      // Standing at the door on Wall A (right side), looking in
+      targetSpherical = { radius: 3.5, theta: 1.7, phi: 1.2 };
+      targetTarget = new THREE.Vector3(W/2, H/3, L/3);
+      break;
+  }
+}
+
+// ============================================================
+// ANIMATION
+// ============================================================
+
+function animate() {
+  requestAnimationFrame(animate);
+  updateCamera();
+  renderer.render(scene, camera);
+}
+animate();
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+</script>
+</body>
+</html>
