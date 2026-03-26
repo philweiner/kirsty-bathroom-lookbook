@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wall D — Tile Layout Diagram</title>
+<style>
+  body {
+    margin: 0; padding: 30px;
+    background: #1a1a2e; color: #e0e0e0;
+    font-family: -apple-system, "Segoe UI", sans-serif;
+  }
+  h1 { color: #fff; font-size: 1.4em; margin-bottom: 4px; }
+  .subtitle { color: #888; font-size: 0.9em; margin-bottom: 24px; }
+  .diagram-wrap {
+    background: #12121e; border-radius: 12px; padding: 30px;
+    display: inline-block; max-width: 100%; overflow-x: auto;
+  }
+  .legend {
+    margin-top: 20px; display: flex; gap: 24px; flex-wrap: wrap;
+    font-size: 0.85em;
+  }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-swatch {
+    width: 20px; height: 20px; border-radius: 3px; border: 1px solid #444;
+    flex-shrink: 0;
+  }
+  .specs {
+    margin-top: 24px; background: #1e1e30; border-radius: 10px;
+    padding: 20px; font-size: 0.9em; line-height: 1.7;
+  }
+  .specs h3 { color: #7db88a; margin: 0 0 10px; font-size: 1.05em; }
+  .specs table { border-collapse: collapse; width: 100%; }
+  .specs td { padding: 4px 12px 4px 0; vertical-align: top; }
+  .specs td:first-child { color: #888; white-space: nowrap; width: 160px; }
+  .note { margin-top: 16px; padding: 14px; background: #262640; border-radius: 8px; font-size: 0.85em; color: #aaa; line-height: 1.6; }
+  .note strong { color: #ccc; }
+  .note.warn { background: #3a2e20; border-left: 3px solid #c49040; }
+</style>
+</head>
+<body>
+
+<h1>Wall D — Matteo Fluted Green Tile Layout</h1>
+<p class="subtitle">Front wall / mirror wall — 1802mm tiled width × 2502mm floor to ceiling — tiles installed <strong style="color:#7db88a;">LANDSCAPE</strong> (300mm wide × 150mm tall, flutes vertical)</p>
+
+<p style="color:#7db88a; font-size:0.95em; margin-bottom:16px;">Grout spacing: <strong>3mm</strong> — BAL Micromax3 ECO Smoke</p>
+
+<div class="diagram-wrap">
+  <svg id="diagram" width="720" height="620" viewBox="0 0 720 620" xmlns="http://www.w3.org/2000/svg">
+  </svg>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch" style="background:#5d8a68;"></div>Full tile (300×150mm landscape)</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#8a5d5d;"></div>Cut tile (right/floor)</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#8a6d5d;"></div>Top strip tiles (see note)</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#5d6d8a;"></div>Side strip tiles (139mm cut from 300mm)</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#d0e4f0;border-color:#99b;"></div>Mirror</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#333;border-color:#555;"></div>Radiator (800×590mm)</div>
+</div>
+
+<div class="specs">
+  <h3>Layout Summary</h3>
+  <table>
+    <tr><td>Tile</td><td>Matteo Fluted Green 150 × 300mm — <strong>LANDSCAPE orientation</strong> (300mm wide, 150mm tall, flutes vertical) — stacked bond</td></tr>
+    <tr><td>Grout</td><td id="grout-spec">2mm — BAL Micromax3 ECO Smoke</td></tr>
+    <tr><td>Horizontal</td><td id="h-spec"></td></tr>
+    <tr><td>Vertical (bottom)</td><td id="v-spec"></td></tr>
+    <tr><td>Top strip</td><td id="top-spec"></td></tr>
+    <tr><td>Side strips</td><td>1 column each side — 139mm wide (cut from 300mm tile, removing 161mm)</td></tr>
+    <tr><td>Mirror</td><td>~1524mm wide × ~1208mm tall, centred</td></tr>
+    <tr><td>Radiator</td><td>Sorrento 800 × 590mm, centred below mirror</td></tr>
+  </table>
+</div>
+
+<div class="note">
+  <strong>Cuts hidden by the door:</strong> All horizontal cut tiles are on the RIGHT side of the wall (nearest to the bathroom door on Wall A). When the door is open, these cuts are the least visible. The bottom cut row at floor level is partially concealed by the radiator.
+</div>
+
+<div class="note warn">
+  <strong>Top strip note:</strong> The top strip above the mirror is 177mm tall, which is taller than one landscape tile (150mm). Options: (1) One full 150mm row + grout + a narrow ~25mm strip — may be too thin to cut cleanly on a fluted tile; (2) A single tile cut to 177mm from the 300mm (long) dimension, installed portrait in this strip only; (3) Adjust grout spacing in this zone to absorb the difference. Discuss with tiler for best approach.
+</div>
+
+<div class="note" style="border-left: 3px solid #7db88a;">
+  <strong>Flute alignment — CRITICAL for tiler:</strong> Stacked bond ensures the vertical grout lines are continuous, so flutes naturally align row-to-row on all full tiles. For the <strong>cut column on the right</strong> (door side): ALWAYS cut from the RIGHT edge of the tile so the left-side flute pattern is preserved identically in every row — this keeps flutes aligned vertically within the cut column. Same rule for <strong>side strips</strong> (139mm): always cut from the same edge so flutes are consistent top to bottom. The <strong>floor cut row</strong> just shortens the flutes (height trim only) — no horizontal alignment issue. If using a wet saw, cut with the glazed face up to get a clean edge on the flute ridges.
+</div>
+
+<script>
+const WALL_W = 1802, WALL_H = 2502;
+const BOTTOM_H = 1117, TOP_H = 177, SIDE_W = 139;
+const MIRROR_H = WALL_H - BOTTOM_H - TOP_H; // 1208
+const MIRROR_W = WALL_W - 2 * SIDE_W; // 1524
+// LANDSCAPE: 300mm wide × 150mm tall
+const TILE_W = 300, TILE_H = 150;
+const RAD_W = 800, RAD_H = 590;
+
+// Scale: fit 1802mm into ~580px, leaving room for labels
+const S = 580 / WALL_W;
+const OX = 90, OY = 40;
+
+function mm2px(mm) { return mm * S; }
+
+const GROUT = 3;
+
+function drawLayout() {
+  const grout = GROUT;
+  const svg = document.getElementById('diagram');
+  svg.innerHTML = '';
+
+  const pw = mm2px(WALL_W), ph = mm2px(WALL_H);
+
+  // --- CALCULATE LAYOUT ---
+  // Horizontal: full tiles (300mm) from left, cut on right
+  let nFullH = 0;
+  while ((nFullH + 1) * TILE_W + nFullH * grout <= WALL_W) nFullH++;
+  const fullSpanH = nFullH * TILE_W + (nFullH - 1) * grout;
+  const cutW = WALL_W - fullSpanH - grout;
+
+  // Vertical (bottom section): full rows (150mm) from mirror edge down
+  let nFullV = 0;
+  while ((nFullV + 1) * TILE_H + nFullV * grout <= BOTTOM_H) nFullV++;
+  const fullSpanV = nFullV * TILE_H + (nFullV - 1) * grout;
+  const cutH = BOTTOM_H - fullSpanV - grout;
+
+  // Top strip: 177mm tall, tiles are 150mm
+  // Option shown: 1 full tile (150) + grout + thin strip
+  const topFullRows = 1;
+  const topCutH = TOP_H - TILE_H - grout; // 177 - 150 - grout
+
+  // Update spec text
+  document.getElementById('grout-spec').textContent = `${grout}mm — BAL Micromax3 ECO Smoke`;
+  document.getElementById('h-spec').textContent = `${nFullH} full tiles (300mm) + 1 cut tile (${cutW}mm / ${Math.round(cutW/TILE_W*100)}%) on the RIGHT (door side)`;
+  document.getElementById('v-spec').textContent = `${nFullV} full rows (150mm) from mirror edge down + 1 cut row at floor (${cutH}mm / ${Math.round(cutH/TILE_H*100)}%)`;
+  document.getElementById('top-spec').textContent = `177mm zone: 1 full tile (150mm) + ${grout}mm grout + ${topCutH}mm strip — see note below`;
+
+  // --- DRAW ---
+  // Wall outline
+  rect(svg, OX, OY, pw, ph, 'none', '#555', 1);
+
+  // Floor line
+  line(svg, OX, OY + ph, OX + pw, OY + ph, '#8a7040', 2);
+
+  // Ceiling line
+  line(svg, OX, OY, OX + pw, OY, '#666', 2);
+
+  // --- BOTTOM SECTION TILES (1802 x 1117) ---
+  const bottomTop = OY + ph - mm2px(BOTTOM_H);
+
+  // Row positions (from mirror edge down)
+  let rowPositions = [];
+  let yPos = BOTTOM_H;
+  for (let r = 0; r < nFullV; r++) {
+    let rowTop = yPos - TILE_H;
+    rowPositions.push({ top: rowTop, h: TILE_H, cut: false });
+    yPos = rowTop - grout;
+  }
+  // Cut row at floor
+  rowPositions.push({ top: 0, h: cutH, cut: true });
+
+  // Column positions (full from left, cut on right)
+  let colPositions = [];
+  let xPos = 0;
+  for (let c = 0; c < nFullH; c++) {
+    colPositions.push({ left: xPos, w: TILE_W, cut: false });
+    xPos += TILE_W + grout;
+  }
+  colPositions.push({ left: xPos, w: cutW, cut: true });
+
+  // Draw bottom section tiles
+  for (let row of rowPositions) {
+    for (let col of colPositions) {
+      const px = OX + mm2px(col.left);
+      const py = OY + ph - mm2px(row.top + row.h);
+      const pWidth = mm2px(col.w);
+      const pHeight = mm2px(row.h);
+      const fill = (col.cut || row.cut) ? '#8a5d5d' : '#5d8a68';
+      rect(svg, px, py, pWidth, pHeight, fill, '#2a2a3a', 0.5);
+
+      // Draw flute lines on larger tiles for visual effect
+      if (col.w >= 80 && row.h >= 40) {
+        const nFlutes = Math.max(2, Math.floor(col.w / 20));
+        for (let f = 1; f < nFlutes; f++) {
+          const fx = px + (pWidth * f / nFlutes);
+          line(svg, fx, py + 1, fx, py + pHeight - 1, 'rgba(255,255,255,0.06)', 0.5);
+        }
+      }
+    }
+  }
+
+  // --- TOP STRIP (1802 x 177) ---
+  const topStripY = OY;
+  // Draw as two rows: thin strip at very top, full tile below
+  const thinStripH = mm2px(topCutH);
+  const fullTileTop = mm2px(TILE_H);
+
+  for (let col of colPositions) {
+    const px = OX + mm2px(col.left);
+    const colW = mm2px(col.w);
+    // Thin strip at ceiling
+    rect(svg, px, topStripY, colW, thinStripH, '#8a6d5d', '#2a2a3a', 0.5);
+    // Full tile below thin strip
+    rect(svg, px, topStripY + thinStripH + mm2px(grout), colW, fullTileTop, '#8a6d5d', '#2a2a3a', 0.5);
+  }
+
+  // --- SIDE STRIPS (139mm cut from 300mm tile, mirror height 1208mm) ---
+  const mirrorTop = OY + mm2px(TOP_H);
+  const mirrorH = mm2px(MIRROR_H);
+
+  // Side rows for 1208mm height with 150mm tiles
+  let sideRows = [];
+  let sYPos = MIRROR_H;
+  let nSideV = 0;
+  while ((nSideV + 1) * TILE_H + nSideV * grout <= MIRROR_H) nSideV++;
+  sYPos = MIRROR_H;
+  for (let r = 0; r < nSideV; r++) {
+    let rTop = sYPos - TILE_H;
+    sideRows.push({ top: rTop, h: TILE_H });
+    sYPos = rTop - grout;
+  }
+  let sideCutH = sYPos + grout;
+  if (sideCutH > 0) sideRows.push({ top: 0, h: sideCutH });
+
+  for (let row of sideRows) {
+    const py = mirrorTop + mm2px(MIRROR_H - row.top - row.h);
+    const pH = mm2px(row.h);
+    // Left strip
+    rect(svg, OX, py, mm2px(SIDE_W), pH, '#5d6d8a', '#2a2a3a', 0.5);
+    // Right strip
+    rect(svg, OX + pw - mm2px(SIDE_W), py, mm2px(SIDE_W), pH, '#5d6d8a', '#2a2a3a', 0.5);
+  }
+
+  // --- MIRROR ---
+  const mirrorX = OX + mm2px(SIDE_W);
+  const mirrorW = mm2px(MIRROR_W);
+  rect(svg, mirrorX, mirrorTop, mirrorW, mirrorH, '#d0e4f0', '#99aabb', 1);
+  // Reflection glint
+  const rLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  rLine.setAttribute('x1', mirrorX + 20); rLine.setAttribute('y1', mirrorTop + 20);
+  rLine.setAttribute('x2', mirrorX + 50); rLine.setAttribute('y2', mirrorTop + 50);
+  rLine.setAttribute('stroke', 'rgba(255,255,255,0.3)'); rLine.setAttribute('stroke-width', '4');
+  rLine.setAttribute('stroke-linecap', 'round');
+  svg.appendChild(rLine);
+  text(svg, mirrorX + mirrorW/2, mirrorTop + mirrorH/2 - 8, 'MIRROR', '#556', 14, 'middle');
+  text(svg, mirrorX + mirrorW/2, mirrorTop + mirrorH/2 + 12, `${MIRROR_W} × ${MIRROR_H}mm`, '#778', 11, 'middle');
+
+  // --- RADIATOR (outline, centred below mirror) ---
+  const radX = OX + (pw - mm2px(RAD_W)) / 2;
+  const radY = OY + ph - mm2px(RAD_H) - mm2px(20);
+  rect(svg, radX, radY, mm2px(RAD_W), mm2px(RAD_H), 'none', '#666', 1.5, '4,3');
+  text(svg, radX + mm2px(RAD_W)/2, radY + mm2px(RAD_H)/2, 'Radiator 800×590', '#666', 9, 'middle');
+
+  // --- DIMENSION LINES ---
+  // Total width
+  dimH(svg, OX, OX + pw, OY + ph + 30, `${WALL_W}mm`);
+
+  // Full tiles span
+  dimH(svg, OX, OX + mm2px(fullSpanH), OY + ph + 50, `${nFullH}× 300mm = ${fullSpanH}mm`);
+
+  // Cut tile
+  dimH(svg, OX + mm2px(fullSpanH + grout), OX + pw, OY + ph + 50, `${cutW}mm`);
+
+  // Total height
+  dimV(svg, OY, OY + ph, OX - 20, `${WALL_H}mm`);
+
+  // Bottom section height
+  dimV(svg, bottomTop, OY + ph, OX - 45, `${BOTTOM_H}mm`);
+
+  // Top strip
+  dimV(svg, OY, OY + mm2px(TOP_H), OX + pw + 15, `${TOP_H}mm`);
+
+  // Mirror height
+  dimV(svg, mirrorTop, mirrorTop + mirrorH, OX + pw + 15, `${MIRROR_H}mm`);
+
+  // Bottom section
+  dimV(svg, bottomTop, OY + ph, OX + pw + 15, `${BOTTOM_H}mm`);
+
+  // Side strip width callout
+  text(svg, OX + mm2px(SIDE_W/2), mirrorTop + mirrorH + 14, `${SIDE_W}mm`, '#5d6d8a', 9, 'middle');
+  text(svg, OX + pw - mm2px(SIDE_W/2), mirrorTop + mirrorH + 14, `${SIDE_W}mm`, '#5d6d8a', 9, 'middle');
+
+  // Labels
+  text(svg, OX + 8, OY + ph - 8, '← FULL TILES start here (left / Wall C side)', '#7db88a', 10, 'start');
+
+  // Arrow pointing to cut column
+  const cutColX = OX + mm2px(fullSpanH + grout + cutW/2);
+  text(svg, cutColX, bottomTop - 8, `↓ CUT ${cutW}mm`, '#c47', 10, 'middle');
+
+  // Door note
+  text(svg, OX + pw + 4, OY + ph - 60, '← Door', '#888', 10, 'start');
+  text(svg, OX + pw + 4, OY + ph - 48, '   side', '#888', 10, 'start');
+
+  // Floor cut row label
+  const cutRowMid = OY + ph - mm2px(cutH/2);
+  text(svg, OX - 48, cutRowMid, `${cutH}mm`, '#c47', 9, 'end');
+  text(svg, OX - 48, cutRowMid + 12, 'cut row', '#c47', 9, 'end');
+
+  // Top strip label
+  text(svg, OX + pw/2, OY + mm2px(TOP_H/2), `${TOP_H}mm strip`, '#8a6d5d', 9, 'middle');
+}
+
+function rect(svg, x, y, w, h, fill, stroke, strokeW, dash) {
+  const r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  r.setAttribute('x', x); r.setAttribute('y', y);
+  r.setAttribute('width', w); r.setAttribute('height', h);
+  if (fill) r.setAttribute('fill', fill);
+  if (stroke) { r.setAttribute('stroke', stroke); r.setAttribute('stroke-width', strokeW || 1); }
+  if (dash) r.setAttribute('stroke-dasharray', dash);
+  svg.appendChild(r);
+}
+
+function line(svg, x1, y1, x2, y2, stroke, strokeW) {
+  const l = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  l.setAttribute('x1', x1); l.setAttribute('y1', y1);
+  l.setAttribute('x2', x2); l.setAttribute('y2', y2);
+  l.setAttribute('stroke', stroke); l.setAttribute('stroke-width', strokeW || 1);
+  svg.appendChild(l);
+}
+
+function text(svg, x, y, content, fill, size, anchor) {
+  const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  t.setAttribute('x', x); t.setAttribute('y', y);
+  t.setAttribute('fill', fill || '#ccc');
+  t.setAttribute('font-size', size || 11);
+  t.setAttribute('text-anchor', anchor || 'middle');
+  t.setAttribute('font-family', '-apple-system, sans-serif');
+  t.textContent = content;
+  svg.appendChild(t);
+}
+
+function dimH(svg, x1, x2, y, label) {
+  line(svg, x1, y - 4, x1, y + 4, '#888', 0.5);
+  line(svg, x2, y - 4, x2, y + 4, '#888', 0.5);
+  line(svg, x1, y, x2, y, '#888', 0.5);
+  text(svg, (x1 + x2) / 2, y - 5, label, '#999', 9, 'middle');
+}
+
+function dimV(svg, y1, y2, x, label) {
+  line(svg, x - 4, y1, x + 4, y1, '#888', 0.5);
+  line(svg, x - 4, y2, x + 4, y2, '#888', 0.5);
+  line(svg, x, y1, x, y2, '#888', 0.5);
+  const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  t.setAttribute('x', x); t.setAttribute('y', (y1 + y2) / 2);
+  t.setAttribute('fill', '#999'); t.setAttribute('font-size', 9);
+  t.setAttribute('text-anchor', 'middle');
+  t.setAttribute('font-family', '-apple-system, sans-serif');
+  t.setAttribute('transform', `rotate(-90,${x},${(y1+y2)/2})`);
+  t.textContent = label;
+  svg.appendChild(t);
+}
+
+// Initial draw
+drawLayout();
+</script>
+
+</body>
+</html>
