@@ -106,7 +106,7 @@
      ========================================================== -->
 <div class="section" id="wall-a">
   <h2>Wall A — Left Wall</h2>
-  <p class="subtitle">Bathroom door (left, 865 mm) · 63 mm wall gap · Shower zone with Dormido tiles (right, 900 mm) · Shower niche recessed into this wall</p>
+  <p class="subtitle">Bathroom door (left, 865 mm) · 63 mm wall gap · Shower zone with Dormido tiles (right, 900 mm) · Dormido tiles continue above door to ceiling</p>
   <div class="render-container">
     <svg viewBox="0 0 430 540" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:600px;">
       <!-- Scale: 329px = 1828mm, 450px = 2502mm. Origin at (50,40) -->
@@ -116,6 +116,11 @@
 
       <!-- Floor strip (terrazzo) -->
       <rect x="50" y="478" width="329" height="12" fill="url(#terrazzo)" stroke="#b89060" stroke-width="0.5"/>
+
+      <!-- === DORMIDO TILES ABOVE DOOR — full width, ceiling to door frame === -->
+      <rect x="50" y="40" width="167" height="84" fill="url(#dormido-h)" stroke="#5a4510" stroke-width="0.5"/>
+      <!-- Grout line to match the shower Dormido grout at same height -->
+      <text x="133" y="75" text-anchor="middle" font-size="6" fill="#c5a55a" font-weight="500">Dormido above door</text>
 
       <!-- === DOOR AREA — left 865mm = 156px (x=50 to x=206) === -->
       <!-- Door frame -->
@@ -141,19 +146,6 @@
       <line x1="217" y1="148" x2="379" y2="148" stroke="#5a4510" stroke-width="1" opacity="0.7"/>
       <line x1="217" y1="256" x2="379" y2="256" stroke="#5a4510" stroke-width="1" opacity="0.7"/>
       <line x1="217" y1="364" x2="379" y2="364" stroke="#5a4510" stroke-width="1" opacity="0.7"/>
-
-      <!-- === SHOWER NICHE on Wall A — recessed, matt black frame === -->
-      <!-- Niche: Arezzo 610×305mm. At scale: 610mm=110px height, 305mm=55px wide -->
-      <!-- Positioned at ~1200mm from floor (centre of shower zone, comfortable reach) = 216px from bottom -->
-      <!-- 1200mm from floor = y_bottom = 490 - 216 = 274. Niche from y=164 to y=274 -->
-      <rect x="268" y="180" width="55" height="110" rx="2" fill="#3a2a08" stroke="#333" stroke-width="1.8"/>
-      <!-- Niche shelf -->
-      <line x1="268" y1="235" x2="323" y2="235" stroke="#333" stroke-width="1.2"/>
-      <!-- Niche highlight -->
-      <rect x="271" y="183" width="49" height="49" rx="1" fill="#4a3a10" opacity="0.5"/>
-      <rect x="271" y="238" width="49" height="49" rx="1" fill="#4a3a10" opacity="0.5"/>
-      <text x="296" y="214" text-anchor="middle" font-size="6.5" fill="#c5a55a" font-weight="500">Niche</text>
-      <text x="296" y="267" text-anchor="middle" font-size="6.5" fill="#c5a55a" font-weight="500">610×305</text>
 
       <!-- Glass enclosure edge (where Wall A meets the enclosure from shower side) -->
       <line x1="217" y1="40" x2="217" y2="490" stroke="#333" stroke-width="2.5"/>
