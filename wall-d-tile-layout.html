@@ -240,14 +240,14 @@ function drawLayout() {
   rLine.setAttribute('stroke', 'rgba(255,255,255,0.3)'); rLine.setAttribute('stroke-width', '4');
   rLine.setAttribute('stroke-linecap', 'round');
   svg.appendChild(rLine);
-  text(svg, mirrorX + mirrorW/2, mirrorTop + mirrorH/2 - 8, 'MIRROR', '#556', 14, 'middle');
-  text(svg, mirrorX + mirrorW/2, mirrorTop + mirrorH/2 + 12, `${MIRROR_W} × ${MIRROR_H}mm`, '#778', 11, 'middle');
+  text(svg, mirrorX + mirrorW/2, mirrorTop + mirrorH/2 - 10, 'MIRROR', '#334', 18, 'middle', true);
+  text(svg, mirrorX + mirrorW/2, mirrorTop + mirrorH/2 + 14, `${MIRROR_W} × ${MIRROR_H}mm`, '#445', 14, 'middle', true);
 
   // --- RADIATOR (outline, centred below mirror) ---
   const radX = OX + (pw - mm2px(RAD_W)) / 2;
   const radY = OY + ph - mm2px(RAD_H) - mm2px(20);
   rect(svg, radX, radY, mm2px(RAD_W), mm2px(RAD_H), 'none', '#666', 1.5, '4,3');
-  text(svg, radX + mm2px(RAD_W)/2, radY + mm2px(RAD_H)/2, 'Radiator 800×590', '#666', 9, 'middle');
+  text(svg, radX + mm2px(RAD_W)/2, radY + mm2px(RAD_H)/2, 'Radiator 800×590', '#aaa', 12, 'middle', true);
 
   // --- DIMENSION LINES ---
   // Total width
@@ -275,27 +275,27 @@ function drawLayout() {
   dimV(svg, bottomTop, OY + ph, OX + pw + 15, `${BOTTOM_H}mm`);
 
   // Side strip width callout
-  text(svg, OX + mm2px(SIDE_W/2), mirrorTop + mirrorH + 14, `${SIDE_W}mm`, '#5d6d8a', 9, 'middle');
-  text(svg, OX + pw - mm2px(SIDE_W/2), mirrorTop + mirrorH + 14, `${SIDE_W}mm`, '#5d6d8a', 9, 'middle');
+  text(svg, OX + mm2px(SIDE_W/2), mirrorTop + mirrorH + 16, `${SIDE_W}mm`, '#fff', 12, 'middle', true);
+  text(svg, OX + pw - mm2px(SIDE_W/2), mirrorTop + mirrorH + 16, `${SIDE_W}mm`, '#fff', 12, 'middle', true);
 
   // Labels
-  text(svg, OX + 8, OY + ph - 8, '← FULL TILES start here (left / Wall C side)', '#7db88a', 10, 'start');
+  text(svg, OX + 8, OY + ph - 10, '← FULL TILES start here (left / Wall C side)', '#fff', 13, 'start', true);
 
   // Arrow pointing to cut column
   const cutColX = OX + mm2px(fullSpanH + grout + cutW/2);
-  text(svg, cutColX, bottomTop - 8, `↓ CUT ${cutW}mm`, '#c47', 10, 'middle');
+  text(svg, cutColX, bottomTop - 10, `↓ CUT ${cutW}mm`, '#ff6b6b', 14, 'middle', true);
 
   // Door note
-  text(svg, OX + pw + 4, OY + ph - 60, '← Door', '#888', 10, 'start');
-  text(svg, OX + pw + 4, OY + ph - 48, '   side', '#888', 10, 'start');
+  text(svg, OX + pw + 6, OY + ph - 60, '← Door', '#fff', 13, 'start', true);
+  text(svg, OX + pw + 6, OY + ph - 46, '   side', '#fff', 13, 'start', true);
 
   // Floor cut row label
   const cutRowMid = OY + ph - mm2px(cutH/2);
-  text(svg, OX - 48, cutRowMid, `${cutH}mm`, '#c47', 9, 'end');
-  text(svg, OX - 48, cutRowMid + 12, 'cut row', '#c47', 9, 'end');
+  text(svg, OX - 50, cutRowMid, `${cutH}mm`, '#ff6b6b', 12, 'end', true);
+  text(svg, OX - 50, cutRowMid + 14, 'cut row', '#ff6b6b', 12, 'end', true);
 
   // Top strip label
-  text(svg, OX + pw/2, OY + mm2px(TOP_H/2), `${TOP_H}mm strip`, '#8a6d5d', 9, 'middle');
+  text(svg, OX + pw/2, OY + mm2px(TOP_H/2) + 2, `${TOP_H}mm strip`, '#fff', 13, 'middle', true);
 }
 
 function rect(svg, x, y, w, h, fill, stroke, strokeW, dash) {
@@ -316,31 +316,57 @@ function line(svg, x1, y1, x2, y2, stroke, strokeW) {
   svg.appendChild(l);
 }
 
-function text(svg, x, y, content, fill, size, anchor) {
+function text(svg, x, y, content, fill, size, anchor, bold) {
+  // Shadow/outline for readability over tiles
+  const s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  s.setAttribute('x', x); s.setAttribute('y', y);
+  s.setAttribute('fill', 'none');
+  s.setAttribute('stroke', '#000');
+  s.setAttribute('stroke-width', 3);
+  s.setAttribute('stroke-linejoin', 'round');
+  s.setAttribute('font-size', size || 11);
+  s.setAttribute('text-anchor', anchor || 'middle');
+  s.setAttribute('font-family', '-apple-system, sans-serif');
+  if (bold) s.setAttribute('font-weight', '700');
+  s.textContent = content;
+  svg.appendChild(s);
+  // Foreground text
   const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
   t.setAttribute('x', x); t.setAttribute('y', y);
   t.setAttribute('fill', fill || '#ccc');
   t.setAttribute('font-size', size || 11);
   t.setAttribute('text-anchor', anchor || 'middle');
   t.setAttribute('font-family', '-apple-system, sans-serif');
+  if (bold) t.setAttribute('font-weight', '700');
   t.textContent = content;
   svg.appendChild(t);
 }
 
 function dimH(svg, x1, x2, y, label) {
-  line(svg, x1, y - 4, x1, y + 4, '#888', 0.5);
-  line(svg, x2, y - 4, x2, y + 4, '#888', 0.5);
-  line(svg, x1, y, x2, y, '#888', 0.5);
-  text(svg, (x1 + x2) / 2, y - 5, label, '#999', 9, 'middle');
+  line(svg, x1, y - 4, x1, y + 4, '#aaa', 0.8);
+  line(svg, x2, y - 4, x2, y + 4, '#aaa', 0.8);
+  line(svg, x1, y, x2, y, '#aaa', 0.8);
+  text(svg, (x1 + x2) / 2, y - 6, label, '#ddd', 11, 'middle', true);
 }
 
 function dimV(svg, y1, y2, x, label) {
-  line(svg, x - 4, y1, x + 4, y1, '#888', 0.5);
-  line(svg, x - 4, y2, x + 4, y2, '#888', 0.5);
-  line(svg, x, y1, x, y2, '#888', 0.5);
+  line(svg, x - 4, y1, x + 4, y1, '#aaa', 0.8);
+  line(svg, x - 4, y2, x + 4, y2, '#aaa', 0.8);
+  line(svg, x, y1, x, y2, '#aaa', 0.8);
+  // Shadow
+  const s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  s.setAttribute('x', x); s.setAttribute('y', (y1 + y2) / 2);
+  s.setAttribute('fill', 'none'); s.setAttribute('stroke', '#000'); s.setAttribute('stroke-width', 3); s.setAttribute('stroke-linejoin', 'round');
+  s.setAttribute('font-size', 11); s.setAttribute('font-weight', '700');
+  s.setAttribute('text-anchor', 'middle');
+  s.setAttribute('font-family', '-apple-system, sans-serif');
+  s.setAttribute('transform', `rotate(-90,${x},${(y1+y2)/2})`);
+  s.textContent = label;
+  svg.appendChild(s);
+  // Foreground
   const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
   t.setAttribute('x', x); t.setAttribute('y', (y1 + y2) / 2);
-  t.setAttribute('fill', '#999'); t.setAttribute('font-size', 9);
+  t.setAttribute('fill', '#ddd'); t.setAttribute('font-size', 11); t.setAttribute('font-weight', '700');
   t.setAttribute('text-anchor', 'middle');
   t.setAttribute('font-family', '-apple-system, sans-serif');
   t.setAttribute('transform', `rotate(-90,${x},${(y1+y2)/2})`);
