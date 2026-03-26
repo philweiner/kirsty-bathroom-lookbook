@@ -61,7 +61,6 @@
   <a href="#floor">Floor Options</a>
   <a href="#shower">Shower</a>
   <a href="#grout">Grout</a>
-  <a href="#wall-d-layout">Wall D Layout</a>
   <a href="#water-conditioning">Water Conditioning</a>
   <a href="#toilet">Toilet</a>
   <a href="#bidet">Bidet Seat</a>
@@ -76,6 +75,7 @@
   <a href="#budget">Budget</a>
   <a href="#summary">Summary</a>
   <a href="2d-renders.html" style="background:rgba(255,255,255,0.25);font-weight:600;">2D Renders →</a>
+  <a href="wall-d-tile-layout.html" style="background:rgba(255,255,255,0.25);font-weight:600;">Wall D Layout →</a>
 </div>
 
 <!-- ===== CONFIRMED TILES ===== -->
@@ -236,47 +236,6 @@
   <div class="key-info" style="margin-top:20px;">
     <p style="font-size:0.88em; margin:0; color:#666;"><strong>Dormido shower tile grout:</strong> Mapei Ultracolor Plus Anthracite 5kg — purchased from Screwfix (£21.49, 26 March). Re-grouting shower tiles where contractor used wrong black grout.</p>
   </div>
-</div>
-
-<hr class="divider">
-
-<!-- ===== WALL D TILE LAYOUT ===== -->
-<div class="section" id="wall-d-layout">
-  <h2>Wall D — Tile Layout</h2>
-  <p class="subtitle">Matteo Fluted Green 150×300mm — LANDSCAPE orientation (300mm wide × 150mm tall, flutes vertical) — stacked bond, 3mm grout</p>
-
-  <div style="background:#12121e; border-radius:12px; padding:24px; margin:16px 0;">
-    <svg id="walld-diagram" width="720" height="620" viewBox="0 0 720 620" xmlns="http://www.w3.org/2000/svg"></svg>
-  </div>
-
-  <div style="display:flex; gap:20px; flex-wrap:wrap; margin:16px 0; font-size:0.85em;">
-    <span><span style="display:inline-block;width:14px;height:14px;background:#5d8a68;border-radius:2px;vertical-align:middle;margin-right:4px;"></span> Full tile (300×150mm)</span>
-    <span><span style="display:inline-block;width:14px;height:14px;background:#8a5d5d;border-radius:2px;vertical-align:middle;margin-right:4px;"></span> Cut tile (right/floor)</span>
-    <span><span style="display:inline-block;width:14px;height:14px;background:#8a6d5d;border-radius:2px;vertical-align:middle;margin-right:4px;"></span> Top strip</span>
-    <span><span style="display:inline-block;width:14px;height:14px;background:#5d6d8a;border-radius:2px;vertical-align:middle;margin-right:4px;"></span> Side strips (139mm from 300mm)</span>
-    <span><span style="display:inline-block;width:14px;height:14px;background:#d0e4f0;border:1px solid #99b;border-radius:2px;vertical-align:middle;margin-right:4px;"></span> Mirror</span>
-  </div>
-
-  <div class="key-info" style="margin-top:16px;">
-    <table style="width:100%; border-collapse:collapse; font-size:0.9em;">
-      <tr><td style="color:#888;padding:4px 12px 4px 0;width:140px;">Tile</td><td>Matteo Fluted Green 150×300mm — <strong>LANDSCAPE</strong> (300mm wide, 150mm tall, flutes vertical) — stacked bond</td></tr>
-      <tr><td style="color:#888;padding:4px 12px 4px 0;">Grout</td><td><strong>3mm</strong> — BAL Micromax3 ECO Smoke</td></tr>
-      <tr><td style="color:#888;padding:4px 12px 4px 0;">Horizontal</td><td>5 full tiles (300mm) + 1 cut tile (287mm / 96%) on the RIGHT (door side)</td></tr>
-      <tr><td style="color:#888;padding:4px 12px 4px 0;">Vertical (bottom)</td><td>7 full rows (150mm) from mirror edge down + 1 cut row (46mm / 31%) at floor</td></tr>
-      <tr><td style="color:#888;padding:4px 12px 4px 0;">Top strip</td><td>177mm zone — see note below</td></tr>
-      <tr><td style="color:#888;padding:4px 12px 4px 0;">Side strips</td><td>1 column each side — 139mm wide (cut from 300mm tile)</td></tr>
-      <tr><td style="color:#888;padding:4px 12px 4px 0;">Mirror</td><td>~1524mm wide × ~1208mm tall, centred</td></tr>
-      <tr><td style="color:#888;padding:4px 12px 4px 0;">Radiator</td><td>Sorrento 800 × 590mm, centred below mirror</td></tr>
-    </table>
-  </div>
-
-  <div class="note" style="margin-top:12px;"><strong>Cuts hidden by the door:</strong> All horizontal cut tiles are on the RIGHT side (nearest to the bathroom door on Wall A). The bottom cut row at floor level is partially concealed by the radiator.</div>
-
-  <div class="note" style="margin-top:8px; background:#fff8e6; border-left:3px solid #c49040;"><strong>Top strip note:</strong> The top strip above the mirror is 177mm tall — taller than one landscape tile (150mm). Options: (1) One full 150mm row + 3mm grout + a narrow 24mm strip; (2) A single tile cut to 177mm from the 300mm dimension; (3) Adjust grout spacing in this zone. Discuss with tiler.</div>
-
-  <div class="note" style="margin-top:8px; border-left:3px solid #5d8a68;"><strong>Flute alignment — CRITICAL:</strong> Stacked bond ensures flutes align row-to-row on full tiles. For the <strong>cut column on the right</strong>: ALWAYS cut from the RIGHT edge so the left-side flute pattern is preserved identically in every row. Same rule for <strong>side strips</strong>: always cut from the same edge. The <strong>floor cut row</strong> just shortens flutes (height trim) — no alignment issue. Wet saw: cut glazed face up for clean flute edges.</div>
-
-  <p style="font-size:0.85em; color:#666; margin-top:12px;"><a href="Wall D Tile Layout.html" target="_blank" style="color:#7db88a;">Open full interactive diagram →</a></p>
 </div>
 
 <hr class="divider">
@@ -959,86 +918,5 @@
   <p style="margin-top: 8px;">Click any product link to view full details and images on the retailer's website</p>
 </div>
 
-<script>
-// Wall D Tile Layout inline diagram
-(function() {
-  const WALL_W=1802,WALL_H=2502,BOTTOM_H=1117,TOP_H=177,SIDE_W=139;
-  const MIRROR_H=WALL_H-BOTTOM_H-TOP_H,MIRROR_W=WALL_W-2*SIDE_W;
-  const TILE_W=300,TILE_H=150,RAD_W=800,RAD_H=590,GROUT=3;
-  const S=580/WALL_W,OX=90,OY=40;
-  const mm=v=>v*S;
-  const svg=document.getElementById('walld-diagram');
-  if(!svg) return;
-
-  function r(x,y,w,h,f,s,sw,d){const e=document.createElementNS('http://www.w3.org/2000/svg','rect');e.setAttribute('x',x);e.setAttribute('y',y);e.setAttribute('width',w);e.setAttribute('height',h);if(f)e.setAttribute('fill',f);if(s){e.setAttribute('stroke',s);e.setAttribute('stroke-width',sw||1);}if(d)e.setAttribute('stroke-dasharray',d);svg.appendChild(e);}
-  function l(x1,y1,x2,y2,s,sw){const e=document.createElementNS('http://www.w3.org/2000/svg','line');e.setAttribute('x1',x1);e.setAttribute('y1',y1);e.setAttribute('x2',x2);e.setAttribute('y2',y2);e.setAttribute('stroke',s);e.setAttribute('stroke-width',sw||1);svg.appendChild(e);}
-  function t(x,y,c,f,sz,a){const e=document.createElementNS('http://www.w3.org/2000/svg','text');e.setAttribute('x',x);e.setAttribute('y',y);e.setAttribute('fill',f||'#ccc');e.setAttribute('font-size',sz||11);e.setAttribute('text-anchor',a||'middle');e.setAttribute('font-family','-apple-system,sans-serif');e.textContent=c;svg.appendChild(e);}
-  function dH(x1,x2,y,lb){l(x1,y-4,x1,y+4,'#888',0.5);l(x2,y-4,x2,y+4,'#888',0.5);l(x1,y,x2,y,'#888',0.5);t((x1+x2)/2,y-5,lb,'#999',9);}
-  function dV(y1,y2,x,lb){l(x-4,y1,x+4,y1,'#888',0.5);l(x-4,y2,x+4,y2,'#888',0.5);l(x,y1,x,y2,'#888',0.5);const e=document.createElementNS('http://www.w3.org/2000/svg','text');e.setAttribute('x',x);e.setAttribute('y',(y1+y2)/2);e.setAttribute('fill','#999');e.setAttribute('font-size',9);e.setAttribute('text-anchor','middle');e.setAttribute('font-family','-apple-system,sans-serif');e.setAttribute('transform','rotate(-90,'+x+','+((y1+y2)/2)+')');e.textContent=lb;svg.appendChild(e);}
-
-  const pw=mm(WALL_W),ph=mm(WALL_H),g=GROUT;
-  let nH=0;while((nH+1)*TILE_W+nH*g<=WALL_W)nH++;
-  const fsH=nH*TILE_W+(nH-1)*g,cW=WALL_W-fsH-g;
-  let nV=0;while((nV+1)*TILE_H+nV*g<=BOTTOM_H)nV++;
-  const fsV=nV*TILE_H+(nV-1)*g,cH=BOTTOM_H-fsV-g;
-  const topCutH=TOP_H-TILE_H-g;
-
-  r(OX,OY,pw,ph,'none','#555',1);
-  l(OX,OY+ph,OX+pw,OY+ph,'#8a7040',2);
-  l(OX,OY,OX+pw,OY,'#666',2);
-
-  const bT=OY+ph-mm(BOTTOM_H);
-  let rows=[],yP=BOTTOM_H;
-  for(let i=0;i<nV;i++){let rt=yP-TILE_H;rows.push({t:rt,h:TILE_H,c:false});yP=rt-g;}
-  rows.push({t:0,h:cH,c:true});
-  let cols=[],xP=0;
-  for(let i=0;i<nH;i++){cols.push({l:xP,w:TILE_W,c:false});xP+=TILE_W+g;}
-  cols.push({l:xP,w:cW,c:true});
-
-  for(let row of rows)for(let col of cols){
-    const px=OX+mm(col.l),py=OY+ph-mm(row.t+row.h),pW=mm(col.w),pH=mm(row.h);
-    r(px,py,pW,pH,(col.c||row.c)?'#8a5d5d':'#5d8a68','#2a2a3a',0.5);
-    if(col.w>=80&&row.h>=40){const n=Math.max(2,Math.floor(col.w/20));for(let f=1;f<n;f++)l(px+pW*f/n,py+1,px+pW*f/n,py+pH-1,'rgba(255,255,255,0.06)',0.5);}
-  }
-
-  const tsY=OY,tsH=mm(topCutH),ftH=mm(TILE_H);
-  for(let col of cols){const px=OX+mm(col.l),cw=mm(col.w);r(px,tsY,cw,tsH,'#8a6d5d','#2a2a3a',0.5);r(px,tsY+tsH+mm(g),cw,ftH,'#8a6d5d','#2a2a3a',0.5);}
-
-  const mT=OY+mm(TOP_H),mH=mm(MIRROR_H);
-  let sR=[],sY=MIRROR_H,nS=0;
-  while((nS+1)*TILE_H+nS*g<=MIRROR_H)nS++;
-  sY=MIRROR_H;
-  for(let i=0;i<nS;i++){let rt=sY-TILE_H;sR.push({t:rt,h:TILE_H});sY=rt-g;}
-  let sCH=sY+g;if(sCH>0)sR.push({t:0,h:sCH});
-  for(let row of sR){const py=mT+mm(MIRROR_H-row.t-row.h),pH=mm(row.h);r(OX,py,mm(SIDE_W),pH,'#5d6d8a','#2a2a3a',0.5);r(OX+pw-mm(SIDE_W),py,mm(SIDE_W),pH,'#5d6d8a','#2a2a3a',0.5);}
-
-  const mX=OX+mm(SIDE_W),mW=mm(MIRROR_W);
-  r(mX,mT,mW,mH,'#d0e4f0','#99aabb',1);
-  t(mX+mW/2,mT+mH/2-8,'MIRROR','#556',14);
-  t(mX+mW/2,mT+mH/2+12,MIRROR_W+' × '+MIRROR_H+'mm','#778',11);
-
-  const rX=OX+(pw-mm(RAD_W))/2,rY=OY+ph-mm(RAD_H)-mm(20);
-  r(rX,rY,mm(RAD_W),mm(RAD_H),'none','#666',1.5,'4,3');
-  t(rX+mm(RAD_W)/2,rY+mm(RAD_H)/2,'Radiator 800×590','#666',9);
-
-  dH(OX,OX+pw,OY+ph+30,WALL_W+'mm');
-  dH(OX,OX+mm(fsH),OY+ph+50,nH+'× 300mm = '+fsH+'mm');
-  dH(OX+mm(fsH+g),OX+pw,OY+ph+50,cW+'mm');
-  dV(OY,OY+ph,OX-20,WALL_H+'mm');
-  dV(bT,OY+ph,OX-45,BOTTOM_H+'mm');
-  dV(OY,OY+mm(TOP_H),OX+pw+15,TOP_H+'mm');
-  dV(mT,mT+mH,OX+pw+15,MIRROR_H+'mm');
-  dV(bT,OY+ph,OX+pw+15,BOTTOM_H+'mm');
-  t(OX+mm(SIDE_W/2),mT+mH+14,SIDE_W+'mm','#5d6d8a',9);
-  t(OX+pw-mm(SIDE_W/2),mT+mH+14,SIDE_W+'mm','#5d6d8a',9);
-  t(OX+8,OY+ph-8,'← FULL TILES start here (left / Wall C side)','#7db88a',10,'start');
-  t(OX+mm(fsH+g+cW/2),bT-8,'↓ CUT '+cW+'mm','#c47',10);
-  t(OX+pw+4,OY+ph-60,'← Door','#888',10,'start');
-  t(OX+pw+4,OY+ph-48,'   side','#888',10,'start');
-  t(OX-48,OY+ph-mm(cH/2),cH+'mm','#c47',9,'end');
-  t(OX-48,OY+ph-mm(cH/2)+12,'cut row','#c47',9,'end');
-  t(OX+pw/2,OY+mm(TOP_H/2),TOP_H+'mm strip','#8a6d5d',9);
-})();
-</script>
 </body>
 </html>
