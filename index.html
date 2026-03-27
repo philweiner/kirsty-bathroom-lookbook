@@ -121,7 +121,7 @@
   <div class="checklist-overall">
     <div style="display:flex; justify-content:space-between; align-items:center;">
       <strong style="color:#2E4057;">Overall Progress</strong>
-      <span class="progress-text" id="progress-text">0 of 42 tasks complete</span>
+      <span class="progress-text" id="progress-text">0 of 41 tasks complete</span>
     </div>
     <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
   </div>
@@ -131,7 +131,7 @@
     <div class="checklist-phase-header" onclick="togglePhase(this)">
       <div class="phase-num" data-phase="1">1</div>
       <div class="phase-title">Contractor &amp; Demolition</div>
-      <div class="phase-progress"><span class="prog-done" data-phase-done="1">0</span>/4</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="1">0</span>/5</div>
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
@@ -139,6 +139,7 @@
       <div class="checklist-item"><input type="checkbox" id="t2" onchange="updateProgress()"><label for="t2">Strip Kevin's green tile work from Wall C<span class="item-note">Carefully remove tiles, salvage any that are intact (they're paid for)</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t3" onchange="updateProgress()"><label for="t3">Scrape adhesive residue, assess wall substrate</label></div>
       <div class="checklist-item"><input type="checkbox" id="t4" onchange="updateProgress()"><label for="t4">Skim-coat any damaged plasterboard (24-48 hrs drying)<span class="item-note">Only if tile removal damages the boards</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t5a" onchange="updateProgress()"><label for="t5a">Cut &amp; install missing Dormido tile on Wall B behind toilet<span class="item-warn">Needs hole cut for soil line pipe (110mm dia). This tile was never installed by Kevin.</span></label></div>
     </div>
   </div>
 
@@ -164,14 +165,13 @@
     <div class="checklist-phase-header" onclick="togglePhase(this)">
       <div class="phase-num" data-phase="3">3</div>
       <div class="phase-title">First Fix Electrical</div>
-      <div class="phase-progress"><span class="prog-done" data-phase-done="3">0</span>/4</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="3">0</span>/2</div>
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
-      <div class="checklist-item"><input type="checkbox" id="t10" onchange="updateProgress()"><label for="t10">Confirm cable runs: KABOMBA vanity light (Wall C), shaver socket (into vanity), downlights x4, extractor fan<span class="item-note">All wiring must be in correct positions before tiling over</span></label></div>
-      <div class="checklist-item"><input type="checkbox" id="t11" onchange="updateProgress()"><label for="t11">Confirm cable runs: flex outlet behind toilet, fused spur outside bathroom, 3-gang grid plate outside door<span class="item-note">Bidet power: spur outside &rarr; floorboards &rarr; copper flex outlet behind toilet</span></label></div>
-      <div class="checklist-item"><input type="checkbox" id="t12" onchange="updateProgress()"><label for="t12">Run any additional conduit while walls are still accessible<span class="item-warn">Once tiles go on, you cannot add cables — do it now</span></label></div>
-      <div class="checklist-item"><input type="checkbox" id="t13" onchange="updateProgress()"><label for="t13">Electrician signs off all rough-in positions</label></div>
+      <p style="font-size:0.85em; color:#2e7d32; margin-bottom:10px;">&#10003; All cable runs already roughed in and ready — vanity light, downlights x4, extractor, shaver socket, flex outlet behind toilet, fused spur outside, 3-gang grid plate outside door.</p>
+      <div class="checklist-item"><input type="checkbox" id="t10" onchange="updateProgress()"><label for="t10">Secure bidet conduit box — fill behind with expanding foam<span class="item-warn">Currently nothing behind the conduit box; needs foam to hold it firm before tiling over</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t11" onchange="updateProgress()"><label for="t11">Final check: all rough-in positions correct before tiles go on<span class="item-note">No new cables needed — just verify nothing has shifted</span></label></div>
     </div>
   </div>
 
@@ -198,7 +198,7 @@
       </div>
 
       <div class="tile-option-card">
-        <img class="tile-swatch" src="https://media1.wickes.co.uk/is/image/travisperaborea/287239_alt1" alt="Wickes Boutique Flora Blush Pink" onerror="this.style.background='linear-gradient(135deg,#f0c0c8,#e0a8b0)'">
+        <img class="tile-swatch" src="https://media.wickes.co.uk/image/upload/b_rgb:FFFFFF,c_pad,dpr_1.0,f_jpg,h_3000,q_auto:good,w_3000/c_pad,h_3000,w_3000/v1/products/wickes/GPID_5000103809_01?pgw=1" alt="Wickes Boutique Flora Blush Pink" onerror="this.style.background='linear-gradient(135deg,#f0c0c8,#e0a8b0)'">
         <div class="tile-info">
           <h4>Boutique Flora Blush Pink — Wickes</h4>
           <p>130 x 130 x 8mm | Ceramic gloss, rustic/handmade look</p>
@@ -208,7 +208,41 @@
         </div>
       </div>
 
-      <div class="checklist-item"><input type="checkbox" id="t14" onchange="updateProgress()"><label for="t14">Kirsty picks final tile (see options above)<span class="item-note">Also decide: Village Rose Gold, Wickes Flora, Leader Online Vivid Blush, or Fayrouz Liberty?</span></label></div>
+      <div class="tile-option-card" style="border:2px solid #2e7d32;">
+        <img class="tile-swatch" src="https://i.ebayimg.com/images/g/yPIAAeSwX3Bn4-3s/s-l1600.webp" alt="Wickes Flora Blush Pink (eBay)" onerror="this.style.background='linear-gradient(135deg,#f0c0c8,#e0a8b0)'">
+        <div class="tile-info">
+          <h4>Boutique Flora Blush Pink — eBay <span style="background:#c62828;color:#fff;font-size:0.7em;padding:2px 8px;border-radius:8px;vertical-align:middle;">Best Value</span></h4>
+          <p>130 x 130 x 8mm | Same Wickes tile, 7 packs (4.40m²) | Ceramic gloss</p>
+          <p class="tile-price">£119 for 7 packs (4.40m²) — ~£27/m² vs £50/m² at Wickes</p>
+          <p>Same tile, nearly half the price. May need 1-2 extra packs from Wickes to top up to 5.22m².</p>
+          <p>Trim: Soft Copper Straight Edge <strong>8mm</strong> (Topps Tiles)</p>
+          <p><a href="https://www.ebay.co.uk/itm/306215645826" target="_blank" style="color:#1565c0; font-size:0.85em;">View on eBay &rarr;</a></p>
+        </div>
+      </div>
+
+      <div class="tile-option-card">
+        <img class="tile-swatch" src="https://m2.wallsandfloors.co.uk/media/catalog/product/cache/f8158826193ba5faa8b862a9bd1eb9e9/r/i/riad-pink-tiles-bathroom-wall-2300-4_1.jpg" alt="Zellige Mini Pink" onerror="this.style.background='linear-gradient(135deg,#f2c4c8,#e6aeb5)'">
+        <div class="tile-info">
+          <h4>Zellige Mini Pink — Walls &amp; Floors <span style="background:#2e7d32;color:#fff;font-size:0.7em;padding:2px 8px;border-radius:8px;vertical-align:middle;">Designer Pick</span></h4>
+          <p>100 x 100 x 9mm | Ceramic gloss, zellige-look | Artisan tonal variation</p>
+          <p class="tile-price">£39.95/m² — ~6m² = ~£240</p>
+          <p>Square format, warm pink gloss, handmade look. Works beautifully with wood &amp; copper.</p>
+          <p><a href="https://www.wallsandfloors.co.uk/zellige-mini-pink-square-gloss-wall-tiles" target="_blank" style="color:#1565c0; font-size:0.85em;">View on Walls &amp; Floors &rarr;</a></p>
+        </div>
+      </div>
+
+      <div class="tile-option-card">
+        <img class="tile-swatch" src="https://www.ottotiles.co.uk/cdn/shop/files/Blush_Pink_Zellige-2-Otto_Tiles_and_Design.png?v=1773928078&width=1000" alt="Blush Pink Zellige" onerror="this.style.background='linear-gradient(135deg,#f0bfc5,#daa0a8)'">
+        <div class="tile-info">
+          <h4>Blush Pink Zellige — Otto Tiles</h4>
+          <p>100 x 100 x 12mm | Genuine handmade Moroccan zellige | Hand-chiselled &amp; kiln-fired in Fez</p>
+          <p class="tile-price">Price on enquiry — authentic artisan, min 1m² order</p>
+          <p>The real deal — each tile unique. <span style="color:#c62828;">10–12 week lead time.</span></p>
+          <p><a href="https://www.ottotiles.co.uk/products/blush-pink-zellige" target="_blank" style="color:#1565c0; font-size:0.85em;">View on Otto Tiles &rarr;</a> &nbsp;|&nbsp; <a href="https://video.vidjet.io/669d6c19-4e4b-4fd9-9639-5f03abddc844/97916fa1-cce0-4b0f-9557-a300e0728d3a/blush_pink_zellige.mov-compressed.mp4" target="_blank" style="color:#1565c0; font-size:0.85em;">Watch video &rarr;</a></p>
+        </div>
+      </div>
+
+      <div class="checklist-item"><input type="checkbox" id="t14" onchange="updateProgress()"><label for="t14">Kirsty picks final tile (see 5 options above)<span class="item-note">Village Rose Gold (£228) | Wickes Flora (£289 or £119 eBay!) | Zellige Mini Pink (£240, designer pick) | Otto Zellige (POA, 10-12wk lead)</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t15" onchange="updateProgress()"><label for="t15">Order tiles (~5.22m² with 10% wastage for Walls C &amp; D)<span class="item-note">Wall C: 2.079m² (incl. window reveals + sill) | Wall D: 2.668m² (around mirror)</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t16" onchange="updateProgress()"><label for="t16">Order Topps Tiles Soft Copper Straight Edge trim x 3 lengths (7.5m)<span class="item-note">Match trim depth to tile thickness (8mm for Wickes, 10mm for Tile Mountain). ~£69</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t17" onchange="updateProgress()"><label for="t17">Choose grout colour for new tiles<span class="item-note">Mapei Anthracite may be too dark for pink/rose gold — consider white, cream, or warm grey</span></label></div>
@@ -289,7 +323,7 @@
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
-      <div class="checklist-item"><input type="checkbox" id="t35" onchange="updateProgress()"><label for="t35">Swap existing downlights for G.W.S brushed copper fire-rated LED x4 — connect to Enkin dimmer (Gang 1)</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t35" onchange="updateProgress()"><label for="t35">Swap existing downlights for G.W.S brushed copper fire-rated LED x4<span class="item-note">Cables already in place — just switch out the fittings and connect to Enkin dimmer (Gang 1)</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t36" onchange="updateProgress()"><label for="t36">Install Airflow iCON 15 extractor fan + KABOMBA vanity light on Wall C + shaver socket inside vanity cabinet</label></div>
       <div class="checklist-item"><input type="checkbox" id="t37" onchange="updateProgress()"><label for="t37">Install outside bathroom: 3-gang grid plate (dimmer + 2 switches) + fused spur (bidet). Install behind toilet: copper flex outlet plate</label></div>
       <div class="checklist-item"><input type="checkbox" id="t38" onchange="updateProgress()"><label for="t38">Connect mirror demister to Gang 3 — test all circuits, verify dimmer works on downlights<span class="item-note">Gang 1 = dimmer (downlights), Gang 2 = vanity light, Gang 3 = extractor + mirror demister</span></label></div>
@@ -321,7 +355,7 @@ function togglePhase(header) {
   arrow.classList.toggle('open');
 }
 function updateProgress() {
-  var total = 42;
+  var total = 41;
   var checks = document.querySelectorAll('.checklist-item input[type="checkbox"]');
   var done = 0;
   checks.forEach(function(cb) {
