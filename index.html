@@ -47,6 +47,39 @@
   .key-info tr:nth-child(even) { background: #f8f5f2; }
   .footer { background: #2E4057; color: white; text-align: center; padding: 30px 20px; margin-top: 60px; }
   .footer p { opacity: 0.7; font-size: 0.9em; }
+
+  /* ===== ORDER OF OPERATIONS CHECKLIST ===== */
+  .checklist-section { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+  .checklist-phase { background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 16px; overflow: hidden; }
+  .checklist-phase-header { padding: 16px 20px; cursor: pointer; display: flex; align-items: center; gap: 12px; user-select: none; transition: background 0.2s; }
+  .checklist-phase-header:hover { background: #f8f5f2; }
+  .checklist-phase-header .phase-num { background: #2E4057; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85em; flex-shrink: 0; }
+  .checklist-phase-header .phase-num.done { background: #2e7d32; }
+  .checklist-phase-header .phase-title { font-weight: 700; color: #2E4057; font-size: 1.05em; flex: 1; }
+  .checklist-phase-header .phase-progress { font-size: 0.8em; color: #888; white-space: nowrap; }
+  .checklist-phase-header .phase-progress .prog-done { color: #2e7d32; font-weight: 700; }
+  .checklist-phase-header .phase-arrow { font-size: 0.8em; color: #aaa; transition: transform 0.2s; }
+  .checklist-phase-header .phase-arrow.open { transform: rotate(90deg); }
+  .checklist-phase-body { padding: 0 20px 16px 64px; display: none; }
+  .checklist-phase-body.open { display: block; }
+  .checklist-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f0ebe6; }
+  .checklist-item:last-child { border-bottom: none; }
+  .checklist-item input[type="checkbox"] { margin-top: 4px; width: 18px; height: 18px; accent-color: #2e7d32; cursor: pointer; flex-shrink: 0; }
+  .checklist-item label { cursor: pointer; font-size: 0.92em; color: #444; flex: 1; }
+  .checklist-item label.checked { text-decoration: line-through; color: #aaa; }
+  .checklist-item .item-note { font-size: 0.78em; color: #1565c0; display: block; margin-top: 2px; font-style: italic; }
+  .checklist-item .item-warn { font-size: 0.78em; color: #c62828; display: block; margin-top: 2px; font-weight: 600; }
+  .checklist-overall { background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 20px 24px; margin-bottom: 24px; }
+  .checklist-overall .progress-bar { height: 12px; background: #e8e0d8; border-radius: 6px; overflow: hidden; margin: 12px 0; }
+  .checklist-overall .progress-fill { height: 100%; background: linear-gradient(90deg, #2e7d32, #4caf50); border-radius: 6px; transition: width 0.4s ease; }
+  .checklist-overall .progress-text { font-size: 0.85em; color: #666; }
+  .tile-option-card { background: white; border: 2px solid #e0d8d0; border-radius: 12px; padding: 20px; margin-bottom: 12px; display: flex; gap: 16px; align-items: flex-start; transition: border-color 0.2s, box-shadow 0.2s; }
+  .tile-option-card:hover { border-color: #b8a99a; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .tile-option-card .tile-swatch { width: 80px; height: 80px; border-radius: 8px; background: #f0e8e0; flex-shrink: 0; object-fit: cover; }
+  .tile-option-card .tile-info { flex: 1; }
+  .tile-option-card .tile-info h4 { color: #2E4057; margin-bottom: 4px; font-size: 1em; }
+  .tile-option-card .tile-info p { font-size: 0.85em; color: #666; margin: 2px 0; }
+  .tile-option-card .tile-info .tile-price { font-weight: 700; color: #2e7d32; }
 </style>
 </head>
 <body>
@@ -57,6 +90,7 @@
 </div>
 
 <div class="nav">
+  <a href="#plan" style="background:rgba(255,255,255,0.25);font-weight:600;">Order of Operations</a>
   <a href="#tiles">Tiles</a>
   <a href="#floor">Floor Options</a>
   <a href="#shower">Shower</a>
@@ -77,6 +111,247 @@
   <a href="2d-renders.html" style="background:rgba(255,255,255,0.25);font-weight:600;">2D Renders →</a>
   <a href="wall-d-tile-layout.html" style="background:rgba(255,255,255,0.25);font-weight:600;">Wall D Layout →</a>
 </div>
+
+<!-- ===== ORDER OF OPERATIONS ===== -->
+<div class="checklist-section" id="plan">
+  <h2 style="font-size:1.8em; color:#2E4057; margin-bottom:8px; border-bottom:3px solid #2E4057; padding-bottom:8px;">Order of Operations <span class="badge pending">In Progress</span></h2>
+  <p style="color:#888; margin-bottom:20px; font-size:0.95em;">Finishing the bathroom from 27 March 2026 — tick items off as you go</p>
+
+  <!-- Overall progress -->
+  <div class="checklist-overall">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <strong style="color:#2E4057;">Overall Progress</strong>
+      <span class="progress-text" id="progress-text">0 of 42 tasks complete</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="checklist-phase">
+    <div class="checklist-phase-header" onclick="togglePhase(this)">
+      <div class="phase-num" data-phase="1">1</div>
+      <div class="phase-title">Contractor &amp; Demolition</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="1">0</span>/4</div>
+      <div class="phase-arrow">&#9654;</div>
+    </div>
+    <div class="checklist-phase-body">
+      <div class="checklist-item"><input type="checkbox" id="t1" onchange="updateProgress()"><label for="t1">Let Kevin go — confirm he is off the job<span class="item-note">Document everything for the payment dispute (see Contractor Timeline doc)</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t2" onchange="updateProgress()"><label for="t2">Strip Kevin's green tile work from Wall C<span class="item-note">Carefully remove tiles, salvage any that are intact (they're paid for)</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t3" onchange="updateProgress()"><label for="t3">Scrape adhesive residue, assess wall substrate</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t4" onchange="updateProgress()"><label for="t4">Skim-coat any damaged plasterboard (24-48 hrs drying)<span class="item-note">Only if tile removal damages the boards</span></label></div>
+    </div>
+  </div>
+
+  <!-- PHASE 2 -->
+  <div class="checklist-phase">
+    <div class="checklist-phase-header" onclick="togglePhase(this)">
+      <div class="phase-num" data-phase="2">2</div>
+      <div class="phase-title">First Fix Plumbing</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="2">0</span>/5</div>
+      <div class="phase-arrow">&#9654;</div>
+    </div>
+    <div class="checklist-phase-body">
+      <div class="checklist-item"><input type="checkbox" id="t5" onchange="updateProgress()"><label for="t5">Drill through back wall for basin waste pipe<span class="item-note">PVC waste from vanity (Wall C) connects to soil line outside</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t6" onchange="updateProgress()"><label for="t6">Adjust/move radiator pipe positions<span class="item-note">Kevin noted pipes need to shift slightly — must be done before tiling</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t7" onchange="updateProgress()"><label for="t7">Confirm all pipe positions are final (basin, radiator, toilet cistern feed)</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t8" onchange="updateProgress()"><label for="t8">Install Limetron water conditioner on mains cold line<span class="item-note">FixTheBog order, Royal Mail YT894800888GB</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t9" onchange="updateProgress()"><label for="t9">Pressure test all pipework and cap off</label></div>
+    </div>
+  </div>
+
+  <!-- PHASE 3 -->
+  <div class="checklist-phase">
+    <div class="checklist-phase-header" onclick="togglePhase(this)">
+      <div class="phase-num" data-phase="3">3</div>
+      <div class="phase-title">First Fix Electrical</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="3">0</span>/4</div>
+      <div class="phase-arrow">&#9654;</div>
+    </div>
+    <div class="checklist-phase-body">
+      <div class="checklist-item"><input type="checkbox" id="t10" onchange="updateProgress()"><label for="t10">Confirm cable runs: KABOMBA vanity light (Wall C), shaver socket (into vanity), downlights x4, extractor fan<span class="item-note">All wiring must be in correct positions before tiling over</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t11" onchange="updateProgress()"><label for="t11">Confirm cable runs: flex outlet behind toilet, fused spur outside bathroom, 3-gang grid plate outside door<span class="item-note">Bidet power: spur outside &rarr; floorboards &rarr; copper flex outlet behind toilet</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t12" onchange="updateProgress()"><label for="t12">Run any additional conduit while walls are still accessible<span class="item-warn">Once tiles go on, you cannot add cables — do it now</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t13" onchange="updateProgress()"><label for="t13">Electrician signs off all rough-in positions</label></div>
+    </div>
+  </div>
+
+  <!-- PHASE 4 -->
+  <div class="checklist-phase">
+    <div class="checklist-phase-header" onclick="togglePhase(this)">
+      <div class="phase-num" data-phase="4">4</div>
+      <div class="phase-title">Select &amp; Order New Wall Tiles + Trim</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="4">0</span>/4</div>
+      <div class="phase-arrow">&#9654;</div>
+    </div>
+    <div class="checklist-phase-body">
+      <p style="font-size:0.85em; color:#888; margin-bottom:12px;">Replacing Matteo Fluted Green — Kirsty wants something bright, glossy, square, works with the wood tiles &amp; copper accents</p>
+
+      <div class="tile-option-card">
+        <img class="tile-swatch" src="https://www.tilemountain.co.uk/media/catalog/product/cache/2b84c9f32cfb8960e7c2cac3a59ef714/v/i/village-rose-gold-132x132_qutr.jpg" alt="Village Rose Gold" onerror="this.style.background='linear-gradient(135deg,#e8b4b8,#d4a0a8)'">
+        <div class="tile-info">
+          <h4>Village Rose Gold — Tile Mountain</h4>
+          <p>132 x 132 x 9mm | Ceramic gloss | Equipe (Spanish)</p>
+          <p class="tile-price">£37.95/m² — 6 boxes for ~5.22m² = ~£228</p>
+          <p>Trim: Soft Copper Straight Edge <strong>10mm</strong> (Topps Tiles) | Online only</p>
+          <p><a href="https://www.tilemountain.co.uk/village-rose-gold-wall-tile-132x132" target="_blank" style="color:#1565c0; font-size:0.85em;">View on Tile Mountain &rarr;</a></p>
+        </div>
+      </div>
+
+      <div class="tile-option-card">
+        <img class="tile-swatch" src="https://media1.wickes.co.uk/is/image/travisperaborea/287239_alt1" alt="Wickes Boutique Flora Blush Pink" onerror="this.style.background='linear-gradient(135deg,#f0c0c8,#e0a8b0)'">
+        <div class="tile-info">
+          <h4>Boutique Flora Blush Pink — Wickes</h4>
+          <p>130 x 130 x 8mm | Ceramic gloss, rustic/handmade look</p>
+          <p class="tile-price">£50/m² — 9 packs for ~5.22m² = ~£289</p>
+          <p>Trim: Soft Copper Straight Edge <strong>8mm</strong> (Topps Tiles) | Click &amp; collect available</p>
+          <p><a href="https://www.wickes.co.uk/Wickes-Boutique-Flora-Blush-Pink-Gloss-Ceramic-Wall-Tile---130-x-130mm/p/287239" target="_blank" style="color:#1565c0; font-size:0.85em;">View on Wickes &rarr;</a></p>
+        </div>
+      </div>
+
+      <div class="checklist-item"><input type="checkbox" id="t14" onchange="updateProgress()"><label for="t14">Kirsty picks final tile (see options above)<span class="item-note">Also decide: Village Rose Gold, Wickes Flora, Leader Online Vivid Blush, or Fayrouz Liberty?</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t15" onchange="updateProgress()"><label for="t15">Order tiles (~5.22m² with 10% wastage for Walls C &amp; D)<span class="item-note">Wall C: 2.079m² (incl. window reveals + sill) | Wall D: 2.668m² (around mirror)</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t16" onchange="updateProgress()"><label for="t16">Order Topps Tiles Soft Copper Straight Edge trim x 3 lengths (7.5m)<span class="item-note">Match trim depth to tile thickness (8mm for Wickes, 10mm for Tile Mountain). ~£69</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t17" onchange="updateProgress()"><label for="t17">Choose grout colour for new tiles<span class="item-note">Mapei Anthracite may be too dark for pink/rose gold — consider white, cream, or warm grey</span></label></div>
+    </div>
+  </div>
+
+  <!-- PHASE 5 -->
+  <div class="checklist-phase">
+    <div class="checklist-phase-header" onclick="togglePhase(this)">
+      <div class="phase-num" data-phase="5">5</div>
+      <div class="phase-title">Tiling — Walls C &amp; D</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="5">0</span>/5</div>
+      <div class="phase-arrow">&#9654;</div>
+    </div>
+    <div class="checklist-phase-body">
+      <div class="checklist-item"><input type="checkbox" id="t18" onchange="updateProgress()"><label for="t18">Tile Wall C: bottom band (1828x897mm) up to window sill level</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t19" onchange="updateProgress()"><label for="t19">Tile Wall C: window reveals (127mm deep each side) + sill + patches flanking window (374x303mm each) with copper trim on all external corners &amp; top edge at 1200mm</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t20" onchange="updateProgress()"><label for="t20">Tile Wall D: below mirror (1802x1117mm), above mirror (1802x177mm), side strips (139x1208mm each)</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t21" onchange="updateProgress()"><label for="t21">Cut in &amp; finish edges where new tiles meet Dormido shower tiles</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t22" onchange="updateProgress()"><label for="t22">Grout all new tiling — let cure 24hrs minimum</label></div>
+    </div>
+  </div>
+
+  <!-- PHASE 6 -->
+  <div class="checklist-phase">
+    <div class="checklist-phase-header" onclick="togglePhase(this)">
+      <div class="phase-num" data-phase="6">6</div>
+      <div class="phase-title">Shower Finishing</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="6">0</span>/4</div>
+      <div class="phase-arrow">&#9654;</div>
+    </div>
+    <div class="checklist-phase-body">
+      <div class="checklist-item"><input type="checkbox" id="t23" onchange="updateProgress()"><label for="t23">Check Kevin's Dormido shower grout — re-grout any problem areas with Mapei Anthracite<span class="item-note">Kevin used wrong black grout — Screwfix Mapei Ultracolor Plus Anthracite purchased for this</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t24" onchange="updateProgress()"><label for="t24">Seal all grout (shower + new tile areas)</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t25" onchange="updateProgress()"><label for="t25">Silicone all shower joints: tray-to-wall, glass-to-wall, glass-to-tray</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t26" onchange="updateProgress()"><label for="t26">Leak test — run shower 20+ minutes, check tray, waste, and all silicone joints<span class="item-warn">Do not proceed to flooring until leak test passes</span></label></div>
+    </div>
+  </div>
+
+  <!-- PHASE 7 -->
+  <div class="checklist-phase">
+    <div class="checklist-phase-header" onclick="togglePhase(this)">
+      <div class="phase-num" data-phase="7">7</div>
+      <div class="phase-title">Flooring</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="7">0</span>/3</div>
+      <div class="phase-arrow">&#9654;</div>
+    </div>
+    <div class="checklist-phase-body">
+      <div class="checklist-item"><input type="checkbox" id="t27" onchange="updateProgress()"><label for="t27">Prepare subfloor — clean, level, lay underlayment if needed</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t28" onchange="updateProgress()"><label for="t28">Loose-lay Latte Fiastra terrazzo vinyl (foam-backed, no adhesive needed up to 12m²)<span class="item-note">Cut around shower tray edge, door frame, pipe penetrations</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t29" onchange="updateProgress()"><label for="t29">Vinyl down BEFORE toilet, radiator &amp; vanity — they sit on top<span class="item-warn">Toilet, radiator feet, and vanity bracket all go on finished floor</span></label></div>
+    </div>
+  </div>
+
+  <!-- PHASE 8 -->
+  <div class="checklist-phase">
+    <div class="checklist-phase-header" onclick="togglePhase(this)">
+      <div class="phase-num" data-phase="8">8</div>
+      <div class="phase-title">Second Fix Plumbing</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="8">0</span>/5</div>
+      <div class="phase-arrow">&#9654;</div>
+    </div>
+    <div class="checklist-phase-body">
+      <div class="checklist-item"><input type="checkbox" id="t30" onchange="updateProgress()"><label for="t30">Mount Pendle vanity unit on Wall C — connect basin, Zana tap, hot/cold feeds, waste</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t31" onchange="updateProgress()"><label for="t31">Install Arezzo toilet on soil line — connect cistern water feed<span class="item-note">Centre on PVC pipe at 465mm from Wall C. Silicone base to vinyl.</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t32" onchange="updateProgress()"><label for="t32">Install VOVO bidet seat — connect to isolation valve &amp; flex outlet power</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t33" onchange="updateProgress()"><label for="t33">Install Sorrento radiator with floor-mounting feet + wall brackets + Elego valves<span class="item-note">Check if angled valves work or if straight valves needed for floor-standing setup</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t34" onchange="updateProgress()"><label for="t34">Turn everything on — test all connections for leaks</label></div>
+    </div>
+  </div>
+
+  <!-- PHASE 9 -->
+  <div class="checklist-phase">
+    <div class="checklist-phase-header" onclick="togglePhase(this)">
+      <div class="phase-num" data-phase="9">9</div>
+      <div class="phase-title">Second Fix Electrical</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="9">0</span>/4</div>
+      <div class="phase-arrow">&#9654;</div>
+    </div>
+    <div class="checklist-phase-body">
+      <div class="checklist-item"><input type="checkbox" id="t35" onchange="updateProgress()"><label for="t35">Swap existing downlights for G.W.S brushed copper fire-rated LED x4 — connect to Enkin dimmer (Gang 1)</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t36" onchange="updateProgress()"><label for="t36">Install Airflow iCON 15 extractor fan + KABOMBA vanity light on Wall C + shaver socket inside vanity cabinet</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t37" onchange="updateProgress()"><label for="t37">Install outside bathroom: 3-gang grid plate (dimmer + 2 switches) + fused spur (bidet). Install behind toilet: copper flex outlet plate</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t38" onchange="updateProgress()"><label for="t38">Connect mirror demister to Gang 3 — test all circuits, verify dimmer works on downlights<span class="item-note">Gang 1 = dimmer (downlights), Gang 2 = vanity light, Gang 3 = extractor + mirror demister</span></label></div>
+    </div>
+  </div>
+
+  <!-- PHASE 10 -->
+  <div class="checklist-phase">
+    <div class="checklist-phase-header" onclick="togglePhase(this)">
+      <div class="phase-num" data-phase="10">10</div>
+      <div class="phase-title">Paint, Accessories &amp; Finishing</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="10">0</span>/4</div>
+      <div class="phase-arrow">&#9654;</div>
+    </div>
+    <div class="checklist-phase-body">
+      <div class="checklist-item"><input type="checkbox" id="t39" onchange="updateProgress()"><label for="t39">Paint above tile line: Wall B non-shower (above 1200mm) + Wall C (above 1200mm) — desert/terracotta style</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t40" onchange="updateProgress()"><label for="t40">Mount MOSSJON cabinet + brushed copper shelves x2 on Wall B above toilet<span class="item-note">Drill with diamond-tipped bit through Dormido tiles. Cabinet bottom at ~1350mm from floor.</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t41" onchange="updateProgress()"><label for="t41">Install: toilet roll holder, FADO table lamp, GANSJON waste bin, plants<span class="item-note">Pipe covers (ETAL Enzo matt black, Screwfix #838YU) if exposed pipework visible</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t42" onchange="updateProgress()"><label for="t42">Final silicone (basin-to-wall, vanity-to-wall, radiator joints) + final clean</label></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function togglePhase(header) {
+  var body = header.nextElementSibling;
+  var arrow = header.querySelector('.phase-arrow');
+  body.classList.toggle('open');
+  arrow.classList.toggle('open');
+}
+function updateProgress() {
+  var total = 42;
+  var checks = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+  var done = 0;
+  checks.forEach(function(cb) {
+    var label = cb.nextElementSibling;
+    if (cb.checked) { done++; label.classList.add('checked'); }
+    else { label.classList.remove('checked'); }
+  });
+  // Update overall
+  document.getElementById('progress-text').textContent = done + ' of ' + total + ' tasks complete';
+  document.getElementById('progress-fill').style.width = (done / total * 100) + '%';
+  // Update per-phase counts
+  for (var p = 1; p <= 10; p++) {
+    var phaseEl = document.querySelector('[data-phase="' + p + '"]');
+    if (!phaseEl) continue;
+    var phaseCard = phaseEl.closest('.checklist-phase');
+    var phaseChecks = phaseCard.querySelectorAll('input[type="checkbox"]');
+    var phaseDone = 0;
+    phaseChecks.forEach(function(cb) { if (cb.checked) phaseDone++; });
+    var doneSpan = phaseCard.querySelector('[data-phase-done="' + p + '"]');
+    if (doneSpan) doneSpan.textContent = phaseDone;
+    if (phaseDone === phaseChecks.length && phaseChecks.length > 0) {
+      phaseEl.classList.add('done');
+    } else {
+      phaseEl.classList.remove('done');
+    }
+  }
+}
+</script>
+
+<hr class="divider">
 
 <!-- ===== CONFIRMED TILES ===== -->
 <div class="section" id="tiles">
