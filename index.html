@@ -121,7 +121,7 @@
   <div class="checklist-overall">
     <div style="display:flex; justify-content:space-between; align-items:center;">
       <strong style="color:#2E4057;">Overall Progress</strong>
-      <span class="progress-text" id="progress-text">0 of 41 tasks complete</span>
+      <span class="progress-text" id="progress-text">0 of 46 tasks complete</span>
     </div>
     <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
   </div>
@@ -131,7 +131,7 @@
     <div class="checklist-phase-header" onclick="togglePhase(this)">
       <div class="phase-num" data-phase="1">1</div>
       <div class="phase-title">Contractor &amp; Demolition</div>
-      <div class="phase-progress"><span class="prog-done" data-phase-done="1">0</span>/5</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="1">0</span>/8</div>
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
@@ -140,6 +140,9 @@
       <div class="checklist-item"><input type="checkbox" id="t3" onchange="updateProgress()"><label for="t3">Scrape adhesive residue, assess wall substrate</label></div>
       <div class="checklist-item"><input type="checkbox" id="t4" onchange="updateProgress()"><label for="t4">Skim-coat any damaged plasterboard (24-48 hrs drying)<span class="item-note">Only if tile removal damages the boards</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t5a" onchange="updateProgress()"><label for="t5a">Cut &amp; install missing Dormido tile on Wall B behind toilet<span class="item-warn">Needs hole cut for soil line pipe (110mm dia). This tile was never installed by Kevin.</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t5b" onchange="updateProgress()"><label for="t5b">Fix Dormido tile above bathroom door (Wall A)<span class="item-warn">Bad line between tiles — either replace tile or cut a clean line with an oscillating multi-tool + diamond blade</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t5c" onchange="updateProgress()"><label for="t5c">Replace Dormido tile at top of shower<span class="item-note">One tile needs replacing — remove carefully with oscillating tool, clean adhesive bed, re-fix</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t5d" onchange="updateProgress()"><label for="t5d">Prep: remove any damaged tiles &amp; scrape old adhesive yourself before tiler arrives<span class="item-note">Saves labour cost — tiler just needs to fix new tiles, not demolish old ones</span></label></div>
     </div>
   </div>
 
@@ -180,7 +183,7 @@
     <div class="checklist-phase-header" onclick="togglePhase(this)">
       <div class="phase-num" data-phase="4">4</div>
       <div class="phase-title">Select &amp; Order New Wall Tiles + Trim</div>
-      <div class="phase-progress"><span class="prog-done" data-phase-done="4">0</span>/4</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="4">0</span>/5</div>
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
@@ -245,7 +248,8 @@
       <div class="checklist-item"><input type="checkbox" id="t14" onchange="updateProgress()"><label for="t14">Kirsty picks final tile (see 5 options above)<span class="item-note">Village Rose Gold (£228) | Wickes Flora (£289 or £119 eBay!) | Zellige Mini Pink (£240, designer pick) | Otto Zellige (POA, 10-12wk lead)</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t15" onchange="updateProgress()"><label for="t15">Order tiles (~5.22m² with 10% wastage for Walls C &amp; D)<span class="item-note">Wall C: 2.079m² (incl. window reveals + sill) | Wall D: 2.668m² (around mirror)</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t16" onchange="updateProgress()"><label for="t16">Order Topps Tiles Soft Copper Straight Edge trim x 3 lengths (7.5m)<span class="item-note">Match trim depth to tile thickness (8mm for Wickes, 10mm for Tile Mountain). ~£69</span></label></div>
-      <div class="checklist-item"><input type="checkbox" id="t17" onchange="updateProgress()"><label for="t17">Choose grout colour for new tiles<span class="item-note">Mapei Anthracite may be too dark for pink/rose gold — consider white, cream, or warm grey</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t17" onchange="updateProgress()"><label for="t17">Choose grout &amp; silicone for Casa Ivory Decor tiles<span class="item-note">Recommendation: Kerakoll Fugabella Color 20 + matching silicone for seamless 3D effect. Alternatives: Mapei Jasmine 130, BAL Jasmine. Return/repurpose BAL Smoke.</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t17a" onchange="updateProgress()"><label for="t17a">Order anthracite silicone for shower ceiling joints (BAL Micromax Sealant Anthracite 310ml)<span class="item-note">Matches Mapei Anthracite grout on shower Dormido tiles. For tile-to-ceiling &amp; movement joints.</span></label></div>
     </div>
   </div>
 
@@ -271,13 +275,14 @@
     <div class="checklist-phase-header" onclick="togglePhase(this)">
       <div class="phase-num" data-phase="6">6</div>
       <div class="phase-title">Shower Finishing</div>
-      <div class="phase-progress"><span class="prog-done" data-phase-done="6">0</span>/4</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="6">0</span>/5</div>
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
       <div class="checklist-item"><input type="checkbox" id="t23" onchange="updateProgress()"><label for="t23">Check Kevin's Dormido shower grout — re-grout any problem areas with Mapei Anthracite<span class="item-note">Kevin used wrong black grout — Screwfix Mapei Ultracolor Plus Anthracite purchased for this</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t24" onchange="updateProgress()"><label for="t24">Seal all grout (shower + new tile areas)</label></div>
       <div class="checklist-item"><input type="checkbox" id="t25" onchange="updateProgress()"><label for="t25">Silicone all shower joints: tray-to-wall, glass-to-wall, glass-to-tray</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t25a" onchange="updateProgress()"><label for="t25a">Silicone Dormido tile-to-ceiling joints with BAL Micromax Anthracite<span class="item-note">Movement joint — use silicone not grout where tiles meet the ceiling</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t26" onchange="updateProgress()"><label for="t26">Leak test — run shower 20+ minutes, check tray, waste, and all silicone joints<span class="item-warn">Do not proceed to flooring until leak test passes</span></label></div>
     </div>
   </div>
@@ -355,7 +360,7 @@ function togglePhase(header) {
   arrow.classList.toggle('open');
 }
 function updateProgress() {
-  var total = 41;
+  var total = 46;
   var checks = document.querySelectorAll('.checklist-item input[type="checkbox"]');
   var done = 0;
   checks.forEach(function(cb) {
@@ -713,30 +718,89 @@ function updateProgress() {
 
 <!-- ===== GROUT ===== -->
 <div class="section" id="grout">
-  <h2>Grout <span class="badge ordered">Ordered</span></h2>
-  <p class="subtitle">BAL Micromax3 ECO Smoke for the Matteo Fluted Green tiles (Walls C &amp; D). Grout spacing: 3mm. Dormido shower tiles: Mapei Ultracolor Plus Anthracite (re-grouting after contractor error).</p>
+  <h2>Grout &amp; Silicone</h2>
+  <p class="subtitle">Three categories: grout for new Casa Ivory Decor tiles, silicone for shower ceiling joints, and shower tile re-grouting after contractor error.</p>
+
+  <h3 style="margin-top:32px; margin-bottom:16px; font-size:1.1em; color:#333;">Sub-section A: Grout for Casa Ivory Decor (Walls C &amp; D)</h3>
+  <p style="font-size:0.92em; color:#666; margin-bottom:20px;">The BAL Smoke grout (VP order, £26.69) was for the scrapped Matteo green tiles and needs to be returned or repurposed. Choose from these 3 options for the new Casa Ivory Decor tiles:</p>
+
   <div class="grid">
     <div class="card">
-      <img src="https://media.diy.com/is/image/Kingfisher/bal-micromax3-eco-smoke-2-5kg~03050440_01c?$MOB_PREV$" alt="BAL Micromax3 ECO Smoke Grout" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px 12px 0 0;" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>BAL Micromax3 ECO Smoke</span></div>'">
+      <div style="background:#e8dcc4; width:100%; aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; border-radius:12px 12px 0 0; font-size:0.9em; color:#666;">Kerakoll Fugabella Color 20</div>
       <div class="card-body">
-        <h3>BAL Micromax3 ECO 2.5kg — Smoke <span class="badge ordered">Ordered</span></h3>
+        <h4 style="margin:0 0 12px 0; color:#2e7d32;"><strong>Kerakoll Fugabella Color 20 3kg</strong> <span class="badge" style="background:#2e7d32; color:white;">RECOMMENDED</span></h4>
         <div class="specs">
-          <strong>Colour:</strong> Smoke (warm mid-grey)<br>
-          <strong>Coverage:</strong> Matteo Fluted Green tiles — Walls C &amp; D<br>
-          <strong>Grout spacing:</strong> 3mm joints<br>
-          <strong>Type:</strong> Anti-bacterial (Microban), flexible, wall &amp; floor<br>
-          <strong>Joint width:</strong> 1–15mm<br>
-          <strong>Price:</strong> £20.75 (+ £5.94 delivery = £26.69 total)<br>
-          <strong>Supplier:</strong> Victorian Plumbing (ORD-2600000006-0173360)<br>
-          <strong>Ordered:</strong> 1 × 2.5kg — 20th March 2026
+          <strong>Type:</strong> Premium bio-resin grout, plaster-look finish<br>
+          <strong>Effect:</strong> Creates seamless "carved mural" effect with 3D Casa tiles<br>
+          <strong>Coverage:</strong> Casa Ivory Decor tiles (Walls C &amp; D)<br>
+          <strong>Colour:</strong> Matches cream/ivory tones<br>
+          <strong>Price:</strong> TBC at Baked Tiles (check link)<br>
         </div>
-        <div class="note"><strong>Why Smoke:</strong> Matches the warm mid-grey tone visible in the Matteo product photography. Tight 1.5–2mm joints let the fluted texture flow across the wall with minimal visual interruption from grout lines. BAL Micromax3 ECO works down to 1mm joints — ideal for the narrow spacing. Use fine/non-sanded grout at this width.</div>
-        <a href="https://www.victorianplumbing.co.uk/bal-micromax3-eco-2-5kg-wall-and-floor-tile-grout" target="_blank">View on Victorian Plumbing →</a>
+        <div class="note"><strong>Designer's pick:</strong> The bio-resin finish perfectly complements the 3D texture of the Casa Ivory tiles, creating an integrated architectural look.</div>
+        <a href="https://www.bakedtiles.co.uk/products/kerakoll-fugabella-color-grout-20-antique-3kg" target="_blank">View Kerakoll Fugabella →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="background:#f5f1ed; width:100%; aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; border-radius:12px 12px 0 0; font-size:0.9em; color:#666;">Mapei Ultracolor Plus 130</div>
+      <div class="card-body">
+        <h4 style="margin:0 0 12px 0;">Mapei Ultracolor Plus 130 Jasmine 5kg</h4>
+        <div class="specs">
+          <strong>Type:</strong> UK industry standard, high-performance epoxy-free<br>
+          <strong>Colour:</strong> Jasmine (warm cream)<br>
+          <strong>Coverage:</strong> Walls C &amp; D with Casa Ivory Decor<br>
+          <strong>Price:</strong> Check City Plumbing (link below)<br>
+          <strong>Matching silicone:</strong> Mapei Mapesil AC 130 Jasmine 310ml
+        </div>
+        <div class="note">Reliable, widely available, proven on glossy &amp; textured tiles. Jasmine tone complements the warm ivory look.</div>
+        <a href="https://www.cityplumbing.co.uk/p/mapei-ultracolor-plus-grout-130-jamine-5kg/p/771465" target="_blank">View on City Plumbing →</a><br>
+        <a href="https://www.tilekingdom.co.uk/mapei/6069-mapei-mapesil-ac-130-jasmine-silicone-310ml-tube.html" target="_blank">Matching Silicone on Tile Kingdom →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="background:#f0e6d8; width:100%; aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; border-radius:12px 12px 0 0; font-size:0.9em; color:#666;">BAL Micromax3 ECO</div>
+      <div class="card-body">
+        <h4 style="margin:0 0 12px 0;">BAL Micromax3 ECO Jasmine 2.5kg</h4>
+        <div class="specs">
+          <strong>Type:</strong> Anti-bacterial (Microban), flexible, wall &amp; floor<br>
+          <strong>Colour:</strong> Jasmine (warm cream/ivory)<br>
+          <strong>Coverage:</strong> Walls C &amp; D<br>
+          <strong>Joint width:</strong> 1–15mm, works at fine spacings<br>
+          <strong>Price:</strong> Check Easy Bathrooms (link below)<br>
+          <strong>Matching silicone:</strong> BAL Micromax Jasmine Sealant 310ml
+        </div>
+        <div class="note">Easy swap — same product line as the Smoke grout already ordered. Jasmine tone works well with warm ivory tiles. Local availability via Easy Bathrooms.</div>
+        <a href="https://www.easybathrooms.com/bal-micromax3-eco-jasmine-grout-25kg" target="_blank">View on Easy Bathrooms →</a><br>
+        <a href="https://www.tileflair.co.uk/products/bal-micromax-jasmine-sealant" target="_blank">Matching Silicone on Tile Flair →</a>
       </div>
     </div>
   </div>
-  <div class="key-info" style="margin-top:20px;">
-    <p style="font-size:0.88em; margin:0; color:#666;"><strong>Dormido shower tile grout:</strong> Mapei Ultracolor Plus Anthracite 5kg — purchased from Screwfix (£21.49, 26 March). Re-grouting shower tiles where contractor used wrong black grout.</p>
+
+  <h3 style="margin-top:32px; margin-bottom:16px; font-size:1.1em; color:#333;">Sub-section B: Anthracite Silicone for Shower Ceiling Joints</h3>
+  <p style="font-size:0.92em; color:#666; margin-bottom:20px;">Where Dormido tiles meet the ceiling and internal shower corners — use silicone, not grout, for movement joints.</p>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.victorianplumbing.co.uk/products/bal-micromax-grout-effect-sealant-310ml/variants/39941/mainimages/39941.webp?origin=39941.png&w=1500" alt="BAL Micromax Sealant Anthracite" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px 12px 0 0;" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>BAL Micromax Sealant Anthracite</span></div>'">
+      <div class="card-body">
+        <h4 style="margin:0 0 12px 0;">BAL Micromax Sealant — Anthracite 310ml <span class="badge ordered">Order Now</span></h4>
+        <div class="specs">
+          <strong>Colour:</strong> Anthracite (matches Mapei Anthracite grout on shower tiles)<br>
+          <strong>Type:</strong> Silicone sealant (NOT grout) — flexible for movement<br>
+          <strong>Application:</strong> Tile-to-ceiling joints in shower, internal corners where tiles meet different surfaces<br>
+          <strong>Price:</strong> TBC — check Victorian Plumbing<br>
+          <strong>Quantity needed:</strong> 1–2 cartridges depending on joint length
+        </div>
+        <div class="note"><strong>Important:</strong> Use silicone, not grout, at ceiling level to allow for natural movement between tile and structure. The anthracite tone matches the Mapei Ultracolor Plus Anthracite grout used on the Dormido shower tile re-grouting.</div>
+        <a href="https://www.victorianplumbing.co.uk/bal-micromax-grout-effect-sealant-310ml?&preSelected=True&sku=39941" target="_blank">View on Victorian Plumbing →</a>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:32px; margin-bottom:16px; font-size:1.1em; color:#333;">Sub-section C: Dormido Shower Tile Re-Grouting</h3>
+  <div class="key-info" style="margin-top:0;">
+    <p style="font-size:0.92em; margin:0; color:#666;"><strong>Mapei Ultracolor Plus Anthracite 5kg</strong> — purchased from Screwfix (£21.49, 26 March). Re-grouting shower tiles (Walls A &amp; B) where contractor used wrong black grout. Grout spacing: 2mm horizontal, 1.5mm vertical.</p>
   </div>
 </div>
 
