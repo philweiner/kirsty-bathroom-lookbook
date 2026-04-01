@@ -121,7 +121,7 @@
   <div class="checklist-overall">
     <div style="display:flex; justify-content:space-between; align-items:center;">
       <strong style="color:#2E4057;">Overall Progress</strong>
-      <span class="progress-text" id="progress-text">0 of 46 tasks complete</span>
+      <span class="progress-text" id="progress-text">0 of 54 tasks complete</span>
     </div>
     <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
   </div>
@@ -131,7 +131,7 @@
     <div class="checklist-phase-header" onclick="togglePhase(this)">
       <div class="phase-num" data-phase="1">1</div>
       <div class="phase-title">Contractor &amp; Demolition</div>
-      <div class="phase-progress"><span class="prog-done" data-phase-done="1">0</span>/8</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="1">0</span>/9</div>
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
@@ -143,6 +143,7 @@
       <div class="checklist-item"><input type="checkbox" id="t5b" onchange="updateProgress()"><label for="t5b">Fix Dormido tile above bathroom door (Wall A)<span class="item-warn">Bad line between tiles — either replace tile or cut a clean line with an oscillating multi-tool + diamond blade</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t5c" onchange="updateProgress()"><label for="t5c">Replace Dormido tile at top of shower<span class="item-note">One tile needs replacing — remove carefully with oscillating tool, clean adhesive bed, re-fix</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t5d" onchange="updateProgress()"><label for="t5d">Prep: remove any damaged tiles &amp; scrape old adhesive yourself before tiler arrives<span class="item-note">Saves labour cost — tiler just needs to fix new tiles, not demolish old ones</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t5e" onchange="updateProgress()"><label for="t5e">Remove grout from Dormido internal shower corner &amp; replace with Mapei Mapesil AC Anthracite silicone<span class="item-warn">Movement joint — grout will crack in corners. Silicone must be used where two tiled walls meet.</span></label></div>
     </div>
   </div>
 
@@ -151,7 +152,7 @@
     <div class="checklist-phase-header" onclick="togglePhase(this)">
       <div class="phase-num" data-phase="2">2</div>
       <div class="phase-title">First Fix Plumbing</div>
-      <div class="phase-progress"><span class="prog-done" data-phase-done="2">0</span>/5</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="2">0</span>/7</div>
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
@@ -160,6 +161,8 @@
       <div class="checklist-item"><input type="checkbox" id="t7" onchange="updateProgress()"><label for="t7">Confirm all pipe positions are final (basin, radiator, toilet cistern feed)</label></div>
       <div class="checklist-item"><input type="checkbox" id="t8" onchange="updateProgress()"><label for="t8">Install Limetron water conditioner on mains cold line<span class="item-note">FixTheBog order, Royal Mail YT894800888GB</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t9" onchange="updateProgress()"><label for="t9">Pressure test all pipework and cap off</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t5f" onchange="updateProgress()"><label for="t5f">Arrange roofer to attend when Pete does plumbing — Pete won&#x2019;t work on back roof<span class="item-warn">Roofer works outside (back roof), Pete works inside. Must coordinate same day.</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t5g" onchange="updateProgress()"><label for="t5g">Core drill through exterior wall for basin waste pipe (40mm)<span class="item-note">Pete upsizing to 40mm due to length of run + corner. Strap-on boss onto plastic soil stack.</span></label></div>
     </div>
   </div>
 
@@ -282,17 +285,34 @@
       <div class="checklist-item"><input type="checkbox" id="t23" onchange="updateProgress()"><label for="t23">Check Kevin's Dormido shower grout — re-grout any problem areas with Mapei Anthracite<span class="item-note">Kevin used wrong black grout — Screwfix Mapei Ultracolor Plus Anthracite purchased for this</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t24" onchange="updateProgress()"><label for="t24">Seal all grout (shower + new tile areas)</label></div>
       <div class="checklist-item"><input type="checkbox" id="t25" onchange="updateProgress()"><label for="t25">Silicone all shower joints: tray-to-wall, glass-to-wall, glass-to-tray</label></div>
-      <div class="checklist-item"><input type="checkbox" id="t25a" onchange="updateProgress()"><label for="t25a">Silicone Dormido tile-to-ceiling joints with BAL Micromax Anthracite<span class="item-note">Movement joint — use silicone not grout where tiles meet the ceiling</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t25a" onchange="updateProgress()"><label for="t25a">Silicone Dormido tile-to-ceiling joints with Mapei Mapesil AC Anthracite<span class="item-note">Movement joint — use silicone not grout where tiles meet the ceiling. Mapei anti-mould formula prevents growth in humid corners.</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t26" onchange="updateProgress()"><label for="t26">Leak test — run shower 20+ minutes, check tray, waste, and all silicone joints<span class="item-warn">Do not proceed to flooring until leak test passes</span></label></div>
     </div>
   </div>
 
-  <!-- PHASE 7 -->
+  <!-- PHASE 7: Floor Prep & Ceiling Repair -->
   <div class="checklist-phase">
     <div class="checklist-phase-header" onclick="togglePhase(this)">
       <div class="phase-num" data-phase="7">7</div>
+      <div class="phase-title">Floor Prep &amp; Ceiling Repair</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="7">0</span>/5</div>
+      <div class="phase-arrow">&#9654;</div>
+    </div>
+    <div class="checklist-phase-body">
+      <div class="checklist-item"><input type="checkbox" id="t26b" onchange="updateProgress()"><label for="t26b">Install timber batten between joists to support cut floorboard edge<span class="item-note">Where floorboard was lifted to access leak — screw batten across joists, re-fix board into it</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t26c" onchange="updateProgress()"><label for="t26c">Lay 6mm plywood underlayment — Section 1: shower tray edge to Wall D<span class="item-note">NOT MDF (terrible in bathroom). Joint lined up with shower tray edge. Pete says 6mm ply is best.</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t26d" onchange="updateProgress()"><label for="t26d">Leave Section 2 (radiator area) for later — pipes may need moving<span class="item-note">Pete needs to check radiator pipe positions. Lay ply in this area after plumbing confirmed.</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t26e" onchange="updateProgress()"><label for="t26e">Remove damaged drywall from downstairs ceiling<span class="item-warn">Water damage from Kevin&#x2019;s defective shower waste. Remove affected plasterboard.</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t26f" onchange="updateProgress()"><label for="t26f">Install small access hatch in ceiling under shower waste location<span class="item-note">Allows future inspection without tearing out ceiling. Position directly below shower waste.</span></label></div>
+    </div>
+  </div>
+
+  <!-- PHASE 8 -->
+  <div class="checklist-phase">
+    <div class="checklist-phase-header" onclick="togglePhase(this)">
+      <div class="phase-num" data-phase="8">8</div>
       <div class="phase-title">Flooring</div>
-      <div class="phase-progress"><span class="prog-done" data-phase-done="7">0</span>/3</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="8">0</span>/3</div>
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
@@ -302,12 +322,12 @@
     </div>
   </div>
 
-  <!-- PHASE 8 -->
+  <!-- PHASE 9 -->
   <div class="checklist-phase">
     <div class="checklist-phase-header" onclick="togglePhase(this)">
-      <div class="phase-num" data-phase="8">8</div>
+      <div class="phase-num" data-phase="9">9</div>
       <div class="phase-title">Second Fix Plumbing</div>
-      <div class="phase-progress"><span class="prog-done" data-phase-done="8">0</span>/5</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="9">0</span>/5</div>
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
@@ -319,12 +339,12 @@
     </div>
   </div>
 
-  <!-- PHASE 9 -->
+  <!-- PHASE 10 -->
   <div class="checklist-phase">
     <div class="checklist-phase-header" onclick="togglePhase(this)">
-      <div class="phase-num" data-phase="9">9</div>
+      <div class="phase-num" data-phase="10">10</div>
       <div class="phase-title">Second Fix Electrical</div>
-      <div class="phase-progress"><span class="prog-done" data-phase-done="9">0</span>/4</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="10">0</span>/4</div>
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
@@ -335,12 +355,12 @@
     </div>
   </div>
 
-  <!-- PHASE 10 -->
+  <!-- PHASE 11 -->
   <div class="checklist-phase">
     <div class="checklist-phase-header" onclick="togglePhase(this)">
-      <div class="phase-num" data-phase="10">10</div>
+      <div class="phase-num" data-phase="11">11</div>
       <div class="phase-title">Paint, Accessories &amp; Finishing</div>
-      <div class="phase-progress"><span class="prog-done" data-phase-done="10">0</span>/4</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="11">0</span>/4</div>
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
@@ -360,7 +380,7 @@ function togglePhase(header) {
   arrow.classList.toggle('open');
 }
 function updateProgress() {
-  var total = 46;
+  var total = 54;
   var checks = document.querySelectorAll('.checklist-item input[type="checkbox"]');
   var done = 0;
   checks.forEach(function(cb) {
@@ -372,7 +392,7 @@ function updateProgress() {
   document.getElementById('progress-text').textContent = done + ' of ' + total + ' tasks complete';
   document.getElementById('progress-fill').style.width = (done / total * 100) + '%';
   // Update per-phase counts
-  for (var p = 1; p <= 10; p++) {
+  for (var p = 1; p <= 11; p++) {
     var phaseEl = document.querySelector('[data-phase="' + p + '"]');
     if (!phaseEl) continue;
     var phaseCard = phaseEl.closest('.checklist-phase');
@@ -782,18 +802,20 @@ function updateProgress() {
 
   <div class="grid">
     <div class="card">
-      <img src="https://images.victorianplumbing.co.uk/products/bal-micromax-grout-effect-sealant-310ml/variants/39941/mainimages/39941.webp?origin=39941.png&w=1500" alt="BAL Micromax Sealant Anthracite" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px 12px 0 0;" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>BAL Micromax Sealant Anthracite</span></div>'">
+      <img src="https://images.victorianplumbing.co.uk/products/mapei-mapesil-ac-anti-mould-silicone-sealant-310-ml/mainimages/4899991it.webp?origin=4899991it.png&w=1500" alt="Mapei Mapesil AC Anthracite" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px 12px 0 0;" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Mapei Mapesil AC Anthracite</span></div>'">
       <div class="card-body">
-        <h4 style="margin:0 0 12px 0;">BAL Micromax Sealant — Anthracite 310ml <span class="badge ordered">Order Now</span></h4>
+        <h4 style="margin:0 0 12px 0;">Mapei Mapesil AC Anti-Mould Silicone Sealant — Anthracite 310ml <span class="badge">NEEDS ORDERING</span></h4>
         <div class="specs">
-          <strong>Colour:</strong> Anthracite (matches Mapei Anthracite grout on shower tiles)<br>
-          <strong>Type:</strong> Silicone sealant (NOT grout) — flexible for movement<br>
-          <strong>Application:</strong> Tile-to-ceiling joints in shower, internal corners where tiles meet different surfaces<br>
-          <strong>Price:</strong> TBC — check Victorian Plumbing<br>
+          <strong>Part No:</strong> 4811491IT<br>
+          <strong>Colour:</strong> Anthracite (matches Mapei Ultracolor Plus Anthracite grout on shower tiles)<br>
+          <strong>Type:</strong> Anti-mould silicone sealant — flexible for movement<br>
+          <strong>Application:</strong> Shower movement joints — where Dormido tiles meet ceiling, internal corners where two tiled walls meet<br>
+          <strong>Price:</strong> £11.35 (Retail £11.95)<br>
+          <strong>Supplier:</strong> Victorian Plumbing (trade.victorianplumbing.co.uk)<br>
           <strong>Quantity needed:</strong> 1–2 cartridges depending on joint length
         </div>
-        <div class="note"><strong>Important:</strong> Use silicone, not grout, at ceiling level to allow for natural movement between tile and structure. The anthracite tone matches the Mapei Ultracolor Plus Anthracite grout used on the Dormido shower tile re-grouting.</div>
-        <a href="https://www.victorianplumbing.co.uk/bal-micromax-grout-effect-sealant-310ml?&preSelected=True&sku=39941" target="_blank">View on Victorian Plumbing →</a>
+        <div class="note"><strong>Important:</strong> Use silicone, not grout, for movement joints at ceiling level and internal corners. Grout will crack where tiles meet different surfaces or where structural movement occurs. Mapei silicone is anti-mould formula — ideal for humid bathroom corners.</div>
+        <a href="https://trade.victorianplumbing.co.uk/mapei-mapesil-ac-anti-mould-silicone-sealant-310-ml" target="_blank">View on Victorian Plumbing Trade →</a>
       </div>
     </div>
   </div>
