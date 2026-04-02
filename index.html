@@ -108,8 +108,7 @@
   <a href="#returns">Returns</a>
   <a href="#budget">Budget</a>
   <a href="#summary">Summary</a>
-  <a href="2d-renders.html" style="background:rgba(255,255,255,0.25);font-weight:600;">2D Renders →</a>
-  <a href="wall-d-tile-layout.html" style="background:rgba(255,255,255,0.25);font-weight:600;">Wall D Layout →</a>
+  <a href="wall-d-final-tile-plans" style="background:rgba(255,255,255,0.25);font-weight:600;">Tile Layout Plans →</a>
 </div>
 
 <!-- ===== ORDER OF OPERATIONS ===== -->
@@ -135,7 +134,7 @@
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
-      <div class="checklist-item"><input type="checkbox" id="t1" onchange="updateProgress()"><label for="t1">Let Kevin go — confirm he is off the job<span class="item-note">Document everything for the payment dispute (see Contractor Timeline doc)</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t1" checked disabled onchange="updateProgress()"><label for="t1" style="text-decoration:line-through;color:#888">Kevin FitzGerald — OFF THE JOB ✔ (terminated 29 Mar 2026)<span class="item-note">Formal termination letter sent. Equipment collected. See Contractor Timeline &amp; Termination Letter docs.</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t2" onchange="updateProgress()"><label for="t2">Strip Kevin's green tile work from Wall C<span class="item-note">Carefully remove tiles, salvage any that are intact (they're paid for)</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t3" onchange="updateProgress()"><label for="t3">Scrape adhesive residue, assess wall substrate</label></div>
       <div class="checklist-item"><input type="checkbox" id="t4" onchange="updateProgress()"><label for="t4">Skim-coat any damaged plasterboard (24-48 hrs drying)<span class="item-note">Only if tile removal damages the boards</span></label></div>
@@ -186,73 +185,16 @@
     <div class="checklist-phase-header" onclick="togglePhase(this)">
       <div class="phase-num" data-phase="4">4</div>
       <div class="phase-title">Select &amp; Order New Wall Tiles + Trim</div>
-      <div class="phase-progress"><span class="prog-done" data-phase-done="4">0</span>/5</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="4">3</span>/5</div>
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
-      <p style="font-size:0.85em; color:#888; margin-bottom:12px;">Replacing Matteo Fluted Green — Kirsty wants something bright, glossy, square, works with the wood tiles &amp; copper accents</p>
+      <p style="font-size:0.85em; color:#888; margin-bottom:12px;">Tile selected: <strong>Del Conca Manufatti Sagome</strong> — ordered from Stone Superstore, arriving Wednesday 8 April 2026</p>
 
-      <div class="tile-option-card">
-        <img class="tile-swatch" src="https://www.tilemountain.co.uk/media/catalog/product/cache/2b84c9f32cfb8960e7c2cac3a59ef714/v/i/village-rose-gold-132x132_qutr.jpg" alt="Village Rose Gold" onerror="this.style.background='linear-gradient(135deg,#e8b4b8,#d4a0a8)'">
-        <div class="tile-info">
-          <h4>Village Rose Gold — Tile Mountain</h4>
-          <p>132 x 132 x 9mm | Ceramic gloss | Equipe (Spanish)</p>
-          <p class="tile-price">£37.95/m² — 6 boxes for ~5.22m² = ~£228</p>
-          <p>Trim: Soft Copper Straight Edge <strong>10mm</strong> (Topps Tiles) | Online only</p>
-          <p><a href="https://www.tilemountain.co.uk/village-rose-gold-wall-tile-132x132" target="_blank" style="color:#1565c0; font-size:0.85em;">View on Tile Mountain &rarr;</a></p>
-        </div>
-      </div>
-
-      <div class="tile-option-card">
-        <img class="tile-swatch" src="https://media.wickes.co.uk/image/upload/b_rgb:FFFFFF,c_pad,dpr_1.0,f_jpg,h_3000,q_auto:good,w_3000/c_pad,h_3000,w_3000/v1/products/wickes/GPID_5000103809_01?pgw=1" alt="Wickes Boutique Flora Blush Pink" onerror="this.style.background='linear-gradient(135deg,#f0c0c8,#e0a8b0)'">
-        <div class="tile-info">
-          <h4>Boutique Flora Blush Pink — Wickes</h4>
-          <p>130 x 130 x 8mm | Ceramic gloss, rustic/handmade look</p>
-          <p class="tile-price">£50/m² — 9 packs for ~5.22m² = ~£289</p>
-          <p>Trim: Soft Copper Straight Edge <strong>8mm</strong> (Topps Tiles) | Click &amp; collect available</p>
-          <p><a href="https://www.wickes.co.uk/Wickes-Boutique-Flora-Blush-Pink-Gloss-Ceramic-Wall-Tile---130-x-130mm/p/287239" target="_blank" style="color:#1565c0; font-size:0.85em;">View on Wickes &rarr;</a></p>
-        </div>
-      </div>
-
-      <div class="tile-option-card" style="border:2px solid #2e7d32;">
-        <img class="tile-swatch" src="https://i.ebayimg.com/images/g/yPIAAeSwX3Bn4-3s/s-l1600.webp" alt="Wickes Flora Blush Pink (eBay)" onerror="this.style.background='linear-gradient(135deg,#f0c0c8,#e0a8b0)'">
-        <div class="tile-info">
-          <h4>Boutique Flora Blush Pink — eBay <span style="background:#c62828;color:#fff;font-size:0.7em;padding:2px 8px;border-radius:8px;vertical-align:middle;">Best Value</span></h4>
-          <p>130 x 130 x 8mm | Same Wickes tile, 7 packs (4.40m²) | Ceramic gloss</p>
-          <p class="tile-price">£119 for 7 packs (4.40m²) — ~£27/m² vs £50/m² at Wickes</p>
-          <p>Same tile, nearly half the price. May need 1-2 extra packs from Wickes to top up to 5.22m².</p>
-          <p>Trim: Soft Copper Straight Edge <strong>8mm</strong> (Topps Tiles)</p>
-          <p><a href="https://www.ebay.co.uk/itm/306215645826" target="_blank" style="color:#1565c0; font-size:0.85em;">View on eBay &rarr;</a></p>
-        </div>
-      </div>
-
-      <div class="tile-option-card">
-        <img class="tile-swatch" src="https://m2.wallsandfloors.co.uk/media/catalog/product/cache/f8158826193ba5faa8b862a9bd1eb9e9/r/i/riad-pink-tiles-bathroom-wall-2300-4_1.jpg" alt="Zellige Mini Pink" onerror="this.style.background='linear-gradient(135deg,#f2c4c8,#e6aeb5)'">
-        <div class="tile-info">
-          <h4>Zellige Mini Pink — Walls &amp; Floors <span style="background:#2e7d32;color:#fff;font-size:0.7em;padding:2px 8px;border-radius:8px;vertical-align:middle;">Designer Pick</span></h4>
-          <p>100 x 100 x 9mm | Ceramic gloss, zellige-look | Artisan tonal variation</p>
-          <p class="tile-price">£39.95/m² — ~6m² = ~£240</p>
-          <p>Square format, warm pink gloss, handmade look. Works beautifully with wood &amp; copper.</p>
-          <p><a href="https://www.wallsandfloors.co.uk/zellige-mini-pink-square-gloss-wall-tiles" target="_blank" style="color:#1565c0; font-size:0.85em;">View on Walls &amp; Floors &rarr;</a></p>
-        </div>
-      </div>
-
-      <div class="tile-option-card">
-        <img class="tile-swatch" src="https://www.ottotiles.co.uk/cdn/shop/files/Blush_Pink_Zellige-2-Otto_Tiles_and_Design.png?v=1773928078&width=1000" alt="Blush Pink Zellige" onerror="this.style.background='linear-gradient(135deg,#f0bfc5,#daa0a8)'">
-        <div class="tile-info">
-          <h4>Blush Pink Zellige — Otto Tiles</h4>
-          <p>100 x 100 x 12mm | Genuine handmade Moroccan zellige | Hand-chiselled &amp; kiln-fired in Fez</p>
-          <p class="tile-price">Price on enquiry — authentic artisan, min 1m² order</p>
-          <p>The real deal — each tile unique. <span style="color:#c62828;">10–12 week lead time.</span></p>
-          <p><a href="https://www.ottotiles.co.uk/products/blush-pink-zellige" target="_blank" style="color:#1565c0; font-size:0.85em;">View on Otto Tiles &rarr;</a> &nbsp;|&nbsp; <a href="https://video.vidjet.io/669d6c19-4e4b-4fd9-9639-5f03abddc844/97916fa1-cce0-4b0f-9557-a300e0728d3a/blush_pink_zellige.mov-compressed.mp4" target="_blank" style="color:#1565c0; font-size:0.85em;">Watch video &rarr;</a></p>
-        </div>
-      </div>
-
-      <div class="checklist-item"><input type="checkbox" id="t14" onchange="updateProgress()"><label for="t14">Kirsty picks final tile (see 5 options above)<span class="item-note">Village Rose Gold (£228) | Wickes Flora (£289 or £119 eBay!) | Zellige Mini Pink (£240, designer pick) | Otto Zellige (POA, 10-12wk lead)</span></label></div>
-      <div class="checklist-item"><input type="checkbox" id="t15" onchange="updateProgress()"><label for="t15">Order tiles (~5.22m² with 10% wastage for Walls C &amp; D)<span class="item-note">Wall C: 2.079m² (incl. window reveals + sill) | Wall D: 2.668m² (around mirror)</span></label></div>
-      <div class="checklist-item"><input type="checkbox" id="t16" onchange="updateProgress()"><label for="t16">Order Topps Tiles Soft Copper Straight Edge trim x 3 lengths (7.5m)<span class="item-note">Match trim depth to tile thickness (8mm for Wickes, 10mm for Tile Mountain). ~£69</span></label></div>
-      <div class="checklist-item"><input type="checkbox" id="t17" onchange="updateProgress()"><label for="t17">Choose grout &amp; silicone for Manufatti Sagome tiles<span class="item-note">Recommendation: Kerakoll Fugabella Color 20 + matching silicone for seamless 3D effect. Alternatives: Mapei Jasmine 130, BAL Jasmine. Return/repurpose BAL Smoke.</span></label></div>
-      <div class="checklist-item"><input type="checkbox" id="t17a" onchange="updateProgress()"><label for="t17a">Order anthracite silicone for shower ceiling joints (BAL Micromax Sealant Anthracite 310ml)<span class="item-note">Matches Mapei Anthracite grout on shower Dormido tiles. For tile-to-ceiling &amp; movement joints.</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t14" checked onchange="updateProgress()"><label for="t14">Tile selected: Del Conca Manufatti Sagome — ORDERED from Stone Superstore, arriving 8 Apr<span class="item-note">200×200mm porcelain stoneware, 5 boxes (~5.5 m²), £281.70</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t15" checked onchange="updateProgress()"><label for="t15">Copper trim ordered + received<span class="item-note">Master Tiles #271610 — 10mm × 5 lengths (£90.00), PURCHASED 1 Apr 2026</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t17" checked onchange="updateProgress()"><label for="t17">Grout for Manufatti Sagome tiles — PURCHASED<span class="item-note">Kerakoll Fugabella Color No 20 (Master Tiles, £14.00). Bio-resin plaster-look finish for seamless carved effect.</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t17a" onchange="updateProgress()"><label for="t17a">Order anthracite silicone for shower ceiling joints + tile edges<span class="item-note">Mapei Mapesil AC Anthracite 310ml (Victorian Plumbing, £11.35) — for shower tile-to-ceiling junctions &amp; movement joints. Order reference: Part No 4811491IT</span></label></div>
     </div>
   </div>
 
@@ -266,8 +208,8 @@
     </div>
     <div class="checklist-phase-body">
       <div class="checklist-item"><input type="checkbox" id="t18" onchange="updateProgress()"><label for="t18">Tile Wall C: bottom band (1828x897mm) up to window sill level</label></div>
-      <div class="checklist-item"><input type="checkbox" id="t19" onchange="updateProgress()"><label for="t19">Tile Wall C: window reveals (127mm deep each side) + sill + patches flanking window (374x303mm each) with copper trim on all external corners &amp; top edge at 1200mm</label></div>
-      <div class="checklist-item"><input type="checkbox" id="t20" onchange="updateProgress()"><label for="t20">Tile Wall D: below mirror (1802x1117mm), above mirror (1802x177mm), side strips (139x1208mm each)</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t19" onchange="updateProgress()"><label for="t19">Tile Wall C: window reveals (160mm deep each side) + sill + patches flanking window (374x349mm each) with copper trim on all external corners &amp; top edge at 1246mm</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t20" onchange="updateProgress()"><label for="t20">Tile Wall D (2110mm wide): below mirror (2110×1120mm), top strip (2110×75mm), side strips (56mm left + 46mm right × ~1210mm each). Mirror 2008×1210mm sits high — 75mm below ceiling, ~1120mm from floor</label></div>
       <div class="checklist-item"><input type="checkbox" id="t21" onchange="updateProgress()"><label for="t21">Cut in &amp; finish edges where new tiles meet Dormido shower tiles</label></div>
       <div class="checklist-item"><input type="checkbox" id="t22" onchange="updateProgress()"><label for="t22">Grout all new tiling — let cure 24hrs minimum</label></div>
     </div>
@@ -364,7 +306,7 @@
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
-      <div class="checklist-item"><input type="checkbox" id="t39" onchange="updateProgress()"><label for="t39">Paint above tile line: Wall B non-shower (above 1200mm) + Wall C (above 1200mm) — desert/terracotta style</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t39" onchange="updateProgress()"><label for="t39">Paint above tile line: Wall B non-shower (above 1245mm) + Wall C (above 1246mm) — desert/terracotta style</label></div>
       <div class="checklist-item"><input type="checkbox" id="t40" onchange="updateProgress()"><label for="t40">Mount MOSSJON cabinet + brushed copper shelves x2 on Wall B above toilet<span class="item-note">Drill with diamond-tipped bit through Dormido tiles. Cabinet bottom at ~1350mm from floor.</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t41" onchange="updateProgress()"><label for="t41">Install: toilet roll holder, FADO table lamp, GANSJON waste bin, plants<span class="item-note">Pipe covers (ETAL Enzo matt black, Screwfix #838YU) if exposed pipework visible</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t42" onchange="updateProgress()"><label for="t42">Final silicone (basin-to-wall, vanity-to-wall, radiator joints) + final clean</label></div>
@@ -437,153 +379,13 @@ function updateProgress() {
     </div>
   </div>
 
-  <!-- Matteo — surplus -->
-  <h3 style="margin-top:28px; color:#888;">Matteo Fluted Green <span style="background:#c62828;color:#fff;font-size:0.7em;padding:2px 10px;border-radius:8px;vertical-align:middle;">Scrapped — For Resale</span></h3>
-  <p class="subtitle" style="color:#999;">Removed from plan 27 March 2026 — Kevin's tile work was poor quality. 8 boxes paid for (£290.80). Will be sold or used on a different project.</p>
-  <div class="grid">
-    <div class="card" style="opacity:0.5; border:1px dashed #ccc;">
-      <img class="card-img" src="https://images.victorianplumbing.co.uk/products/stonehouse-studio-matteo-fluted-green-wall-tiles-150-x-300mm/mainimages/mat1530grn_d3.jpg" alt="Matteo Fluted Green" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Matteo Fluted Green</span></div>'">
-      <div class="card-body">
-        <h3 style="color:#999;">Matteo Fluted Green <span style="text-decoration:line-through;">Ordered</span></h3>
-        <div class="specs" style="color:#999;">
-          <strong>Size:</strong> 150 × 300 mm | <strong>Finish:</strong> Ceramic gloss, fluted<br>
-          <strong>Paid:</strong> 8 boxes — £290.80 (VP order ORD-2600000001-8049562)<br>
-          <strong>Status:</strong> Non-returnable. Sell privately or repurpose on another project.
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Walls C & D — Sagome (ordered) -->
+  <h3 style="margin-top:28px; color:#2E4057;">Walls C &amp; D — Del Conca Manufatti Sagome <span style="background:#2e7d32;color:#fff;font-size:0.7em;padding:2px 10px;border-radius:8px;vertical-align:middle;">Ordered</span></h3>
+  <p class="subtitle">Coverage: 5.31 m² with 10% wastage (Wall C: 2.186 m² incl. reveals + sill | Wall D: 2.645 m²). 5 boxes (~5.5 m²) ordered from Stone Superstore, arriving Wed 8 April 2026.<br>
+  Trim: Copper 10mm straight edge × 5 lengths — PURCHASED from Master Tiles (£90).</p>
 
-  <!-- Proposed replacement tiles — Walls C & D -->
-  <h3 style="margin-top:28px; color:#2E4057;">Walls C &amp; D — Replacement Tile <span style="background:#f57c00;color:#fff;font-size:0.7em;padding:2px 10px;border-radius:8px;vertical-align:middle;">Selection Needed</span></h3>
-  <p class="subtitle">Bright, glossy, square format — to work with Dormido wood, brushed copper accents, and Latte Fiastra terrazzo floor.<br>
-  Coverage: 5.22 m² with 10% wastage (Wall C: 2.23 m² incl. reveals + sill | Wall D: 2.67 m²).<br>
-  Trim: <a href="https://www.toppstiles.co.uk/complements" target="_blank">Topps Tiles Complements Soft Copper Straight Edge</a> × 3 lengths (~7.5m, ~£69) — match depth to tile thickness.</p>
-
-  <div style="background:#fdf6f0; border-radius:12px; padding:20px; margin:16px 0 24px;">
-    <h4 style="color:#2E4057; margin:0 0 12px;">Interior Designer Notes</h4>
-    <p style="font-size:0.92em; color:#555; line-height:1.6; margin:0 0 10px;">
-      The palette in this room layers warm oak wood grain, cool grey terrazzo, brushed copper, matt black hardware, and desert-toned paint above the tile line. The replacement wall tile needs to bridge the warm and cool halves — something that picks up the copper and the terrazzo simultaneously without competing with the Dormido wood.
-    </p>
-    <p style="font-size:0.92em; color:#555; line-height:1.6; margin:0 0 10px;">
-      A <strong>blush or soft pink gloss</strong> is the right call here. It reads warm enough to sit next to the wood and copper, but has enough cool undertone to relate to the grey terrazzo floor. The glossy surface bounces light around what is a fairly compact room (1.8 × 2.1m), and a square format tiles cleanly around the window reveals without awkward cuts.
-    </p>
-    <p style="font-size:0.92em; color:#555; line-height:1.6; margin:0;">
-      Of the options below, the <strong>Zellige Mini Pink</strong> (Walls &amp; Floors) is the designer pick — the tonal variation in each tile gives it depth and character that a flat-colour tile can't match, and at 100×100mm it handles the 127mm window reveals and mirror cutouts on Wall D gracefully. The <strong>Wickes Flora via eBay</strong> is the best-value route if budget is a factor — same rustic handmade look at nearly half the retail price.
-    </p>
-  </div>
 
   <div class="grid">
-    <div class="card">
-      <img class="card-img" src="https://www.tilemountain.co.uk/media/catalog/product/cache/2b84c9f32cfb8960e7c2cac3a59ef714/v/i/village-rose-gold-132x132_qutr.jpg" alt="Village Rose Gold" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Village Rose Gold</span></div>'">
-      <div class="card-body">
-        <h3>Village Rose Gold — Tile Mountain</h3>
-        <div class="specs">
-          <strong>Size:</strong> 132 × 132 × 9mm | Ceramic gloss | Equipe (Spanish)<br>
-          <strong>Price:</strong> £37.95/m² — 6 boxes for ~5.22m² = <strong>~£228</strong><br>
-          <strong>Trim depth:</strong> 10mm (Soft Copper Straight Edge)<br>
-          <strong>Availability:</strong> Online only — Tile Mountain is the sole UK stockist for 132mm square
-        </div>
-        <a href="https://www.tilemountain.co.uk/village-rose-gold-wall-tile-132x132" target="_blank">View on Tile Mountain →</a>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img" src="https://media.wickes.co.uk/image/upload/b_rgb:FFFFFF,c_pad,dpr_1.0,f_jpg,h_3000,q_auto:good,w_3000/c_pad,h_3000,w_3000/v1/products/wickes/GPID_5000103809_01?pgw=1" alt="Wickes Boutique Flora Blush Pink" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Boutique Flora Blush Pink</span></div>'">
-      <div class="card-body">
-        <h3>Boutique Flora Blush Pink — Wickes</h3>
-        <div class="specs">
-          <strong>Size:</strong> 130 × 130 × 8mm | Ceramic gloss, rustic/handmade look<br>
-          <strong>Price:</strong> £50/m² — 9 packs for ~5.22m² = <strong>~£289</strong><br>
-          <strong>Trim depth:</strong> 8mm (Soft Copper Straight Edge)<br>
-          <strong>Availability:</strong> Click &amp; collect available
-        </div>
-        <a href="https://www.wickes.co.uk/Wickes-Boutique-Flora-Blush-Pink-Gloss-Ceramic-Wall-Tile---130-x-130mm/p/287239" target="_blank">View on Wickes →</a>
-      </div>
-    </div>
-    <div class="card" style="border:2px solid #2e7d32;">
-      <img class="card-img" src="https://i.ebayimg.com/images/g/yPIAAeSwX3Bn4-3s/s-l1600.webp" alt="Wickes Flora Blush Pink (eBay)" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Flora Blush Pink (eBay)</span></div>'">
-      <div class="card-body">
-        <h3>Boutique Flora Blush Pink — eBay <span style="background:#c62828;color:#fff;font-size:0.65em;padding:2px 8px;border-radius:8px;vertical-align:middle;">Best Value</span></h3>
-        <div class="specs">
-          <strong>Size:</strong> 130 × 130 × 8mm | Same Wickes tile<br>
-          <strong>Price:</strong> 7 packs (4.40m²) for <strong>£119</strong> — ~£27/m² vs £50/m² retail<br>
-          <strong>Top-up:</strong> May need 1–2 extra packs from Wickes (~£30–60) to reach 5.22m²<br>
-          <strong>Trim depth:</strong> 8mm (Soft Copper Straight Edge)
-        </div>
-        <a href="https://www.ebay.co.uk/itm/306215645826" target="_blank">View on eBay →</a>
-      </div>
-    </div>
-    <div class="card" style="border:2px solid #2e7d32;">
-      <img class="card-img" src="https://m2.wallsandfloors.co.uk/media/catalog/product/cache/f8158826193ba5faa8b862a9bd1eb9e9/r/i/riad-pink-tiles-bathroom-wall-2300-4_1.jpg" alt="Zellige Mini Pink" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Zellige Mini Pink</span></div>'">
-      <div class="card-body">
-        <h3>Zellige Mini Pink — Walls &amp; Floors <span style="background:#2e7d32;color:#fff;font-size:0.65em;padding:2px 8px;border-radius:8px;vertical-align:middle;">Designer Pick</span></h3>
-        <div class="specs">
-          <strong>Size:</strong> 100 × 100 × 9mm | Ceramic gloss, zellige-look<br>
-          <strong>Price:</strong> £39.95/m² — ~6m² = <strong>~£240</strong><br>
-          <strong>Character:</strong> Artisan tonal variation — each tile subtly different. Warm pink gloss that bridges the copper accents and terrazzo floor beautifully.<br>
-          <strong>Trim depth:</strong> 10mm (Soft Copper Straight Edge)
-        </div>
-        <a href="https://www.wallsandfloors.co.uk/zellige-mini-pink-square-gloss-wall-tiles" target="_blank">View on Walls &amp; Floors →</a>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img" src="https://www.ottotiles.co.uk/cdn/shop/files/Blush_Pink_Zellige-2-Otto_Tiles_and_Design.png?v=1773928078&width=1000" alt="Blush Pink Zellige" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Blush Pink Zellige</span></div>'">
-      <div class="card-body">
-        <h3>Blush Pink Zellige — Otto Tiles</h3>
-        <div class="specs">
-          <strong>Size:</strong> 100 × 100 × 12mm | Genuine handmade Moroccan zellige<br>
-          <strong>Price:</strong> Price on enquiry — authentic artisan, min 1m² order<br>
-          <strong>Character:</strong> Hand-chiselled &amp; kiln-fired in Fez. Each tile truly unique.<br>
-          <strong>Lead time:</strong> <span style="color:#c62828; font-weight:600;">10–12 weeks</span><br>
-          <strong>Trim depth:</strong> 12mm (Soft Copper Straight Edge — check Topps stock)
-        </div>
-        <a href="https://www.ottotiles.co.uk/products/blush-pink-zellige" target="_blank">View on Otto Tiles →</a> &nbsp;|&nbsp;
-        <a href="https://video.vidjet.io/669d6c19-4e4b-4fd9-9639-5f03abddc844/97916fa1-cce0-4b0f-9557-a300e0728d3a/blush_pink_zellige.mov-compressed.mp4" target="_blank">Watch video →</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Kirsty's additional finds — 28 March 2026 -->
-  <h3 style="margin-top:28px; color:#2E4057;">More Options — Kirsty's Picks <span style="background:#1565c0;color:#fff;font-size:0.7em;padding:2px 10px;border-radius:8px;vertical-align:middle;">New 28 Mar</span></h3>
-
-  <div style="background:#f0f4f8; border-radius:12px; padding:20px; margin:16px 0 24px;">
-    <h4 style="color:#2E4057; margin:0 0 12px;">Designer Notes on These Additions</h4>
-    <p style="font-size:0.92em; color:#555; line-height:1.6; margin:0 0 10px;">
-      Interesting shift here — these picks open up two new directions alongside the blush/pink options. The <strong>Stone Superstore Casa</strong> range and <strong>Del Conca Sagome</strong> bring <em>textural, 3D surfaces</em> in neutral tones (ivory, pearl, warm beige) rather than colour. The <strong>WOW White</strong> is pure white with dimensional shaping. These would let the Dormido wood and copper accents do all the talking, with the wall tiles providing quiet texture and light play instead of a colour statement.
-    </p>
-    <p style="font-size:0.92em; color:#555; line-height:1.6; margin:0 0 10px;">
-      The <strong>Atlas Blush</strong> from Stone Superstore is the bridge between both worlds — zellige-effect in blush pink at 13×13cm, very similar to the Walls &amp; Floors Zellige Mini Pink but worth comparing side by side.
-    </p>
-    <p style="font-size:0.92em; color:#555; line-height:1.6; margin:0;">
-      <strong>Pricing confirmed:</strong> Stone Superstore Casa range and Atlas Blush are all on sale — end-of-line stock. Great prices but once they're gone, they're gone. Samples ordered 27–28 Mar.
-    </p>
-  </div>
-
-  <div class="grid">
-    <div class="card" style="border:1px solid #ccc; opacity:0.5;">
-      <div class="card-img-placeholder"><span style="font-size:0.85em;color:#666">Casa Ivory Decor — Glazed Porcelain</span></div>
-      <div class="card-body">
-        <h3>Casa Ivory Decor — Stone Superstore <span style="background:#999;color:#fff;font-size:0.65em;padding:2px 8px;border-radius:8px;vertical-align:middle;">Not selected</span></h3>
-        <div class="specs">
-          <strong>Size:</strong> 195 × 195 × 9mm | Glazed porcelain<br>
-          <strong>Status:</strong> Superseded by Manufatti Sagome — sample received but not ordering.
-        </div>
-      </div>
-    </div>
-    <div class="card" style="border:1px solid #ccc; opacity:0.5;">
-      <div class="card-img-placeholder"><span style="font-size:0.85em;color:#666">Casa Pearla Decor</span></div>
-      <div class="card-body">
-        <h3>Casa Pearla Decor <span style="background:#999;color:#fff;font-size:0.65em;padding:2px 8px;border-radius:8px;vertical-align:middle;">Not selected</span></h3>
-        <div class="specs"><strong>Status:</strong> Sample received, not ordering.</div>
-      </div>
-    </div>
-    <div class="card" style="border:1px solid #ccc; opacity:0.5;">
-      <div class="card-img-placeholder"><span style="font-size:0.85em;color:#666">Atlas Blush Zellige</span></div>
-      <div class="card-body">
-        <h3>Atlas Blush Zellige <span style="background:#999;color:#fff;font-size:0.65em;padding:2px 8px;border-radius:8px;vertical-align:middle;">Not selected</span></h3>
-        <div class="specs"><strong>Status:</strong> Sample received, not ordering.</div>
-      </div>
-    </div>
     <div class="card" style="border:3px solid #2e7d32;">
       <img src="https://domusgroup.com/system/inspirations/images/817/099/f6-/large/DFMS_12_Sagome_D%C3%A9cor_Glazed_%28Variation%29.jpg?1725263451" alt="Del Conca Manufatti Sagome Décor" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px 12px 0 0;" onerror="this.outerHTML='<div class=card-img-placeholder><span style=font-size:0.85em;color:#666>Del Conca Manufatti Sagome</span></div>'">
       <div class="card-body">
@@ -598,23 +400,13 @@ function updateProgress() {
           <strong>Trim:</strong> Copper trim 10mm × 5 lengths — PURCHASED (Master Tiles, £90)<br>
           <strong>Domus samples:</strong> Sagome Décor + Cerchi Décor ordered FREE (for quick reference — NOT buying from Domus, too expensive)
         </div>
-        <a href="https://tile.expert/en-gb/tile/del-conca/manufatti/a/20mi00sa-sagome-mi-s000607736" target="_blank">View on tile.expert →</a> &nbsp;|&nbsp;
-        <a href="https://www.delconca.com/en/collections/faetano/manufatti/sagome/" target="_blank">Del Conca official →</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img-placeholder"><span style="font-size:0.85em;color:#666">WOW White 5×5 — Ceramic</span></div>
-      <div class="card-body">
-        <h3>WOW White 5×5 — WOW Design (Spanish)</h3>
-        <div class="specs">
-          <strong>Size:</strong> 127 × 127 mm (5" × 5") | Ceramic<br>
-          <strong>Finish:</strong> Available in multiple 3D shapes (Arch, Delta, Moon, Nilo, Wave) — dimensional white ceramic<br>
-          <strong>Character:</strong> Pure bright white with sculptural depth. Light bounces off the 3D surface. Lets the wood and copper do the colour work.<br>
-          <strong>Price:</strong> ~£11.50/sq ft (~£124/m²) via US retailers — check UK stockists for local pricing<br>
-          <strong>UK stockists:</strong> Spacers Showrooms, Walton Ceramics (Chelsea), Tile &amp; Wood Flooring
+        <a href="https://tile.expert/en-gb/tile/del-conca/manufatti/a/20mi00sa-sagome-mi-s000607736" target="_blank">View on tile.expert →</a>
+        <div style="margin-top:12px;padding-top:12px;border-top:1px solid #e0dcd4">
+          <strong style="font-size:0.85em;color:#666">Product Links:</strong><br>
+          <a href="https://www.delconca.com/en/collections/faetano/manufatti/sagome/" target="_blank" style="color:#1565c0;font-size:0.85em">Del Conca Official →</a> ·
+          <a href="https://domusgroup.com/products/manifattura" target="_blank" style="color:#1565c0;font-size:0.85em">Domus Group →</a> ·
+          <a href="https://www.stonesuperstore.co.uk/casa-ivory-decor-glazed-tiles" target="_blank" style="color:#1565c0;font-size:0.85em">Stone Superstore (Order Page) →</a>
         </div>
-        <a href="https://uniquedesignsolutions.com/product/wow-white-5-x-5-ceramic-tile/" target="_blank">View product →</a> &nbsp;|&nbsp;
-        <a href="https://www.spacers-uk.com/wow-tiles/" target="_blank">Spacers UK →</a>
       </div>
     </div>
   </div>
@@ -1488,12 +1280,14 @@ function updateProgress() {
     <table>
       <tr><th>Item</th><th>Status</th><th>Details</th></tr>
       <tr style="background:#e8f5e9;"><td>Dormido tiles</td><td><span class="badge ordered">Ordered</span></td><td>7 boxes — £352.31 from VP</td></tr>
-      <tr style="background:#e8f5e9;"><td>Matteo tiles</td><td><span class="badge ordered">Ordered</span></td><td>8 boxes — £290.80 from VP</td></tr>
+      <tr style="background:#fff3e0;"><td>Matteo tiles (SCRAPPED)</td><td><span style="background:#c62828;color:#fff;font-size:0.7em;padding:2px 8px;border-radius:8px;">Scrapped</span></td><td>8 boxes — £290.80 from VP (non-returnable, for resale)</td></tr>
+      <tr style="background:#e8f5e9;"><td>Sagome tiles (Walls C &amp; D)</td><td><span class="badge ordered">Ordered</span></td><td>5 boxes — £281.70 from Stone Superstore (arriving 8 Apr)</td></tr>
       <tr style="background:#e8f5e9;"><td>Floor — Latte Fiastra sheet vinyl</td><td><span class="badge ordered">Ordered</span></td><td>Best4Flooring 2m×3m roll — £113.84 (delivering 20 Mar)</td></tr>
       <tr style="background:#e8f5e9;"><td>Shower tray</td><td><span class="badge ordered">Ordered</span></td><td>Drench stone resin 1200×900 — £199.99</td></tr>
       <tr style="background:#e8f5e9;"><td>Shower waste</td><td><span class="badge ordered">Ordered</span></td><td>Harbour 90mm Gloss Black — £34.99 from Drench</td></tr>
       <tr><td>Glass enclosure</td><td><span class="badge pending">Pending</span></td><td>Plumber to select (~£250–£500)</td></tr>
-      <tr style="background:#e8f5e9;"><td>Grout (green tiles)</td><td><span class="badge ordered">Ordered</span></td><td>BAL Micromax3 ECO Smoke 2.5kg — £26.69 from VP (2mm H / 1.5mm V joints)</td></tr>
+      <tr style="background:#e8f5e9;"><td>Grout (Sagome tiles)</td><td><span class="badge ordered">Ordered</span></td><td>Kerakoll Fugabella Color No 20 — £14.00 from Master Tiles</td></tr>
+      <tr style="background:#fff3e0;"><td>Grout (BAL Smoke — scrapped)</td><td><span style="background:#c62828;color:#fff;font-size:0.7em;padding:2px 8px;border-radius:8px;">Scrapped</span></td><td>BAL Micromax3 ECO Smoke — £26.69 from VP (was for Matteo, return or repurpose)</td></tr>
       <tr style="background:#e8f5e9;"><td>Toilet</td><td><span class="badge ordered">Ordered</span></td><td>Arezzo BTW matt black seat — £289.95 from VP</td></tr>
       <tr style="background:#e8f5e9;"><td>Bidet seat</td><td><span class="badge" style="background:#e8f5e9; color:#1b5e20;">Gift</span></td><td>VOVO VB-6000SE Elongated — gift from Pibo (not in budget)</td></tr>
       <tr style="background:#e8f5e9;"><td>Basin/Vanity</td><td><span class="badge ordered">Ordered</span></td><td>Pendle 600mm Black — £249.95 from Better Bathrooms</td></tr>
@@ -1516,19 +1310,21 @@ function updateProgress() {
       <tr style="background:#e8f5e9;"><td>Waste bin</td><td><span class="badge ordered">Ordered</span></td><td>IKEA GANSJÖN 3L black &#8212; £12.00 from IKEA</td></tr>
       <tr style="background:#e8f5e9;"><td>Table lamp</td><td><span class="badge ordered">Ordered</span></td><td>IKEA FADO N 25 white &#8212; £19.00 from IKEA</td></tr>
       <tr style="background:#e8f5e9;"><td>Water conditioner</td><td><span class="badge ordered">Ordered</span></td><td>Limetron 15mm &#8212; £167.49 from FixTheBog</td></tr>
-      <tr><td>Paint</td><td><span class="badge pending">Pending</span></td><td>Claybrook terracotta + desert paint for Wall B &amp; Wall C above 1200mm</td></tr>
+      <tr><td>Paint</td><td><span class="badge pending">Pending</span></td><td>Claybrook terracotta + desert paint for Wall B (above 1245mm) &amp; Wall C (above 1246mm)</td></tr>
       <tr style="background:#e8f5e9;"><td>Shower valve/head</td><td><span class="badge ordered">Ordered</span></td><td>Milano Alara Thermostatic Bar Valve — Brushed Copper — £249.99 from Big Bathroom Shop</td></tr>
     </table>
   </div>
 
   <div style="margin-top: 30px; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
     <h3 style="color: #2E4057; margin-bottom: 12px;">Wall B Design Change</h3>
-    <p style="font-size: 0.95em;">The non-shower section of Wall B (behind the toilet) now has <strong>Dormido wood effect tiles from floor to 1200 mm</strong>, with a <strong>light desert-style paint from 1200 mm to ceiling</strong>. The fluted green tiles have been removed from this wall. This creates a warm, cohesive look with the shower tiles while keeping the ceiling area light and airy.</p>
+    <p style="font-size: 0.95em;">The non-shower section of Wall B (behind the toilet) has <strong>Dormido wood effect tiles from 40mm above floor to 1245mm</strong>, with <strong>desert-style paint from 1245mm to ceiling</strong>. One Dormido tile is missing on the bottom row (needs 110mm hole for soil pipe).</p>
   </div>
 
   <div style="margin-top: 16px; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
-    <h3 style="color: #2E4057; margin-bottom: 12px;">Wall C Design Change</h3>
-    <p style="font-size: 0.95em;">Wall C (window wall) now has <strong>fluted green tiles only up to ~1200 mm</strong> — a full-width band at the bottom (1828 × 897 mm) plus two small patches flanking the window sill (374 × 303 mm each). <strong>Everything above 1200 mm is plaster/drywall with paint</strong>, including around and above the window. This lines up with the paint on Wall B above the toilet, creating a consistent horizon line. Window reveals (127 mm each side) are also painted. Matteo tile area reduced from 6.643 m² to 4.534 m² (4.99 m² with wastage). 8 boxes already ordered — there will be spare tiles.</p>
+    <h3 style="color: #2E4057; margin-bottom: 12px;">Walls C &amp; D — Sagome Tiles</h3>
+    <p style="font-size: 0.95em;">Wall C (window wall): <strong>Del Conca Manufatti Sagome tiles to 1246mm</strong> — bottom band (1828 × 897mm) + two patches flanking window (374 × 349mm each) + window reveals (160mm deep × 349mm each side) + sill (1080 × 160mm). Copper trim at 1246mm and all external window corners. <strong>Paint above 1246mm.</strong><br><br>
+    Wall D (mirror wall, 2110mm wide): Large tile area <strong>below mirror (~1120mm tall)</strong> + 75mm strip above mirror + side strips (56mm left, 46mm right). Mirror is 2008 × 1210mm, positioned high on wall.<br><br>
+    Total Sagome: <strong>4.831 m²</strong> (5.31 m² with 10% wastage). 5 boxes ordered (~5.5 m²).</p>
   </div>
 </div>
 
