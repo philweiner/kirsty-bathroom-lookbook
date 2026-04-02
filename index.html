@@ -108,7 +108,9 @@
   <a href="#returns">Returns</a>
   <a href="#budget">Budget</a>
   <a href="#summary">Summary</a>
-  <a href="wall-d-final-tile-plans" style="background:rgba(255,255,255,0.25);font-weight:600;">Tile Layout Plans →</a>
+  <a href="wall-d-final-tile-plans.html" style="background:rgba(255,255,255,0.25);font-weight:600;">Tile Layout Plans →</a>
+  <a href="flooring-plan.html" style="background:rgba(255,255,255,0.25);font-weight:600;">Flooring Plan →</a>
+  <a href="2d-renders.html" style="background:rgba(255,255,255,0.25);font-weight:600;">2D Renders →</a>
 </div>
 
 <!-- ===== ORDER OF OPERATIONS ===== -->
@@ -194,7 +196,7 @@
       <div class="checklist-item"><input type="checkbox" id="t14" checked onchange="updateProgress()"><label for="t14">Tile selected: Del Conca Manufatti Sagome — ORDERED from Stone Superstore, arriving 8 Apr<span class="item-note">200×200mm porcelain stoneware, 5 boxes (~5.5 m²), £281.70</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t15" checked onchange="updateProgress()"><label for="t15">Copper trim ordered + received<span class="item-note">Master Tiles #271610 — 10mm × 5 lengths (£90.00), PURCHASED 1 Apr 2026</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t17" checked onchange="updateProgress()"><label for="t17">Grout for Manufatti Sagome tiles — PURCHASED<span class="item-note">Kerakoll Fugabella Color No 20 (Master Tiles, £14.00). Bio-resin plaster-look finish for seamless carved effect.</span></label></div>
-      <div class="checklist-item"><input type="checkbox" id="t17a" onchange="updateProgress()"><label for="t17a">Order anthracite silicone for shower ceiling joints + tile edges<span class="item-note">Mapei Mapesil AC Anthracite 310ml (Victorian Plumbing, £11.35) — for shower tile-to-ceiling junctions &amp; movement joints. Order reference: Part No 4811491IT</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t17a" checked disabled onchange="updateProgress()"><label for="t17a">Order anthracite silicone for shower ceiling joints + tile edges ✔<span class="item-note">Mapei Mapesil AC Anthracite 310ml — ORDERED. For shower tile-to-ceiling junctions &amp; movement joints.</span></label></div>
     </div>
   </div>
 
@@ -322,8 +324,8 @@ function togglePhase(header) {
   arrow.classList.toggle('open');
 }
 function updateProgress() {
-  var total = 54;
   var checks = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+  var total = checks.length;
   var done = 0;
   checks.forEach(function(cb) {
     var label = cb.nextElementSibling;
@@ -350,6 +352,8 @@ function updateProgress() {
     }
   }
 }
+// Run on page load so pre-checked items (Kevin, ordered items) are counted immediately
+document.addEventListener('DOMContentLoaded', updateProgress);
 </script>
 
 <hr class="divider">
