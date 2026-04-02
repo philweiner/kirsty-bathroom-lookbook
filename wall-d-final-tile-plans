@@ -31,7 +31,7 @@ tr:nth-child(even){background:#faf8f4}
 <body>
 <div class="wrap">
 
-<img src="Photos Before Tiling/Entire bathroom.jpg" alt="Current state of the bathroom" style="width:100%;border-radius:8px;margin-bottom:24px;box-shadow:0 2px 8px rgba(0,0,0,.12)">
+<img src="Entire%20bathroom.jpg" alt="Current state of the bathroom" style="width:100%;border-radius:8px;margin-bottom:24px;box-shadow:0 2px 8px rgba(0,0,0,.12)">
 
 <div class="hdr">
 <h1>Tile Layout Plans</h1>
@@ -75,11 +75,15 @@ tr:nth-child(even){background:#faf8f4}
 </div>
 
 <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:12px 0">
-  <img src="Photos Before Tiling/Wall A top tile replacement.JPG" alt="Wall A — tile above door and shower top" style="width:48%;min-width:280px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1)">
-  <img src="Photos Before Tiling/Dormido tiles Bad joint on wall A above door .JPG" alt="Wall A — bad joint above door" style="width:48%;min-width:280px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1)">
+  <img src="Wall%20A%20top%20tile%20replacement.JPG" alt="Wall A — tile above door and shower top" style="width:48%;min-width:280px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1)">
+  <img src="Dormido%20tiles%20Bad%20joint%20on%20wall%20A%20above%20door%20.JPG" alt="Wall A — bad joint above door" style="width:48%;min-width:280px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1)">
 </div>
 <p style="text-align:center;font-size:12px;color:#999;margin:4px 0 14px">Dormido tiles above door — note bad joint on right side</p>
-<p style="text-align:center;font-size:12px;color:#999;margin:4px 0 14px">Close-up of the joint that needs fixing</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:12px 0">
+  <img src="Dormida%20tile%20wall%20A%20corner%20gap%20left.JPG" alt="Wall A — corner gap between door section and shower section" style="width:48%;min-width:280px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1)">
+  <img src="Dormido%20shower%20tile%20replace%20wall%20B.JPG" alt="Wall A/B — shower Dormido tile replacement needed" style="width:48%;min-width:280px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1)">
+</div>
+<p style="text-align:center;font-size:12px;color:#999;margin:4px 0 14px">Left: Corner gap at Wall A junction · Right: Shower Dormido tile needing replacement</p>
 
 <!-- Wall A: viewBox uses real mm. Margin=180 for labels. -->
 <!-- Wall: x=180..2008, y=180..2682. Width=1828, Height=2502. -->
@@ -161,7 +165,7 @@ tr:nth-child(even){background:#faf8f4}
 <b>Work:</b> Missing Dormido tile behind toilet + 40mm floor gap needs solution
 </div>
 
-<img src="Photos Before Tiling/wall b dormido tile needed behind toilet.JPG" alt="Wall B — missing Dormido tile behind toilet" style="width:100%;max-width:700px;border-radius:6px;margin:12px auto;display:block;box-shadow:0 1px 6px rgba(0,0,0,.1)">
+<img src="wall%20b%20dormido%20tile%20needed%20behind%20toilet.JPG" alt="Wall B — missing Dormido tile behind toilet" style="width:100%;max-width:700px;border-radius:6px;margin:12px auto;display:block;box-shadow:0 1px 6px rgba(0,0,0,.1)">
 <p style="text-align:center;font-size:12px;color:#999;margin:4px 0 14px">Wall B non-shower section — missing Dormido tile behind toilet area, soil pipe visible</p>
 
 <svg viewBox="0 0 2400 2900" xmlns="http://www.w3.org/2000/svg">
@@ -244,7 +248,7 @@ tr:nth-child(even){background:#faf8f4}
 <b>Above 1246mm:</b> Desert-style paint
 </div>
 
-<img src="Photos Before Tiling/italian porcelain tile on wall C .JPG" alt="Wall C — window wall, ready for Sagome tiles" style="width:100%;max-width:700px;border-radius:6px;margin:12px auto;display:block;box-shadow:0 1px 6px rgba(0,0,0,.1)">
+<img src="italian%20porcelain%20tile%20on%20wall%20C%20.JPG" alt="Wall C — window wall, ready for Sagome tiles" style="width:100%;max-width:700px;border-radius:6px;margin:12px auto;display:block;box-shadow:0 1px 6px rgba(0,0,0,.1)">
 <p style="text-align:center;font-size:12px;color:#999;margin:4px 0 14px">Wall C stripped and ready — window, adhesive residue, pipework for sink visible</p>
 
 <!-- Wall C: 1828 wide × 2502 tall. Floor at y=2682, ceiling at y=180 -->
@@ -423,8 +427,8 @@ tr:nth-child(even){background:#faf8f4}
 </div>
 
 <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:12px 0">
-  <img src="Photos Before Tiling/Italian porcelain tile on wall D.JPG" alt="Wall D — mirror wall overview" style="width:48%;min-width:280px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1)">
-  <img src="Photos Before Tiling/Italian porcelain tile on wall D below mirror.JPG" alt="Wall D — below mirror detail" style="width:48%;min-width:280px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1)">
+  <img src="Italian%20porcelain%20tile%20on%20wall%20D.JPG" alt="Wall D — mirror wall overview" style="width:48%;min-width:280px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1)">
+  <img src="Italian%20porcelain%20tile%20on%20wall%20D%20below%20mirror.JPG" alt="Wall D — below mirror detail" style="width:48%;min-width:280px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1)">
 </div>
 <p style="text-align:center;font-size:12px;color:#999;margin:4px 0 14px">Wall D — large tile area below the mirror, radiator sits in front</p>
 
