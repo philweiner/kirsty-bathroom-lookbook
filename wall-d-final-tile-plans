@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tile Layout Plans — Inwood Crescent Bathroom BN1 5AQ</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#faf8f4;color:#2c2c2c;line-height:1.6;padding:20px}
+.wrap{max-width:1100px;margin:0 auto;background:#fff;padding:36px;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+h1{font-size:26px;margin-bottom:6px}
+.hdr{border-bottom:3px solid #b87333;padding-bottom:18px;margin-bottom:28px}
+.meta{display:flex;gap:24px;flex-wrap:wrap;font-size:13px;color:#666;margin-top:8px}
+h2{font-size:20px;margin:36px 0 12px;border-left:4px solid #b87333;padding-left:12px}
+.wall-info{background:#f5f1ea;padding:14px 18px;border-radius:6px;margin-bottom:14px;font-size:14px;line-height:1.7}
+.wall-info b{color:#b87333}
+svg{display:block;width:100%;max-width:900px;margin:10px auto;border:1px solid #e0dcd4;border-radius:4px;background:#faf8f4}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin:16px 0;font-size:12px}
+.leg{display:flex;align-items:center;gap:6px}
+.leg span{width:22px;height:22px;border-radius:3px;border:1px solid #bbb;display:inline-block}
+.note{background:#fff8e1;border-left:4px solid #f9a825;padding:10px 14px;margin:12px 0;font-size:13px;border-radius:0 4px 4px 0}
+.repair{background:#fce4ec;border-left:4px solid #e53935;padding:10px 14px;margin:12px 0;font-size:13px;border-radius:0 4px 4px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+th{background:#e8dcc8;padding:8px 10px;text-align:left;font-weight:600;border:1px solid #d9cbb5}
+td{padding:7px 10px;border:1px solid #e8dcc8}
+tr:nth-child(even){background:#faf8f4}
+.sum{background:#e8f5e9;border:2px solid #4caf50;padding:16px;border-radius:6px;margin:20px 0;font-size:14px}
+.sum b{color:#2e7d32}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<img src="Photos Before Tiling/Entire bathroom.jpg" alt="Current state of the bathroom" style="width:100%;border-radius:8px;margin-bottom:24px;box-shadow:0 2px 8px rgba(0,0,0,.12)">
+
+<div class="hdr">
+<h1>Tile Layout Plans</h1>
+<p style="color:#666">Inwood Crescent Bathroom BN1 5AQ</p>
+<div class="meta">
+<span><b>Date:</b> 2 April 2026</span>
+<span><b>Tile:</b> Del Conca Manufatti Sagome 195×195×8.5mm</span>
+<span><b>Grout:</b> Kerakoll Fugabella Color No 20 (2mm joints)</span>
+<span><b>Trim:</b> Copper 10mm straight edge</span>
+</div>
+</div>
+
+<div class="legend">
+<div class="leg"><span style="background:#e8dcc8"></span> Sagome tile</div>
+<div class="leg"><span style="background:#3d2e1f"></span> Dormido tile</div>
+<div class="leg"><span style="background:#e8ddd0"></span> Paint (desert)</div>
+<div class="leg"><span style="background:#b8d8f0"></span> Window / glass</div>
+<div class="leg"><span style="background:#d0d0d0"></span> Mirror</div>
+<div class="leg"><span style="background:#b87333"></span> Copper trim</div>
+<div class="leg"><span style="background:none;border:2px dashed #e53935!important"></span> Repair needed</div>
+</div>
+
+<table>
+<tr><th>Surface</th><th>Wall</th><th>Area</th><th>Tile</th></tr>
+<tr><td>Wall C front face</td><td>Right / window</td><td>1.640 m²</td><td>Sagome</td></tr>
+<tr><td>Wall C patches + reveals + sill</td><td>Right / window</td><td>0.546 m²</td><td>Sagome</td></tr>
+<tr><td>Wall D below mirror (2110×1120mm)</td><td>Front / mirror</td><td>2.363 m²</td><td>Sagome</td></tr>
+<tr><td>Wall D top strip + side strips</td><td>Front / mirror</td><td>0.282 m²</td><td>Sagome</td></tr>
+<tr><td style="font-weight:600">Total Sagome</td><td></td><td style="font-weight:600">4.831 m²</td><td>5.31 m² w/ 10% waste</td></tr>
+<tr><td>Dormido repairs (Walls A+B)</td><td>Left + Back</td><td>~0.5 m² est</td><td>Dormido (spare)</td></tr>
+</table>
+
+<div class="sum"><b>5 boxes ordered (~5.5 m²)</b> — covers the 5.31 m² needed (with 10% wastage). Reasonable spare for cuts and breakages, though the narrow Wall D side strips (46–56mm) will consume extra tiles.</div>
+
+<!-- ==================== WALL A ==================== -->
+<h2>Wall A — Left Wall (Dormido Repairs)</h2>
+<div class="wall-info">
+<b>Dimensions:</b> 1828mm wide × 2502mm tall<br>
+<b>Features:</b> Bathroom door (bottom-left, 865mm wide) · Shower section (right 900mm, floor to ceiling) · Dormido tiles above door<br>
+<b>Work:</b> Two Dormido repairs only — no new Sagome tiling on this wall
+</div>
+
+<div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:12px 0">
+  <img src="Photos Before Tiling/Wall A top tile replacement.JPG" alt="Wall A — tile above door and shower top" style="width:48%;min-width:280px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1)">
+  <img src="Photos Before Tiling/Dormido tiles Bad joint on wall A above door .JPG" alt="Wall A — bad joint above door" style="width:48%;min-width:280px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1)">
+</div>
+<p style="text-align:center;font-size:12px;color:#999;margin:4px 0 14px">Dormido tiles above door — note bad joint on right side</p>
+<p style="text-align:center;font-size:12px;color:#999;margin:4px 0 14px">Close-up of the joint that needs fixing</p>
+
+<!-- Wall A: viewBox uses real mm. Margin=180 for labels. -->
+<!-- Wall: x=180..2008, y=180..2682. Width=1828, Height=2502. -->
+<svg viewBox="0 0 2200 2900" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#555" stroke-width="1.5"/></marker>
+<pattern id="dormido" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#3d2e1f"/><line x1="0" y1="5" x2="40" y2="5" stroke="#4d3e2f" stroke-width="1" opacity=".5"/><line x1="0" y1="15" x2="40" y2="15" stroke="#2a1a0f" stroke-width="1" opacity=".4"/></pattern>
+</defs>
+
+<!-- Wall background -->
+<rect x="180" y="180" width="1828" height="2502" fill="#f0ebe3" stroke="#333" stroke-width="3"/>
+
+<!-- Dormido above door: from ceiling to door frame top (180 to 180+(2502-2040)=642) -->
+<!-- Door is 865mm wide, 2040mm tall from floor. Door top = floor-2040 = 2682-2040 = 642 from top of wall = y=180+462=642 NO wait.
+     Floor is at y=180+2502=2682. Door top is at y=2682-2040=642.
+     So Dormido above door: y=180 to y=642, x=180 to x=180+865=1045 -->
+<rect x="180" y="180" width="865" height="462" fill="url(#dormido)" stroke="#2a1f14" stroke-width="1"/>
+<text x="612" y="420" font-size="32" fill="#ccc" text-anchor="middle" font-weight="600">DORMIDO</text>
+<text x="612" y="455" font-size="22" fill="#aaa" text-anchor="middle">above door</text>
+
+<!-- Door opening -->
+<rect x="180" y="642" width="865" height="2040" fill="#e8e4de" stroke="#999" stroke-width="2" stroke-dasharray="10,6"/>
+<text x="612" y="1700" font-size="36" fill="#999" text-anchor="middle" font-weight="600">DOOR</text>
+<text x="612" y="1745" font-size="24" fill="#bbb" text-anchor="middle">865 × 2040mm</text>
+
+<!-- Shower section (right 900mm, floor to ceiling) -->
+<!-- x = 180+(1828-900) = 1108, width=900, full height -->
+<rect x="1108" y="180" width="900" height="2502" fill="url(#dormido)" stroke="#2a1f14" stroke-width="1.5"/>
+<!-- Dormido grid: 600×1200mm horizontal. In 900mm width: 1 tile + partial. In 2502mm height: ~4.17 tiles at 600mm -->
+<line x1="1108" y1="780" x2="2008" y2="780" stroke="#1a0f0a" stroke-width="1" opacity=".3"/>
+<line x1="1108" y1="1380" x2="2008" y2="1380" stroke="#1a0f0a" stroke-width="1" opacity=".3"/>
+<line x1="1108" y1="1980" x2="2008" y2="1980" stroke="#1a0f0a" stroke-width="1" opacity=".3"/>
+<line x1="1108" y1="2580" x2="2008" y2="2580" stroke="#1a0f0a" stroke-width="1" opacity=".3"/>
+<text x="1558" y="1400" font-size="36" fill="#aaa" text-anchor="middle" font-weight="600">SHOWER</text>
+<text x="1558" y="1445" font-size="22" fill="#888" text-anchor="middle">Dormido · 900mm wide</text>
+
+<!-- REPAIR 1: 60mm gap at ceiling in shower -->
+<rect x="1108" y="180" width="900" height="60" fill="none" stroke="#e53935" stroke-width="4" stroke-dasharray="12,6"/>
+<text x="1558" y="170" font-size="22" fill="#e53935" text-anchor="middle" font-weight="600">REPAIR: 60mm Dormido cut at ceiling</text>
+
+<!-- REPAIR 2: Ugly vertical joint between above-door Dormido and shower Dormido -->
+<!-- The joint runs vertically at x≈1045–1108 (between above-door right edge and shower left edge) -->
+<line x1="1076" y1="180" x2="1076" y2="642" stroke="#e53935" stroke-width="6" stroke-dasharray="10,5"/>
+<circle cx="1076" cy="411" r="18" fill="none" stroke="#e53935" stroke-width="3"/>
+<text x="1076" y="140" font-size="18" fill="#e53935" text-anchor="middle" font-weight="600">REPAIR: Fix vertical</text>
+<text x="1076" y="162" font-size="18" fill="#e53935" text-anchor="middle" font-weight="600">joint between sections</text>
+
+<!-- Dimension: wall width -->
+<line x1="180" y1="2750" x2="2008" y2="2750" stroke="#555" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="1094" y="2790" font-size="24" fill="#555" text-anchor="middle">1828mm</text>
+
+<!-- Dimension: door width -->
+<line x1="180" y1="2710" x2="1045" y2="2710" stroke="#888" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="612" y="2706" font-size="18" fill="#888" text-anchor="middle">865mm</text>
+
+<!-- Dimension: shower width -->
+<line x1="1108" y1="2710" x2="2008" y2="2710" stroke="#888" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="1558" y="2706" font-size="18" fill="#888" text-anchor="middle">900mm</text>
+
+<!-- Dimension: wall height (right side) -->
+<line x1="2080" y1="180" x2="2080" y2="2682" stroke="#555" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="2100" y="1440" font-size="24" fill="#555" text-anchor="middle" transform="rotate(90,2100,1440)">2502mm</text>
+
+<!-- Dimension: door height -->
+<line x1="120" y1="642" x2="120" y2="2682" stroke="#888" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="100" y="1670" font-size="18" fill="#888" text-anchor="middle" transform="rotate(-90,100,1670)">2040mm</text>
+</svg>
+
+<div class="repair">
+<b>Repair 1 — Shower ceiling gap (60mm):</b> Cut a 60mm strip of Dormido tile to fill the gap at the top of the shower where tiles meet the ceiling. This is a horizontal cut across the full 900mm shower width on Wall A.<br>
+<b>Repair 2 — Vertical joint between sections:</b> The perpendicular line where the above-door Dormido meets the shower Dormido (visible in photos above). Options: clean up the joint line with an oscillating multi-tool + diamond blade, re-grout with Mapei Anthracite, or replace the above-door tile entirely. Assess on site.
+</div>
+
+<!-- ==================== WALL B ==================== -->
+<h2>Wall B — Back Wall (Dormido Repair + 40mm Gap)</h2>
+<div class="wall-info">
+<b>Dimensions:</b> ~2083mm wide × 2502mm tall (shower 1200mm + non-shower 883mm)<br>
+<b>Features:</b> Shower section (left 1200mm, Dormido floor-to-ceiling) · Non-shower (right 883mm, Dormido 40mm–1245mm, paint above) · Toilet · Cabinet<br>
+<b>Work:</b> Missing Dormido tile behind toilet + 40mm floor gap needs solution
+</div>
+
+<img src="Photos Before Tiling/wall b dormido tile needed behind toilet.JPG" alt="Wall B — missing Dormido tile behind toilet" style="width:100%;max-width:700px;border-radius:6px;margin:12px auto;display:block;box-shadow:0 1px 6px rgba(0,0,0,.1)">
+<p style="text-align:center;font-size:12px;color:#999;margin:4px 0 14px">Wall B non-shower section — missing Dormido tile behind toilet area, soil pipe visible</p>
+
+<svg viewBox="0 0 2400 2900" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern id="dormido2" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#3d2e1f"/><line x1="0" y1="5" x2="40" y2="5" stroke="#4d3e2f" stroke-width="1" opacity=".5"/><line x1="0" y1="15" x2="40" y2="15" stroke="#2a1a0f" stroke-width="1" opacity=".4"/></pattern>
+</defs>
+
+<!-- Wall background -->
+<rect x="180" y="180" width="2083" height="2502" fill="#f0ebe3" stroke="#333" stroke-width="3"/>
+
+<!-- Shower section: left 1200mm, floor to ceiling -->
+<rect x="180" y="180" width="1200" height="2502" fill="url(#dormido2)" stroke="#2a1f14" stroke-width="1.5"/>
+<!-- Grid lines -->
+<line x1="180" y1="780" x2="1380" y2="780" stroke="#1a0f0a" stroke-width="1" opacity=".25"/>
+<line x1="180" y1="1380" x2="1380" y2="1380" stroke="#1a0f0a" stroke-width="1" opacity=".25"/>
+<line x1="180" y1="1980" x2="1380" y2="1980" stroke="#1a0f0a" stroke-width="1" opacity=".25"/>
+<line x1="780" y1="180" x2="780" y2="2682" stroke="#1a0f0a" stroke-width="1" opacity=".25"/>
+<text x="780" y="1440" font-size="36" fill="#aaa" text-anchor="middle" font-weight="600">SHOWER</text>
+<text x="780" y="1480" font-size="22" fill="#888" text-anchor="middle">Dormido · 1200mm</text>
+
+<!-- Non-shower section: right 883mm -->
+<!-- Dormido from 40mm above floor to 1245mm: y_bottom = 2682-40 = 2642, y_top = 2682-1245 = 1437 -->
+<rect x="1380" y="1437" width="883" height="1205" fill="url(#dormido2)" stroke="#2a1f14" stroke-width="1.5"/>
+<text x="1821" y="2050" font-size="28" fill="#aaa" text-anchor="middle">DORMIDO</text>
+<text x="1821" y="2085" font-size="18" fill="#888" text-anchor="middle">40mm to 1245mm</text>
+
+<!-- Desert paint above 1245mm on non-shower -->
+<rect x="1380" y="180" width="883" height="1257" fill="#e8ddd0" stroke="#c5b8a0" stroke-width="1"/>
+<text x="1821" y="800" font-size="24" fill="#a09080" text-anchor="middle">PAINT</text>
+<text x="1821" y="835" font-size="18" fill="#b0a090" text-anchor="middle">(desert style)</text>
+
+<!-- 40mm GAP at floor (REPAIR) -->
+<rect x="1380" y="2642" width="883" height="40" fill="#ffcdd2" stroke="#e53935" stroke-width="3" stroke-dasharray="8,4"/>
+<text x="1821" y="2670" font-size="16" fill="#e53935" text-anchor="middle" font-weight="600">40mm GAP</text>
+
+<!-- Missing tile: BOTTOM row of non-shower section (full 883mm width) -->
+<!-- Top row (645mm–1245mm) is installed. Bottom row (40mm–640mm) is MISSING. -->
+<!-- y_top of bottom row = 2682-640 = 2042, y_bottom = 2682-40 = 2642, height = 600mm -->
+<rect x="1380" y="2042" width="883" height="600" fill="none" stroke="#e53935" stroke-width="4" stroke-dasharray="12,6"/>
+<text x="1821" y="2290" font-size="22" fill="#e53935" text-anchor="middle" font-weight="600">MISSING TILE</text>
+<text x="1821" y="2325" font-size="16" fill="#e53935" text-anchor="middle">Full width · Cut 110mm hole for soil pipe</text>
+<text x="1821" y="2355" font-size="14" fill="#e53935" text-anchor="middle">883mm × 600mm (bottom row, above 40mm gap)</text>
+
+<!-- Toilet outline (simplified) -->
+<rect x="1600" y="2200" width="440" height="350" rx="20" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="1820" y="2390" font-size="18" fill="#999" text-anchor="middle">Toilet</text>
+
+<!-- Dimension: 1245mm line -->
+<line x1="1380" y1="1437" x2="2263" y2="1437" stroke="#b87333" stroke-width="1.5" stroke-dasharray="6,4"/>
+<text x="2280" y="1445" font-size="18" fill="#b87333" font-weight="600">1245mm</text>
+
+<!-- Dimension: shower width -->
+<line x1="180" y1="2750" x2="1380" y2="2750" stroke="#555" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="780" y="2790" font-size="22" fill="#555" text-anchor="middle">1200mm</text>
+
+<!-- Dimension: non-shower width -->
+<line x1="1380" y1="2750" x2="2263" y2="2750" stroke="#555" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="1821" y="2790" font-size="22" fill="#555" text-anchor="middle">883mm</text>
+
+<!-- Dimension: full height -->
+<line x1="2330" y1="180" x2="2330" y2="2682" stroke="#555" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="2355" y="1440" font-size="22" fill="#555" text-anchor="middle" transform="rotate(90,2355,1440)">2502mm</text>
+
+<!-- Dimension: 40mm gap -->
+<line x1="1320" y1="2642" x2="1320" y2="2682" stroke="#e53935" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="1300" y="2668" font-size="14" fill="#e53935" text-anchor="end">40mm</text>
+</svg>
+
+<div class="repair">
+<b>Repair — Missing Dormido tile:</b> One tile was never installed on the non-shower section of Wall B (behind the toilet area). Needs cutting with a 110mm hole for the soil line pipe. Dormido tile orientation is HORIZONTAL (1200mm runs left to right).<br><br>
+<b>40mm floor gap:</b> Kevin set the Dormido tiles 40mm above floor level on the non-shower section (intended for shower tray alignment but not communicated). The gap between the vinyl floor and the bottom tile edge needs filling. Options: thin tile strip, silicone seal, small skirting trim, or let the vinyl curve up. Tiler to recommend best approach.
+</div>
+
+<!-- ==================== WALL C ==================== -->
+<h2>Wall C — Right / Window Wall (New Sagome Tiles)</h2>
+<div class="wall-info">
+<b>Dimensions:</b> 1828mm wide × 2502mm tall<br>
+<b>Sagome tiles:</b> Floor to 1246mm (matching Dormido on Wall B). Copper trim at 1246mm line.<br>
+<b>Window:</b> Sill at 897mm from floor. Opening 1080mm wide. Reveals 160mm deep × 349mm tall — being tiled.<br>
+<b>Above 1246mm:</b> Desert-style paint
+</div>
+
+<img src="Photos Before Tiling/italian porcelain tile on wall C .JPG" alt="Wall C — window wall, ready for Sagome tiles" style="width:100%;max-width:700px;border-radius:6px;margin:12px auto;display:block;box-shadow:0 1px 6px rgba(0,0,0,.1)">
+<p style="text-align:center;font-size:12px;color:#999;margin:4px 0 14px">Wall C stripped and ready — window, adhesive residue, pipework for sink visible</p>
+
+<!-- Wall C: 1828 wide × 2502 tall. Floor at y=2682, ceiling at y=180 -->
+<!-- Tile zone: floor (2682) to 1246mm up = y=2682-1246=1436 -->
+<!-- Window sill at 897mm from floor = y=2682-897=1785 -->
+<!-- Window patches: from sill (1785) up to tile line (1436) = 349mm -->
+<!-- Window centered: (1828-1080)/2 = 374mm each side. Left patch: x=180..554, Right patch: x=1634..2008 -->
+<!-- Window opening: x=554..1634, from sill up past tile line into paint -->
+<svg viewBox="0 0 2200 2900" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern id="sagome" width="197" height="197" patternUnits="userSpaceOnUse">
+<rect width="197" height="197" fill="#ede4d4"/>
+<rect x="1" y="1" width="195" height="195" fill="#e8dcc8" rx="1"/>
+<!-- Subtle 3D arc on some tiles -->
+<path d="M1 196 A97 97 0 0 1 98 99" fill="none" stroke="#d4c4a8" stroke-width="2" opacity=".4"/>
+</pattern>
+<pattern id="sagome2" width="197" height="197" patternUnits="userSpaceOnUse">
+<rect width="197" height="197" fill="#ede4d4"/>
+<rect x="1" y="1" width="195" height="195" fill="#f0e8da" rx="1"/>
+<line x1="65" y1="1" x2="65" y2="196" stroke="#ddd0bc" stroke-width="2" opacity=".35"/>
+<line x1="130" y1="1" x2="130" y2="196" stroke="#ddd0bc" stroke-width="2" opacity=".35"/>
+</pattern>
+</defs>
+
+<!-- Wall background (full) -->
+<rect x="180" y="180" width="1828" height="2502" fill="#f0ebe3" stroke="#333" stroke-width="3"/>
+
+<!-- Paint zone: 1246mm to ceiling on non-window areas -->
+<rect x="180" y="180" width="1828" height="1256" fill="#e8ddd0"/>
+<text x="1094" y="900" font-size="28" fill="#b0a090" text-anchor="middle">PAINT (desert style)</text>
+
+<!-- Sagome tile zone: bottom band (full width, floor to sill) -->
+<!-- Floor=2682, sill=1785. Height = 2682-1785 = 897 -->
+<rect x="180" y="1785" width="1828" height="897" fill="url(#sagome)"/>
+
+<!-- Tile grid lines (grout) for bottom band — horizontal lines every 197mm from floor up -->
+<g stroke="#d4c4a8" stroke-width="1.5" opacity=".6">
+<!-- From floor (2682) upward: 2682-197=2485, 2485-197=2288, 2288-197=2091, 2091-197=1894 -->
+<line x1="180" y1="2485" x2="2008" y2="2485"/>
+<line x1="180" y1="2288" x2="2008" y2="2288"/>
+<line x1="180" y1="2091" x2="2008" y2="2091"/>
+<line x1="180" y1="1894" x2="2008" y2="1894"/>
+<!-- Vertical lines: centered 8 columns. Start at 180+126=306, then every 197 -->
+<line x1="306" y1="1785" x2="306" y2="2682"/>
+<line x1="503" y1="1785" x2="503" y2="2682"/>
+<line x1="700" y1="1785" x2="700" y2="2682"/>
+<line x1="897" y1="1785" x2="897" y2="2682"/>
+<line x1="1094" y1="1785" x2="1094" y2="2682"/>
+<line x1="1291" y1="1785" x2="1291" y2="2682"/>
+<line x1="1488" y1="1785" x2="1488" y2="2682"/>
+<line x1="1685" y1="1785" x2="1685" y2="2682"/>
+<line x1="1882" y1="1785" x2="1882" y2="2682"/>
+</g>
+
+<!-- Left tile patch above sill: 374×349mm -->
+<rect x="180" y="1436" width="374" height="349" fill="url(#sagome2)"/>
+<g stroke="#d4c4a8" stroke-width="1.5" opacity=".6">
+<line x1="306" y1="1436" x2="306" y2="1785"/>
+<line x1="180" y1="1633" x2="554" y2="1633"/>
+</g>
+
+<!-- Right tile patch above sill: 374×349mm -->
+<rect x="1634" y="1436" width="374" height="349" fill="url(#sagome2)"/>
+<g stroke="#d4c4a8" stroke-width="1.5" opacity=".6">
+<line x1="1685" y1="1436" x2="1685" y2="1785"/>
+<line x1="1882" y1="1436" x2="1882" y2="1785"/>
+<line x1="1634" y1="1633" x2="2008" y2="1633"/>
+</g>
+
+<!-- Window opening -->
+<rect x="554" y="1100" width="1080" height="685" fill="#b8d8f0" stroke="#999" stroke-width="2"/>
+<text x="1094" y="1460" font-size="28" fill="#6a9ab8" text-anchor="middle">WINDOW</text>
+<text x="1094" y="1495" font-size="18" fill="#8ab8d4" text-anchor="middle">1080mm wide</text>
+
+<!-- Window reveals (inside edges) — shown as thin tiled strips -->
+<rect x="554" y="1436" width="160" height="349" fill="#e8dcc8" stroke="#b87333" stroke-width="2"/>
+<text x="634" y="1620" font-size="14" fill="#b87333" text-anchor="middle" transform="rotate(-90,634,1620)">Reveal 160×349</text>
+<rect x="1474" y="1436" width="160" height="349" fill="#e8dcc8" stroke="#b87333" stroke-width="2"/>
+<text x="1554" y="1620" font-size="14" fill="#b87333" text-anchor="middle" transform="rotate(-90,1554,1620)">Reveal 160×349</text>
+
+<!-- Window sill (tiled) -->
+<rect x="554" y="1785" width="1080" height="160" fill="#e8dcc8" stroke="#b87333" stroke-width="2"/>
+<text x="1094" y="1875" font-size="16" fill="#b87333" text-anchor="middle">Sill 1080 × 160mm (tiled)</text>
+
+<!-- Copper trim at 1246mm line -->
+<line x1="180" y1="1436" x2="554" y2="1436" stroke="#b87333" stroke-width="5"/>
+<line x1="1634" y1="1436" x2="2008" y2="1436" stroke="#b87333" stroke-width="5"/>
+<text x="100" y="1444" font-size="18" fill="#b87333" font-weight="600">1246mm ▸</text>
+
+<!-- Copper trim on window external corners (4 corners of the reveal) -->
+<circle cx="554" cy="1436" r="8" fill="#b87333"/>
+<circle cx="554" cy="1785" r="8" fill="#b87333"/>
+<circle cx="1634" cy="1436" r="8" fill="#b87333"/>
+<circle cx="1634" cy="1785" r="8" fill="#b87333"/>
+
+<!-- Pendle 600mm Wall Hung Vanity (596×446×500mm) -->
+<!-- Top aligns with window sill at 897mm from floor (y=1785) -->
+<!-- Basin centre just right of window right edge (x=1634). Centre at x=1680 (1500mm from left wall) -->
+<!-- Left edge: x=1380, Right edge: x=1980 -->
+<rect x="1380" y="1785" width="600" height="500" rx="4" fill="#2c2c2c" stroke="#111" stroke-width="3"/>
+<!-- Drawer divider line -->
+<line x1="1380" y1="2035" x2="1980" y2="2035" stroke="#444" stroke-width="1.5"/>
+<!-- Drawer handles -->
+<line x1="1630" y1="1895" x2="1730" y2="1895" stroke="#777" stroke-width="3" stroke-linecap="round"/>
+<line x1="1630" y1="2145" x2="1730" y2="2145" stroke="#777" stroke-width="3" stroke-linecap="round"/>
+<!-- Basin (white, sits on top of vanity) -->
+<rect x="1390" y="1765" width="580" height="35" rx="4" fill="#f0f0f0" stroke="#ccc" stroke-width="1.5"/>
+<ellipse cx="1680" cy="1780" rx="180" ry="8" fill="#e0e0e0" stroke="#ccc" stroke-width="1"/>
+<!-- Vanity labels -->
+<text x="1680" y="1940" font-size="22" fill="#bbb" text-anchor="middle" font-weight="600">VANITY</text>
+<text x="1680" y="1970" font-size="16" fill="#999" text-anchor="middle">Pendle 600mm</text>
+<text x="1680" y="2210" font-size="14" fill="#888" text-anchor="middle">600 × 450 × 500mm</text>
+<!-- Zana tap (centered on basin) -->
+<line x1="1680" y1="1740" x2="1680" y2="1765" stroke="#333" stroke-width="4" stroke-linecap="round"/>
+<circle cx="1680" cy="1735" r="6" fill="#333" stroke="#222" stroke-width="1"/>
+<!-- KABOMBA wall sconce above vanity (in paint zone above tiles) -->
+<rect x="1445" y="1320" width="470" height="36" rx="8" fill="#333" stroke="#555" stroke-width="1.5"/>
+<text x="1680" y="1345" font-size="13" fill="#aaa" text-anchor="middle">KABOMBA sconce · 470mm</text>
+<!-- Vanity dimension arrow -->
+<line x1="1380" y1="2310" x2="1980" y2="2310" stroke="#888" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="1680" y="2340" font-size="16" fill="#888" text-anchor="middle">600mm vanity</text>
+
+<!-- Dimension annotations -->
+<!-- Full width -->
+<line x1="180" y1="2750" x2="2008" y2="2750" stroke="#555" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="1094" y="2790" font-size="22" fill="#555" text-anchor="middle">1828mm</text>
+
+<!-- Left patch width -->
+<line x1="180" y1="1410" x2="554" y2="1410" stroke="#888" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="367" y="1405" font-size="16" fill="#888" text-anchor="middle">374mm</text>
+
+<!-- Window width -->
+<line x1="554" y1="1090" x2="1634" y2="1090" stroke="#888" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="1094" y="1085" font-size="16" fill="#888" text-anchor="middle">1080mm</text>
+
+<!-- Right patch width -->
+<line x1="1634" y1="1410" x2="2008" y2="1410" stroke="#888" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="1821" y="1405" font-size="16" fill="#888" text-anchor="middle">374mm</text>
+
+<!-- Tile height (right side) -->
+<line x1="2080" y1="1436" x2="2080" y2="2682" stroke="#b87333" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="2100" y="2070" font-size="20" fill="#b87333" text-anchor="middle" transform="rotate(90,2100,2070)">1246mm tiles</text>
+
+<!-- Full height -->
+<line x1="2150" y1="180" x2="2150" y2="2682" stroke="#555" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="2175" y="1440" font-size="20" fill="#555" text-anchor="middle" transform="rotate(90,2175,1440)">2502mm</text>
+
+<!-- Patch height -->
+<line x1="130" y1="1436" x2="130" y2="1785" stroke="#888" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="115" y="1620" font-size="16" fill="#888" text-anchor="middle" transform="rotate(-90,115,1620)">349mm</text>
+
+<!-- Bottom band height -->
+<line x1="130" y1="1785" x2="130" y2="2682" stroke="#888" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="115" y="2240" font-size="16" fill="#888" text-anchor="middle" transform="rotate(-90,115,2240)">897mm</text>
+
+<!-- Sill depth label -->
+<text x="1094" y="1970" font-size="14" fill="#888" text-anchor="middle">↕ 160mm deep</text>
+</svg>
+
+<div class="note">
+<b>Tile layout — Wall C optimised:</b><br>
+<b>Horizontal:</b> 8 centred full tile columns (8 × 197mm = 1576mm) with 126mm symmetrical cuts on each side (65% of a tile — substantial, looks intentional).<br>
+<b>Vertical:</b> 6 full rows from the copper trim line (1246mm) downward. 64mm cut row at floor level, hidden by vinyl flooring edge.<br>
+<b>Window patches:</b> Continue the vertical grout alignment from the bottom band. Each patch is roughly 2 tiles wide × 2 tiles tall.<br>
+<b>Reveals:</b> Single column of tiles cut to 160mm depth (82% of tile). Copper trim on all external corners.<br>
+<b>Sill:</b> Tiled across 1080mm × 160mm. Tiles cut to 160mm depth.
+</div>
+
+<!-- ==================== WALL D ==================== -->
+<h2>Wall D — Front / Mirror Wall (New Sagome Tiles)</h2>
+<div class="wall-info">
+<b>Dimensions:</b> 2110mm wide × 2502mm tall<br>
+<b>Mirror:</b> 2008mm wide × 1210mm tall. Positioned HIGH on wall: 75mm below ceiling, ~1120mm from floor to bottom.<br>
+<b>Tile zones:</b> 75mm strip above mirror · 56mm left · 46mm right · <b>~1120mm below mirror</b> (large tiled area, radiator in front)<br>
+<b>Radiator:</b> Sorrento 800×590mm — floor-standing in the lower tile zone
+</div>
+
+<div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:12px 0">
+  <img src="Photos Before Tiling/Italian porcelain tile on wall D.JPG" alt="Wall D — mirror wall overview" style="width:48%;min-width:280px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1)">
+  <img src="Photos Before Tiling/Italian porcelain tile on wall D below mirror.JPG" alt="Wall D — below mirror detail" style="width:48%;min-width:280px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1)">
+</div>
+<p style="text-align:center;font-size:12px;color:#999;margin:4px 0 14px">Wall D — large tile area below the mirror, radiator sits in front</p>
+
+<!-- Wall D: 2110 wide × 2502 tall. Floor at y=2682, ceiling at y=180 -->
+<!-- Mirror sits HIGH: 75mm from ceiling, 1210mm tall, ~1120mm from floor -->
+<!-- Top of mirror: y = 180 + 75 = 255 -->
+<!-- Bottom of mirror: y = 2682 - 1120 = 1562 -->
+<!-- Bottom tile zone: y=1562 to y=2682 = 1120mm -->
+<!-- Mirror: x=180+56=236, y=255, width=2008, height=1307 (to reach y=1562) -->
+<svg viewBox="0 0 2500 2900" xmlns="http://www.w3.org/2000/svg">
+
+<!-- Wall background -->
+<rect x="180" y="180" width="2110" height="2502" fill="#f0ebe3" stroke="#333" stroke-width="3"/>
+
+<!-- TOP tile strip: 75mm (ceiling to mirror top) -->
+<rect x="180" y="180" width="2110" height="75" fill="url(#sagome)"/>
+
+<!-- LARGE BOTTOM tile zone: full width, 1120mm (mirror bottom to floor) -->
+<rect x="180" y="1562" width="2110" height="1120" fill="url(#sagome)"/>
+<!-- Grout grid in bottom zone (197mm module) -->
+<g stroke="#d4c4a8" stroke-width="1.5" opacity=".5">
+<!-- Horizontal grout lines from mirror bottom downward at 197mm intervals -->
+<line x1="180" y1="1759" x2="2290" y2="1759"/>
+<line x1="180" y1="1956" x2="2290" y2="1956"/>
+<line x1="180" y1="2153" x2="2290" y2="2153"/>
+<line x1="180" y1="2350" x2="2290" y2="2350"/>
+<line x1="180" y1="2547" x2="2290" y2="2547"/>
+<!-- Vertical grout lines -->
+<line x1="377" y1="1562" x2="377" y2="2682"/>
+<line x1="574" y1="1562" x2="574" y2="2682"/>
+<line x1="771" y1="1562" x2="771" y2="2682"/>
+<line x1="968" y1="1562" x2="968" y2="2682"/>
+<line x1="1165" y1="1562" x2="1165" y2="2682"/>
+<line x1="1362" y1="1562" x2="1362" y2="2682"/>
+<line x1="1559" y1="1562" x2="1559" y2="2682"/>
+<line x1="1756" y1="1562" x2="1756" y2="2682"/>
+<line x1="1953" y1="1562" x2="1953" y2="2682"/>
+<line x1="2150" y1="1562" x2="2150" y2="2682"/>
+</g>
+<text x="1235" y="1650" font-size="22" fill="#b0a080" text-anchor="middle" font-weight="600">SAGOME TILES</text>
+<text x="1235" y="1680" font-size="16" fill="#b0a080" text-anchor="middle">2110 × 1120mm below mirror</text>
+
+<!-- Left tile strip: 56mm wide × 1307mm tall (beside mirror) -->
+<rect x="180" y="255" width="56" height="1307" fill="#e8dcc8" stroke="#d4c4a8" stroke-width="1"/>
+
+<!-- Right tile strip: 46mm wide × 1307mm tall (beside mirror) -->
+<rect x="2244" y="255" width="46" height="1307" fill="#e8dcc8" stroke="#d4c4a8" stroke-width="1"/>
+
+<!-- Mirror (high on wall) -->
+<defs>
+<linearGradient id="mirrorGrad" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#e8e8e8"/>
+<stop offset="30%" stop-color="#d0d0d0"/>
+<stop offset="60%" stop-color="#ddd"/>
+<stop offset="100%" stop-color="#c8c8c8"/>
+</linearGradient>
+</defs>
+<rect x="236" y="255" width="2008" height="1307" fill="url(#mirrorGrad)" stroke="#aaa" stroke-width="2"/>
+<text x="1240" y="820" font-size="42" fill="#999" text-anchor="middle" font-weight="300">MIRROR</text>
+<text x="1240" y="870" font-size="24" fill="#aaa" text-anchor="middle">2008 × 1210mm</text>
+<text x="1240" y="905" font-size="16" fill="#bbb" text-anchor="middle">(built-in demister)</text>
+
+<!-- Radiator (floor-standing, in lower tile zone) -->
+<rect x="835" y="2092" width="800" height="590" rx="10" fill="rgba(240,235,227,0.6)" stroke="#888" stroke-width="2.5" stroke-dasharray="8,4"/>
+<text x="1235" y="2370" font-size="22" fill="#888" text-anchor="middle" font-weight="600">RADIATOR</text>
+<text x="1235" y="2400" font-size="16" fill="#999" text-anchor="middle">Sorrento 800 × 590mm</text>
+<text x="1235" y="2430" font-size="14" fill="#aaa" text-anchor="middle">(floor-standing on tile)</text>
+
+<!-- Dimension: top strip (75mm) -->
+<line x1="2350" y1="180" x2="2350" y2="255" stroke="#e65100" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="2385" y="225" font-size="16" fill="#e65100" font-weight="600">75mm</text>
+
+<!-- Dimension: left strip (56mm) -->
+<line x1="180" y1="230" x2="236" y2="230" stroke="#e65100" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="208" y="220" font-size="16" fill="#e65100" text-anchor="middle" font-weight="600">56</text>
+
+<!-- Dimension: right strip (46mm) -->
+<line x1="2244" y1="230" x2="2290" y2="230" stroke="#e65100" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="2267" y="220" font-size="16" fill="#e65100" text-anchor="middle" font-weight="600">46</text>
+
+<!-- Dimension: bottom tile zone (1120mm) -->
+<line x1="2350" y1="1562" x2="2350" y2="2682" stroke="#e65100" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="2385" y="2130" font-size="16" fill="#e65100" font-weight="600">~1120mm</text>
+
+<!-- Dimension: mirror height -->
+<line x1="130" y1="255" x2="130" y2="1562" stroke="#888" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="110" y="910" font-size="18" fill="#888" text-anchor="middle" transform="rotate(-90,110,910)">1210mm mirror</text>
+
+<!-- Dimension: full width -->
+<line x1="180" y1="2750" x2="2290" y2="2750" stroke="#555" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="1235" y="2790" font-size="22" fill="#555" text-anchor="middle">2110mm</text>
+
+<!-- Dimension: full height -->
+<line x1="2420" y1="180" x2="2420" y2="2682" stroke="#555" stroke-width="1.5" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="2445" y="1440" font-size="22" fill="#555" text-anchor="middle" transform="rotate(90,2445,1440)">2502mm</text>
+
+<!-- Dimension: mirror width -->
+<line x1="236" y1="1585" x2="2244" y2="1585" stroke="#888" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="1240" y="1605" font-size="18" fill="#888" text-anchor="middle">2008mm mirror</text>
+</svg>
+
+<div class="note">
+<b>Tile layout — Wall D (CORRECTED 2 Apr):</b><br>
+<b>Mirror sits HIGH:</b> 75mm below ceiling, ~1120mm above floor. Large tile zone below.<br>
+<b>Below-mirror zone (~1120mm):</b> Major tile area — 5 full rows (5 × 197mm = 985mm) + ~135mm cut row at top. ~11 columns across (197mm module). Radiator sits in front of this area.<br>
+<b>Top strip (75mm):</b> Single row cut to 75mm (38% of tile).<br>
+<b>Left strip (56mm):</b> Single column cut to 56mm wide (29% of tile). ~7 tiles tall.<br>
+<b>Right strip (46mm):</b> Single column cut to 46mm wide (24% of tile). ~7 tiles tall.<br>
+<b>⚠ Side strips still narrow.</b> 46–56mm porcelain cuts — tiler to assess feasibility.
+</div>
+
+<!-- ==================== TILER NOTES ==================== -->
+<h2>Notes for Tiler</h2>
+
+<div class="wall-info" style="background:#e3f2fd;border-left:4px solid #1976d2">
+<b style="color:#1565c0">Dormido tile orientation:</b> HORIZONTAL — 1200mm runs left to right, 600mm top to bottom. All repairs must match this orientation.<br><br>
+<b style="color:#1565c0">Sagome tile pattern:</b> Each box contains multiple 3D designs. Dry-lay tiles before fixing to plan pattern distribution. Aim for a balanced, organic mix — avoid clustering identical patterns. See product photos for reference.<br><br>
+<b style="color:#1565c0">Grout joints:</b> 2mm for Sagome tiles (Kerakoll Fugabella Color No 20, warm ivory). Mapei Ultracolor Plus Anthracite for any Dormido grout repairs.<br><br>
+<b style="color:#1565c0">Copper trim:</b> 10mm straight edge. Install at the 1246mm line on Wall C and on all 4 external corners of the window reveals. Mitre or butt joints at corners — assess on site.<br><br>
+<b style="color:#1565c0">Wall C tile start:</b> Begin from the 1246mm copper trim line and work DOWN with full tiles. The bottom cut row (64mm) is at floor level and will be hidden by the vinyl flooring edge.<br><br>
+<b style="color:#1565c0">Wall C horizontal:</b> Centre 8 full columns. This gives 126mm cuts on each side — symmetrical and substantial enough to look intentional.<br><br>
+<b style="color:#1565c0">Sequence:</b> Complete ALL wall tiling before vinyl flooring goes down. Core drill for basin waste pipe can go through tiles if needed (diamond bit) — ideally know vanity position first.
+</div>
+
+</div>
+</body>
+</html>
