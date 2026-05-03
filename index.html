@@ -247,7 +247,7 @@
       <div class="checklist-item"><input type="checkbox" id="t26c" onchange="updateProgress()"><label for="t26c">Lay 6mm plywood underlayment — Section 1: shower tray edge to Wall D<span class="item-note">NOT MDF (terrible in bathroom). Joint lined up with shower tray edge. Pete says 6mm ply is best.</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t26d" onchange="updateProgress()"><label for="t26d">Leave Section 2 (radiator area) for later — pipes may need moving<span class="item-note">Pete needs to check radiator pipe positions. Lay ply in this area after plumbing confirmed.</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t26e" onchange="updateProgress()"><label for="t26e">Remove damaged drywall from downstairs ceiling<span class="item-warn">Water damage from Kevin&#x2019;s defective shower waste. Remove affected plasterboard.</span></label></div>
-      <div class="checklist-item"><input type="checkbox" id="t26f" onchange="updateProgress()"><label for="t26f">Install small access hatch in ceiling under shower waste location<span class="item-note">Allows future inspection without tearing out ceiling. Position directly below shower waste.</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t26f" onchange="updateProgress()"><label for="t26f">Install small access hatch in ceiling under shower waste location<span class="item-note">Allows future inspection without tearing out ceiling. Position directly below shower waste. See <strong>Ceiling Repair Notes.md</strong> for joist positions (1st joist 5.5–10.6 cm, 2nd joist 42–47 cm from drywall edge; centre-to-centre 36.5 cm).</span></label></div>
     </div>
   </div>
 
@@ -261,7 +261,7 @@
     </div>
     <div class="checklist-phase-body">
       <div class="checklist-item"><input type="checkbox" id="t27" onchange="updateProgress()"><label for="t27">Prepare subfloor — clean, level, lay underlayment if needed</label></div>
-      <div class="checklist-item"><input type="checkbox" id="t28" onchange="updateProgress()"><label for="t28">Loose-lay Latte Fiastra terrazzo vinyl (foam-backed, no adhesive needed up to 12m²)<span class="item-note">Cut around shower tray edge, door frame, pipe penetrations</span></label></div>
+      <div class="checklist-item"><input type="checkbox" id="t28" onchange="updateProgress()"><label for="t28">Tile floor with Del Conca Coast Sassi Beige 600×600mm porcelain (13 tiles)<span class="item-note">Cut around shower tray edge, toilet pipe, radiator pipes, door threshold</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t29" onchange="updateProgress()"><label for="t29">Vinyl down BEFORE toilet, radiator &amp; vanity — they sit on top<span class="item-warn">Toilet, radiator feet, and vanity bracket all go on finished floor</span></label></div>
     </div>
   </div>
@@ -271,10 +271,11 @@
     <div class="checklist-phase-header" onclick="togglePhase(this)">
       <div class="phase-num" data-phase="9">9</div>
       <div class="phase-title">Second Fix Plumbing</div>
-      <div class="phase-progress"><span class="prog-done" data-phase-done="9">0</span>/5</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="9">0</span>/6</div>
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
+      <div class="checklist-item"><input type="checkbox" id="t29b" onchange="updateProgress()"><label for="t29b">ANTI: Fit bull nose limestone windowsill (Wall C) — £250 supply + fit<span class="item-note">Back 1060mm × Front 1058mm, depths 165/152mm + 20mm overhang. Copper trim on outside won't affect fit. Basin goes in front of right side — ANTI will handle. Template made with thin wood strips.</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t30" onchange="updateProgress()"><label for="t30">Mount Pendle vanity unit on Wall C — connect basin, Zana tap, hot/cold feeds, waste</label></div>
       <div class="checklist-item"><input type="checkbox" id="t31" onchange="updateProgress()"><label for="t31">Install Arezzo toilet on soil line — connect cistern water feed<span class="item-note">Centre on PVC pipe at 465mm from Wall C. Silicone base to vinyl.</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t32" onchange="updateProgress()"><label for="t32">Install VOVO bidet seat — connect to isolation valve &amp; flex outlet power</label></div>
@@ -304,7 +305,7 @@
     <div class="checklist-phase-header" onclick="togglePhase(this)">
       <div class="phase-num" data-phase="11">11</div>
       <div class="phase-title">Paint, Accessories &amp; Finishing</div>
-      <div class="phase-progress"><span class="prog-done" data-phase-done="11">0</span>/4</div>
+      <div class="phase-progress"><span class="prog-done" data-phase-done="11">0</span>/5</div>
       <div class="phase-arrow">&#9654;</div>
     </div>
     <div class="checklist-phase-body">
@@ -312,6 +313,7 @@
       <div class="checklist-item"><input type="checkbox" id="t40" onchange="updateProgress()"><label for="t40">Mount MOSSJON cabinet + brushed copper shelves x2 on Wall B above toilet<span class="item-note">Drill with diamond-tipped bit through Dormido tiles. Cabinet bottom at ~1350mm from floor.</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t41" onchange="updateProgress()"><label for="t41">Install: toilet roll holder, FADO table lamp, GANSJON waste bin, plants<span class="item-note">Pipe covers (ETAL Enzo matt black, Screwfix #838YU) if exposed pipework visible</span></label></div>
       <div class="checklist-item"><input type="checkbox" id="t42" onchange="updateProgress()"><label for="t42">Final silicone (basin-to-wall, vanity-to-wall, radiator joints) + final clean</label></div>
+      <div class="checklist-item"><input type="checkbox" id="t43" onchange="updateProgress()"><label for="t43">Downstairs ceiling — finish repair (plasterboard + access hatch, skim, paint)<span class="item-note">See <strong>Ceiling Repair Notes.md</strong> for joist measurements. Primary joists from drywall edge: 1st at 5.5–10.6 cm, 2nd at 42–47 cm. Centre-to-centre 36.5 cm, edge-to-edge ~31 cm. Use these for sizing plasterboard cut + fixing access hatch.</span></label></div>
     </div>
   </div>
 </div>
@@ -420,27 +422,26 @@ document.addEventListener('DOMContentLoaded', updateProgress);
 
 <!-- ===== FLOOR — TERRAZZO SHEET VINYL ===== -->
 <div class="section" id="floor">
-  <h2>Floor — Latte Fiastra Terrazzo Sheet Vinyl <span class="badge ordered">Ordered</span></h2>
-  <p class="subtitle">Best4Flooring Order #1000376620 — 2m × 3m roll (6 m²), delivering 20 March 2026</p>
+  <h2>Floor — Del Conca Coast (Sassi) Beige Porcelain 600×600mm</h2>
+  <p class="subtitle">Domus Outlet · £18.33/m² · 12 tiles to order + 1 sample held = 13 total</p>
   <div class="grid">
     <div class="card">
-      <img src="https://www.best4flooring.co.uk/media/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/l/a/latte_fiastra_-_room_2.png" alt="Best4Flooring Latte Fiastra" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px 12px 0 0;">
       <div class="card-body">
-        <h3>Latte Fiastra Terrazzo Vinyl Flooring Roll <span class="badge ordered">Ordered</span></h3>
+        <h3>DFCS 02 Coast (Sassi) Beige Matt Rect</h3>
         <div class="specs">
-          <strong>SKU:</strong> TER-LF<br>
-          <strong>Roll size:</strong> 2m wide × 3m long (6 m² total)<br>
-          <strong>Price:</strong> £83.94 (item) + £29.90 shipping = £113.84 total<br>
-          <strong>Wear layer:</strong> 0.35 mm (stain &amp; scratch resistant)<br>
-          <strong>Backing:</strong> Foam-backed (high-density, cushioned)<br>
-          <strong>Slip rating:</strong> Non-slip, water resistant<br>
-          <strong>Features:</strong> Can be loose-laid up to 12 m² · 15-year warranty · Smoother surface<br>
-          <strong>Supplier:</strong> Best4Flooring (Order #1000376620)<br>
-          <strong>Ordered:</strong> 1 roll — 18th March 2026<br>
-          <strong>Delivery:</strong> 20th March 2026 (Express)
+          <strong>Product Code:</strong> FIOICCSSMR026060<br>
+          <strong>Tile size:</strong> 600 × 600 × 9mm<br>
+          <strong>Material:</strong> Porcelain · Matt/Natural finish<br>
+          <strong>Effect:</strong> Stone<br>
+          <strong>Use:</strong> Wall &amp; Floor (indoor)<br>
+          <strong>Price:</strong> £18.33/m² (Domus Outlet)<br>
+          <strong>Floor area:</strong> 2.773 m² net (3.853 m² total − 1.080 m² shower tray)<br>
+          <strong>Tiles needed:</strong> 13 (12 to order + 1 sample held) = 4.68 m²<br>
+          <strong>Est. tile cost:</strong> 4.32 m² × £18.33 = ~£79.19 (+ delivery TBC)<br>
+          <strong>Supplier:</strong> Domus Outlet (outlet@domusgroup.com / 020 8481 9588)
         </div>
-        <div class="note"><strong>Cool grey-blue tones</strong> with large, playful terrazzo specks. Smoother finish — more refined and understated. Thickest wear layer of the three options (0.35 mm) and can be loose-laid without adhesive. 2m × 3m roll covers the full bathroom floor with plenty of spare material after the shower tray cutout.</div>
-        <a href="https://www.best4flooring.co.uk/vinyl-flooring-latte-fiastra" target="_blank">View on Best4Flooring →</a>
+        <div class="note"><strong>Replaces Latte Fiastra vinyl</strong> (Best4Flooring £113.84 — already paid, sunk cost). Stone-effect porcelain in warm beige tones. Radek to tile as part of contract scope.</div>
+        <a href="https://www.domusoutlet.com/dfcs-02-coast-sassi-beige-matt-rect-600-x-600-x-9-mm.html" target="_blank">View on Domus Outlet →</a>
       </div>
     </div>
   </div>
@@ -1163,7 +1164,7 @@ document.addEventListener('DOMContentLoaded', updateProgress);
       <tr style="background:#e8f5e9;"><td colspan="4" style="font-weight:700;padding:8px 14px;">Amazon (shaver socket) Subtotal</td><td style="font-weight:700;padding:8px 14px;"><strong>£28.99</strong></td></tr>
       <!-- ORDERED — BEST4FLOORING -->
       <tr style="background:#c8e6c9;"><td colspan="5" style="font-weight:700;color:#1b5e20;padding:10px 14px;">Best4Flooring (#1000376620) — Ordered 18 Mar, delivering 20 Mar</td></tr>
-      <tr><td>Floor</td><td>Latte Fiastra Terrazzo Vinyl Roll 2m × 3m (SKU: TER-LF)</td><td>£83.94</td><td>1 roll</td><td><strong>£83.94</strong></td></tr>
+      <tr style="color:#999; text-decoration:line-through;"><td>Floor</td><td>Latte Fiastra Terrazzo Vinyl Roll 2m × 3m (SUPERSEDED — sunk cost)</td><td>£83.94</td><td>1 roll</td><td><strong>£83.94</strong></td></tr>
       <tr><td colspan="3"></td><td>Shipping (Express)</td><td>£29.90</td></tr>
       <tr style="background:#e8f5e9;"><td colspan="4" style="font-weight:700;padding:8px 14px;">Best4Flooring Subtotal</td><td style="font-weight:700;padding:8px 14px;"><strong>£113.84</strong></td></tr>
       <!-- ORDERED — VICTORIAN PLUMBING (GROUT) -->
@@ -1218,11 +1219,21 @@ document.addEventListener('DOMContentLoaded', updateProgress);
       <tr><td colspan="3"></td><td>Delivery</td><td>£6.95</td></tr>
       <tr><td colspan="3"></td><td>Trade Discount</td><td>−£1.60</td></tr>
       <tr style="background:#e8f5e9;"><td colspan="4" style="font-weight:700;padding:8px 14px;">VP (sealants) Subtotal</td><td style="font-weight:700;padding:8px 14px;"><strong>£37.20</strong></td></tr>
+      <!-- REPLACEMENT ORDERS (INSURANCE CLAIM) -->
+      <tr style="background:#ffcdd2;"><td colspan="5" style="font-weight:700;color:#b71c1c;padding:10px 14px;">Replacement Orders — Insurance Claim (Apr 2026)</td></tr>
+      <tr><td>Tiles</td><td>Stonehouse Studio Dormido 600×1200mm × 4 boxes</td><td>£47.81/box</td><td>4</td><td><strong>£191.24</strong></td></tr>
+      <tr><td colspan="3"></td><td>Delivery</td><td>£24.95</td></tr>
+      <tr style="background:#e8f5e9;"><td colspan="4" style="font-weight:700;padding:8px 14px;">VP (replacement Dormido) Subtotal</td><td style="font-weight:700;padding:8px 14px;"><strong>£216.19</strong></td></tr>
+      <tr><td>Shower tray</td><td>Harbour 28mm Luxury Stone Rectangular 1200×900mm</td><td>£184.99</td><td>1</td><td><strong>£184.99</strong></td></tr>
+      <tr><td>Shower waste</td><td>Harbour 90mm Round Topped — Gloss Black</td><td>£32.37</td><td>1</td><td><strong>£32.37</strong></td></tr>
+      <tr><td colspan="3"></td><td>Delivery (Next Day XL)</td><td>£39.99</td></tr>
+      <tr style="background:#e8f5e9;"><td colspan="4" style="font-weight:700;padding:8px 14px;">Drench Trade (DR324916) Subtotal</td><td style="font-weight:700;padding:8px 14px;"><strong>£257.35</strong></td></tr>
       <!-- TOTAL ORDERED -->
-      <tr style="background:#1b5e20;color:white;"><td colspan="4" style="font-weight:700;padding:12px 14px;font-size:1.05em;">TOTAL ORDERED (23 orders)</td><td style="font-weight:700;padding:12px 14px;font-size:1.05em;">£3,344.77</td></tr>
+      <tr style="background:#1b5e20;color:white;"><td colspan="4" style="font-weight:700;padding:12px 14px;font-size:1.05em;">TOTAL ORDERED (25 orders)</td><td style="font-weight:700;padding:12px 14px;font-size:1.05em;">£3,818.31</td></tr>
       <!-- STILL TO BUY -->
       <tr style="background:#fff3e0;"><td colspan="5" style="font-weight:700;color:#e65100;padding:10px 14px;">Still to Buy — Pending Decisions</td></tr>
-      <tr><td>Glass enclosure</td><td>Pivot door, matt black frame (plumber to select)</td><td colspan="2">TBC — est. £250–£500</td><td>~£250–£500</td></tr>
+      <tr><td>Floor tiles</td><td>Del Conca Coast Sassi Beige 600×600mm (Domus Outlet)</td><td>£18.33/m²</td><td>12 tiles (4.32 m²)</td><td>~£79.19</td></tr>
+      <tr><td>Glass enclosure</td><td>Sliding door, matt black frame (5 options shortlisted)</td><td colspan="2">TBC — est. £250–£500</td><td>~£250–£500</td></tr>
       <tr><td>Paint</td><td>Claybrook terracotta + desert paint</td><td colspan="2">TBC</td><td>TBC</td></tr>
     </table>
   </div>
@@ -1253,19 +1264,24 @@ document.addEventListener('DOMContentLoaded', updateProgress);
       <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">— Master Tiles (copper trim 10mm × 5 + Kerakoll Fugabella Color No 20 grout — in-store)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£104.00</td></tr>
       <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">— Stone Superstore (Del Conca Sagome tiles × 5 boxes + £92.20 pallet delivery) — shipped 3 Apr</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£281.70</td></tr>
       <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">— Victorian Plumbing (Kerakoll Silicone 20 + Mapei Mapesil AC Anthracite + Tile Rite smoothers + £6.95 delivery)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£37.20</td></tr>
-      <tr style="background:#1b5e20; color:white;"><td style="padding:10px 12px;"><strong>Total ordered (23 orders)</strong></td><td style="padding:10px 12px; text-align:right;"><strong>£3,344.77</strong></td></tr>
+      <tr style="background:#c8e6c9;"><td style="padding:10px 12px;" colspan="2"><strong>Replacement orders (Apr 23–29) — insurance claim</strong></td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">— Victorian Plumbing (replacement Dormido tiles × 4 boxes + £24.95 delivery)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£216.19</td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">— Drench Trade (replacement Harbour shower tray + waste + £39.99 next-day delivery)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£257.35</td></tr>
+      <tr style="background:#1b5e20; color:white;"><td style="padding:10px 12px;"><strong>Total ordered (25 orders)</strong></td><td style="padding:10px 12px; text-align:right;"><strong>£3,818.31</strong></td></tr>
       <tr style="background:#e3f2fd;"><td style="padding:10px 12px;"><strong>Tile samples + return postage</strong></td><td style="padding:10px 12px; text-align:right;"><strong>£18.97</strong></td></tr>
-      <tr style="background:#1b5e20; color:white;"><td style="padding:10px 12px;"><strong>Grand total spent (gross)</strong></td><td style="padding:10px 12px; text-align:right;"><strong>£3,363.74</strong></td></tr>
+      <tr style="background:#1b5e20; color:white;"><td style="padding:10px 12px;"><strong>Grand total spent (gross)</strong></td><td style="padding:10px 12px; text-align:right;"><strong>£3,837.28</strong></td></tr>
       <tr style="background:#ffcdd2;"><td style="padding:10px 12px;"><strong>Returns refunded (5 items)</strong></td><td style="padding:10px 12px; text-align:right;"><strong>−£189.43</strong></td></tr>
       <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">Ellis &amp; Co pull cord £19.95 + Soho 2-gang £38.94 + Soho 3-gang £65.90 + Lieber FCU £15.97 + Soho grid plate £48.67</td><td></td></tr>
-      <tr style="background:#1b5e20; color:white;"><td style="padding:10px 12px;"><strong>Net spend (after refunds)</strong></td><td style="padding:10px 12px; text-align:right;"><strong>£3,174.31</strong></td></tr>
+      <tr style="background:#1b5e20; color:white;"><td style="padding:10px 12px;"><strong>Net spend (after refunds)</strong></td><td style="padding:10px 12px; text-align:right;"><strong>£3,647.85</strong></td></tr>
       <tr style="background:#fff3e0;"><td style="padding:10px 12px;"><strong>Estimated remaining spend</strong></td><td style="padding:10px 12px; text-align:right;"><strong>~£250 – £500+</strong></td></tr>
       <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">Glass enclosure (plumber to select)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">~£250 – £500</td></tr>
       <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">Paint</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">TBC</td></tr>
       <tr style="background:#e1bee7;"><td style="padding:10px 12px;" colspan="2"><strong>Labour</strong></td></tr>
       <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">— RAD Building Services (Radek Balicki) — plumbing, tiling, painting, floor prep (~10 days)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£3,700</td></tr>
       <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666; font-size:0.85em;">&nbsp;&nbsp;Payment: 30% deposit £1,110 / 40% mid £1,480 / 30% final £1,110</td><td></td></tr>
-      <tr style="background:#2E4057; color:white;"><td style="padding:10px 12px;"><strong>Estimated project total (materials + labour)</strong></td><td style="padding:10px 12px; text-align:right;"><strong>~£7,120 – £7,370+</strong></td></tr>
+      <tr style="background:#e1bee7;"><td style="padding:10px 12px;" colspan="2"><strong>Stone Windowsill</strong></td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee; color:#666;">— ANTI — bull nose limestone windowsill supply + fit (Wall C)</td><td style="padding:8px 12px; text-align:right; border-bottom:1px solid #eee;">£250</td></tr>
+      <tr style="background:#2E4057; color:white;"><td style="padding:10px 12px;"><strong>Estimated project total (materials + labour + windowsill)</strong></td><td style="padding:10px 12px; text-align:right;"><strong>~£7,600 – £7,850+</strong></td></tr>
     </table>
     <p style="font-size:0.82em; color:#888; margin-top:12px;">Remaining material costs: glass enclosure (~£250–£500), paint (TBC). One copper FCU (£8–£16) will also be returned after comparing finishes. Prices as of March–April 2026.</p>
   </div>
@@ -1282,7 +1298,7 @@ document.addEventListener('DOMContentLoaded', updateProgress);
       <tr style="background:#e8f5e9;"><td>Dormido tiles</td><td><span class="badge ordered">Ordered</span></td><td>7 boxes — £352.31 from VP</td></tr>
       <tr style="background:#fff3e0;"><td>Matteo tiles (SCRAPPED)</td><td><span style="background:#c62828;color:#fff;font-size:0.7em;padding:2px 8px;border-radius:8px;">Scrapped</span></td><td>8 boxes — £290.80 from VP (non-returnable, for resale)</td></tr>
       <tr style="background:#e8f5e9;"><td>Sagome tiles (Walls C &amp; D)</td><td><span class="badge ordered">Ordered</span></td><td>5 boxes — £281.70 from Stone Superstore (arriving 8 Apr)</td></tr>
-      <tr style="background:#e8f5e9;"><td>Floor — Latte Fiastra sheet vinyl</td><td><span class="badge ordered">Ordered</span></td><td>Best4Flooring 2m×3m roll — £113.84 (delivering 20 Mar)</td></tr>
+      <tr style="background:#fff3e0;"><td>Floor — Del Conca Coast Sassi Beige 600×600mm</td><td><span class="badge">To Order</span></td><td>Domus Outlet — 12 tiles (~£79.19 + delivery TBC). Replaces Latte Fiastra vinyl (£113.84 sunk cost).</td></tr>
       <tr style="background:#e8f5e9;"><td>Shower tray</td><td><span class="badge ordered">Ordered</span></td><td>Drench stone resin 1200×900 — £199.99</td></tr>
       <tr style="background:#e8f5e9;"><td>Shower waste</td><td><span class="badge ordered">Ordered</span></td><td>Harbour 90mm Gloss Black — £34.99 from Drench</td></tr>
       <tr><td>Glass enclosure</td><td><span class="badge pending">Pending</span></td><td>Plumber to select (~£250–£500)</td></tr>
@@ -1313,6 +1329,7 @@ document.addEventListener('DOMContentLoaded', updateProgress);
       <tr><td>Paint</td><td><span class="badge pending">Pending</span></td><td>Claybrook terracotta + desert paint for Wall B (above 1245mm) &amp; Wall C (above 1246mm)</td></tr>
       <tr style="background:#e8f5e9;"><td>Shower valve/head</td><td><span class="badge ordered">Ordered</span></td><td>Milano Alara Thermostatic Bar Valve — Brushed Copper — £249.99 from Big Bathroom Shop</td></tr>
       <tr style="background:#e1bee7;"><td><strong>Labour — RAD Building Services</strong></td><td><span class="badge" style="background:#7b1fa2;color:#fff;">Hired</span></td><td>Radek Balicki — £3,700 (plumbing, tiling, painting, floor prep, ~10 days, starting late Apr 2026)</td></tr>
+      <tr style="background:#e1bee7;"><td><strong>Stone Windowsill — ANTI</strong></td><td><span class="badge" style="background:#7b1fa2;color:#fff;">Confirmed</span></td><td>Bull nose limestone supply + fit — £250. Back 1060mm, depths 165/152mm + 20mm overhang.</td></tr>
     </table>
   </div>
 
