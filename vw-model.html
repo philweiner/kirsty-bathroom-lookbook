@@ -81,7 +81,7 @@
 <body class="viz-root" data-palette="#2a78d6,#1baf7a,#e34948,#9aa3aa">
 <div class="wrap">
   <h1>The Van — 5-Year Scenario Explorer</h1>
-  <div class="sub">2023 VW Transporter CamperKing St Tropez · all-cash purchase · drag the sliders or pick a scenario. Every preset is anchored to sourced data (9 Jul 2026).</div>
+  <div class="sub">2023 VW Transporter CamperKing St Tropez · all-cash purchase · lean cost basis (street-permit parking £346, platforms-only marketing, £85/yr Claude-run admin) · drag the sliders or pick a scenario. Every preset anchored to sourced data (9 Jul 2026).</div>
 
   <div class="panel">
     <div class="chips" id="chips"></div>
@@ -149,18 +149,21 @@
     <h2>The 5-year table</h2>
     <table id="tbl"></table>
     <div class="flag" id="flagBox"></div>
-    <div class="foot">Model: mirrors Campervan_Hire_Financial_Model.xlsx at the chosen price — 18% blended platform commission, £800/yr ancillary income, running costs inflated 3%/yr, 10% nights growth in yr 2, UK corporation tax with year-1 capital allowance, van depreciating 7%/yr from £47,750 market value to a £33,219 exit sale at end of year 5. Buying below asking creates day-one equity because depreciation runs off market value, not what you paid. Rates &amp; comparables: Camplify/Goboony/Quirky Brighton listings, fetched live 9 Jul 2026. Festival premium: £185/night assumption vs published peak guide £150–250/night for 4-berths; Glastonbury campervan pitches routinely sell out. Not financial advice; tax layer to be confirmed with a dual-qualified US/UK accountant (LLP structure pending).</div>
+    <div class="foot">Model: mirrors Campervan_Hire_Financial_Model.xlsx at the chosen price — 18% blended platform commission, £800/yr ancillary income, running costs inflated 3%/yr, 10% nights growth in yr 2, UK corporation tax with year-1 capital allowance, van depreciating 7%/yr from £47,750 market value to a £33,219 exit sale at end of year 5. Buying below asking creates day-one equity because depreciation runs off market value, not what you paid. Lean cost basis (agreed 9 Jul 2026): no pre-purchase inspection (HPI + DIY damp check only), photos self / kit £350, Companies House incorporation £100 &amp; confirmation £50 at the Feb-2026 fees, street-permit parking £346/yr (confirm insurer accepts street parking), marketing £0 (platform listings only), admin £85/yr (SA800 software; Claude-run bookkeeping — Claude Pro already paid across projects). US-side note: partners' Form 8865 filing cost not modelled — ask the accountant. Rates &amp; comparables: Camplify/Goboony/Quirky Brighton listings, fetched live 9 Jul 2026. Festival premium: £185/night assumption vs published peak guide £150–250/night for 4-berths; Glastonbury campervan pitches routinely sell out. Not financial advice; tax layer to be confirmed with a dual-qualified US/UK accountant (LLP structure pending).</div>
   </div>
 </div>
 
 <script>
 // ---------------- model (verified against Python) ----------------
 const CFG = {
-  asking: 47750, inspection: 250, kit: 750, setup: 50,
+  // Lean cost basis agreed 9 Jul 2026: no inspection (HPI check only), photos self,
+  // CH incorporation £100 (Feb-2026 fees), street-permit parking £346, no marketing,
+  // admin = £50 confirmation statement + ~£35 SA800 software (Claude/bank/books £0).
+  asking: 47750, inspection: 0, kit: 350, setup: 100,
   commission: 0.18, ancillary: 800, avgHire: 4,
   nightsGrowthY2: 0.10, rateGrowth: 0.025,
-  fixedCostsY1: 4055, cleanPerHire: 30, marketingY1: 300, marketingOn: 150,
-  repairsPct: 0.03, inflation: 0.03, admin: 994,
+  fixedCostsY1: 3501, cleanPerHire: 30, marketingY1: 0, marketingOn: 0,
+  repairsPct: 0.03, inflation: 0.03, admin: 85,
   ctRate: 0.19, deprMarket: 0.07, hold: 5, festivalRate: 185,
 };
 function runModel({ nights, rate, price, festivalNights = 0, insuranceExtra = 0 }) {
@@ -180,7 +183,7 @@ function runModel({ nights, rate, price, festivalNights = 0, insuranceExtra = 0 
     const costs = (CFG.fixedCostsY1 + insuranceExtra) * infl
       + CFG.cleanPerHire * infl * hires
       + (y === 1 ? CFG.marketingY1 : CFG.marketingOn * infl)
-      + CFG.repairsPct * gross + CFG.admin * infl;
+      + CFG.repairsPct * gross + CFG.admin * infl; // marketing £0 both years under lean basis
     rows.push({ year: y, nights: totalNights, gross, netRev, costs, ebitda: netRev - costs });
   }
   const cf = [-totalInitial];
@@ -358,7 +361,7 @@ function render() {
   el("kY1").style.color = m.rows[0].ebitda < 0 ? "var(--neg)" : "var(--ink-1)";
   el("kY1D").textContent = fmtGBP(m.rows[0].ebitda / 2) + " per partner";
   el("kStake").textContent = fmtGBP(m.totalInitial / 2);
-  el("kStakeD").textContent = "vs £60,563 for a Brighton Airbnb";
+  el("kStakeD").textContent = "lean setup · vs £60,563 for a Brighton Airbnb";
 
   lineChart(m);
   barChart(m);
